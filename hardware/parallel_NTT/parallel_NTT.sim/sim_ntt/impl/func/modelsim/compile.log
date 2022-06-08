@@ -1,0 +1,89 @@
+# do {parallel_ntt_0_butterfly_tb_compile.do}
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/work".
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim".
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim/xil_defaultlib".
+# Model Technology ModelSim SE-64 vmap 10.5 Lib Mapping Utility 2016.02 Feb 13 2016
+# vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib 
+# Modifying modelsim.ini
+# ** Warning: (vlog-159) Mode option -64 is not supported in this context and will be ignored.
+# Model Technology ModelSim SE-64 vlog 10.5 Compiler 2016.02 Feb 13 2016
+# Start time: 15:38:43 on Nov 19,2021
+# vlog -64 -incr -work xil_defaultlib "+incdir+../../../../../user_rtl" parallel_ntt_0_butterfly_tb_func_impl.v ../../../../../user_rtl/parallel_ntt_0_butterfly_tb.v 
+# -- Compiling module parallel_ntt_0
+# -- Compiling module parallel_ntt_0_Barret_reduce
+# -- Compiling module parallel_ntt_0_Barret_reduce__xdcDup__1
+# -- Compiling module parallel_ntt_0_Barret_reduce__xdcDup__2
+# -- Compiling module parallel_ntt_0_Barret_reduce__xdcDup__3
+# -- Compiling module parallel_ntt_0_NTT_processor
+# -- Compiling module parallel_ntt_0_NTT_processor__parameterized0
+# -- Compiling module parallel_ntt_0_NTT_processor__parameterized1
+# -- Compiling module parallel_ntt_0_NTT_processor__parameterized2
+# -- Compiling module parallel_ntt_0_mem_dp
+# -- Compiling module parallel_ntt_0_mem_dp__1
+# -- Compiling module parallel_ntt_0_mem_dp__2
+# -- Compiling module parallel_ntt_0_mem_dp__3
+# -- Compiling module parallel_ntt_0_mem_sp
+# -- Compiling module parallel_ntt_0_mem_sp__parameterized0
+# -- Compiling module parallel_ntt_0_mem_sp__parameterized1
+# -- Compiling module parallel_ntt_0_mem_sp__parameterized2
+# -- Compiling module parallel_ntt_0_mult_gen_32x32
+# -- Compiling module parallel_ntt_0_mult_gen_32x32__10
+# -- Compiling module parallel_ntt_0_mult_gen_32x32__4
+# -- Compiling module parallel_ntt_0_mult_gen_32x32__5
+# -- Compiling module parallel_ntt_0_mult_gen_32x32__6
+# -- Compiling module parallel_ntt_0_mult_gen_32x32__7
+# -- Compiling module parallel_ntt_0_mult_gen_32x32__8
+# -- Compiling module parallel_ntt_0_mult_gen_32x32__9
+# -- Compiling module parallel_ntt_0_mult_gen_64x33
+# -- Compiling module parallel_ntt_0_mult_gen_64x33__4
+# -- Compiling module parallel_ntt_0_mult_gen_64x33__5
+# -- Compiling module parallel_ntt_0_mult_gen_64x33__6
+# -- Compiling module parallel_ntt_0_parallel_NTT_top
+# -- Compiling module parallel_ntt_0_parallel_ntt_v1_0
+# -- Compiling module parallel_ntt_0_parallel_ntt_v1_0_M_AXIS
+# -- Compiling module parallel_ntt_0_parallel_ntt_v1_0_S_AXIS
+# -- Compiling module parallel_ntt_0_wrapper
+# -- Compiling module parallel_ntt_0_blk_mem_gen_generic_cstr
+# -- Compiling module parallel_ntt_0_blk_mem_gen_generic_cstr_30
+# -- Compiling module parallel_ntt_0_blk_mem_gen_generic_cstr_58
+# -- Compiling module parallel_ntt_0_blk_mem_gen_generic_cstr_86
+# -- Compiling module parallel_ntt_0_blk_mem_gen_prim_width
+# -- Compiling module parallel_ntt_0_blk_mem_gen_prim_width_31
+# -- Compiling module parallel_ntt_0_blk_mem_gen_prim_width_59
+# -- Compiling module parallel_ntt_0_blk_mem_gen_prim_width_87
+# -- Compiling module parallel_ntt_0_blk_mem_gen_prim_wrapper_init
+# -- Compiling module parallel_ntt_0_blk_mem_gen_prim_wrapper_init_32
+# -- Compiling module parallel_ntt_0_blk_mem_gen_prim_wrapper_init_60
+# -- Compiling module parallel_ntt_0_blk_mem_gen_prim_wrapper_init_88
+# -- Compiling module parallel_ntt_0_blk_mem_gen_top
+# -- Compiling module parallel_ntt_0_blk_mem_gen_top_29
+# -- Compiling module parallel_ntt_0_blk_mem_gen_top_57
+# -- Compiling module parallel_ntt_0_blk_mem_gen_top_85
+# -- Compiling module parallel_ntt_0_blk_mem_gen_v8_4_1
+# -- Compiling module parallel_ntt_0_blk_mem_gen_v8_4_1__1
+# -- Compiling module parallel_ntt_0_blk_mem_gen_v8_4_1__2
+# -- Compiling module parallel_ntt_0_blk_mem_gen_v8_4_1__3
+# -- Compiling module parallel_ntt_0_blk_mem_gen_v8_4_1_synth
+# -- Compiling module parallel_ntt_0_blk_mem_gen_v8_4_1_synth_28
+# -- Compiling module parallel_ntt_0_blk_mem_gen_v8_4_1_synth_56
+# -- Compiling module parallel_ntt_0_blk_mem_gen_v8_4_1_synth_84
+# -- Compiling module parallel_ntt_0_mult_gen_v12_0_14
+# -- Compiling module parallel_ntt_0_mult_gen_v12_0_14__10
+# -- Compiling module parallel_ntt_0_mult_gen_v12_0_14__4
+# -- Compiling module parallel_ntt_0_mult_gen_v12_0_14__5
+# -- Compiling module parallel_ntt_0_mult_gen_v12_0_14__6
+# -- Compiling module parallel_ntt_0_mult_gen_v12_0_14__7
+# -- Compiling module parallel_ntt_0_mult_gen_v12_0_14__8
+# -- Compiling module parallel_ntt_0_mult_gen_v12_0_14__9
+# -- Compiling module parallel_ntt_0_mult_gen_v12_0_14__parameterized1
+# -- Compiling module parallel_ntt_0_mult_gen_v12_0_14__parameterized1__4
+# -- Compiling module parallel_ntt_0_mult_gen_v12_0_14__parameterized1__5
+# -- Compiling module parallel_ntt_0_mult_gen_v12_0_14__parameterized1__6
+# -- Compiling module glbl
+# -- Compiling module parallel_ntt_0_butterfly_tb
+# 
+# Top level modules:
+# 	glbl
+# 	parallel_ntt_0_butterfly_tb
+# End time: 15:38:45 on Nov 19,2021, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 1

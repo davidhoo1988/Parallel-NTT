@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mult_gen_32x32/sim/mult_gen_32x32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mult_gen_32x32
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mult_gen_64x33/sim/mult_gen_64x33.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mult_gen_64x33

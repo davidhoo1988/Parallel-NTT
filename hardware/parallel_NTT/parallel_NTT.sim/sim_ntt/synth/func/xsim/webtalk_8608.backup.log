@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Thu Nov 11 17:46:08 2021
+# Process ID: 8608
+# Current directory: E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.sim/sim_ntt/synth/func/xsim
+# Command line: wbtcv.exe -mode batch -source E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.sim/sim_ntt/synth/func/xsim/xsim.dir/parallel_ntt_0_butterfly_tb_func_synth/webtalk/xsim_webtalk.tcl -notrace
+# Log file: E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.sim/sim_ntt/synth/func/xsim/webtalk.log
+# Journal file: E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.sim/sim_ntt/synth/func/xsim\webtalk.jou
+#-----------------------------------------------------------
+source E:/Dropbox/FHE/my -notrace
+couldn't read file "E:/Dropbox/FHE/my": permission denied
+INFO: [Common 17-206] Exiting Webtalk at Thu Nov 11 17:46:09 2021...

@@ -1,0 +1,399 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.sim/sim_ntt/behav/modelsim
+T_opt
+!s110 1640661476
+VjE5FR<T<8mzJ3NVzk0Wmn2
+Z1 04 27 4 work parallel_ntt_0_butterfly_tb fast 0
+Z2 04 4 4 work glbl fast 0
+=1-200db012e06c-61ca81c1-251-22dc
+Z3 o-quiet -auto_acc_if_foreign -work xil_defaultlib -L xbip_utils_v3_0_9 -L xbip_pipe_v3_0_5 -L xbip_bram18k_v3_0_5 -L mult_gen_v12_0_14 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm +acc
+Z4 tCvgOpt 0
+n@_opt
+Z5 OL;O;10.5;63
+R0
+T_opt1
+!s110 1644137204
+VT2`?KPaIYQgJ;h[?Dg;z[1
+R1
+R2
+=1-200db012e06c-61ff8af2-235-29d4
+R3
+R4
+n@_opt1
+R5
+R0
+vBarret_reduce
+Z6 !s10a 1644137669
+Z7 !s110 1640492701
+!i10b 1
+!s100 h`5@DJ8e9AME=XE@<6=CH1
+I_AJZeX7`H]akbMQ37[=^O0
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z9 w1640492699
+8../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/Barret_reduce.v
+F../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/Barret_reduce.v
+Z10 L0 23
+Z11 OL;L;10.5;63
+r1
+!s85 0
+31
+Z12 !s108 1640492701.000000
+Z13 !s107 ../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/clog2.v|../../../../user_rtl/parallel_ntt_0_butterfly_tb.v|../../../../user_rtl/parallel_ntt_0_wrapper.v|../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/sim/parallel_ntt_0.v|../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/hdl/parallel_ntt_v2_0.v|../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/hdl/parallel_ntt_v2_0_M_AXIS.v|../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mem_dp.v|../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/parallel_NTT_top.v|../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/Barret_reduce.v|../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mem_sp.v|../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/NTT_processor.v|../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/hdl/parallel_ntt_v2_0_S_AXIS.v|
+Z14 !s90 -64|-incr|-work|xil_defaultlib|+incdir+../../../../user_rtl|+incdir+../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src|../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/hdl/parallel_ntt_v2_0_S_AXIS.v|../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/NTT_processor.v|../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mem_sp.v|../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/Barret_reduce.v|../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/parallel_NTT_top.v|../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mem_dp.v|../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/hdl/parallel_ntt_v2_0_M_AXIS.v|../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/hdl/parallel_ntt_v2_0.v|../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/sim/parallel_ntt_0.v|../../../../user_rtl/parallel_ntt_0_wrapper.v|../../../../user_rtl/parallel_ntt_0_butterfly_tb.v|
+!i113 0
+Z15 o-work xil_defaultlib -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z16 !s92 -work xil_defaultlib +incdir+../../../../user_rtl +incdir+../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+n@barret_reduce
+vglbl
+Z17 !s110 1644137671
+!i10b 1
+!s100 JWZ^meD<P7inSF0<1SiO32
+IAl?5;D^:bf?I5A^M>WzmU1
+R8
+R0
+w1522801934
+8glbl.v
+Fglbl.v
+L0 6
+R11
+r1
+!s85 0
+31
+Z18 !s108 1644137671.000000
+!s107 glbl.v|
+!s90 -work|xil_defaultlib|glbl.v|
+!i113 0
+R15
+R4
+vmem_dp
+R6
+Z19 !s110 1640492702
+!i10b 1
+!s100 3>gOnWQ>?WPm_GA^CC>K@1
+I8`[lJ3_N>j8=hAKzz5Uf01
+R8
+R0
+R9
+8../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mem_dp.v
+F../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mem_dp.v
+Z20 L0 10
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+R16
+R4
+vmem_sp
+R6
+R7
+!i10b 1
+!s100 ^6zGbhTMMCb2OQcBCYBJ51
+I`_=5fCTC?=Wil4K4S`>F`1
+R8
+R0
+R9
+8../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mem_sp.v
+F../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mem_sp.v
+R20
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+R16
+R4
+Emult_gen_32x32
+Z21 w1644137669
+Z22 DPx17 mult_gen_v12_0_14 26 mult_gen_v12_0_14_viv_comp 0 22 52V0:UR@9H>_;198[KM^N0
+Z23 DEx17 mult_gen_v12_0_14 17 mult_gen_v12_0_14 0 22 @z<c3;Q>jDGIM5Lo:`Z?S0
+Z24 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z25 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z26 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z27 8../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mult_gen_32x32/sim/mult_gen_32x32.vhd
+Z28 F../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mult_gen_32x32/sim/mult_gen_32x32.vhd
+l0
+L59
+VWemlBBc;JjW79MmI07@?53
+!s100 UY3`0C7QQCESZGQRil2QR0
+Z29 OL;C;10.5;63
+31
+R17
+!i10b 1
+R18
+Z30 !s90 -64|-93|-work|xil_defaultlib|../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mult_gen_32x32/sim/mult_gen_32x32.vhd|../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mult_gen_64x33/sim/mult_gen_64x33.vhd|
+Z31 !s107 ../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mult_gen_64x33/sim/mult_gen_64x33.vhd|../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mult_gen_32x32/sim/mult_gen_32x32.vhd|
+!i113 0
+Z32 o-93 -work xil_defaultlib
+Z33 tExplicit 1 CvgOpt 0
+Amult_gen_32x32_arch
+R22
+R24
+R25
+R26
+DEx4 work 14 mult_gen_32x32 0 22 WemlBBc;JjW79MmI07@?53
+l113
+L68
+Vjkl<S42;EnE5z`jV5I`7n0
+!s100 l^`?_IUn?zRfmG8cizmMU0
+R29
+31
+R17
+!i10b 1
+R18
+R30
+R31
+!i113 0
+R32
+R33
+Emult_gen_64x33
+R21
+R22
+R23
+R24
+R25
+R26
+R0
+Z34 8../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mult_gen_64x33/sim/mult_gen_64x33.vhd
+Z35 F../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mult_gen_64x33/sim/mult_gen_64x33.vhd
+l0
+L59
+V5l0V4D?VhL@EngaC4cM=m3
+!s100 zX7b3_U5F9kDG?keh20Ao3
+R29
+31
+R17
+!i10b 1
+R18
+R30
+R31
+!i113 0
+R32
+R33
+Amult_gen_64x33_arch
+R22
+R24
+R25
+R26
+DEx4 work 14 mult_gen_64x33 0 22 5l0V4D?VhL@EngaC4cM=m3
+l113
+L68
+V[TDD^XnST;:nZhNk]jR@j3
+!s100 >7h?MmWaXLZGOTF6el;dV0
+R29
+31
+R17
+!i10b 1
+R18
+R30
+R31
+!i113 0
+R32
+R33
+vNTT_processor
+R6
+Z36 !s110 1644137191
+!i10b 1
+!s100 jETja7TVN;YH5jW6<7I>O0
+Ic7jIfKWHEG_bmBMhOjnih3
+R8
+R0
+Z37 w1644137189
+8../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/NTT_processor.v
+F../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/NTT_processor.v
+Z38 L0 22
+R11
+r1
+!s85 0
+31
+Z39 !s108 1644137191.000000
+R13
+R14
+!i113 0
+R15
+R16
+R4
+n@n@t@t_processor
+vparallel_ntt_0
+R6
+R19
+!i10b 1
+!s100 Cc0@1WCbEz?cQXZX[LQL32
+Ib5_YL_7]fXncW1M7KVgI<0
+R8
+R0
+R9
+8../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/sim/parallel_ntt_0.v
+F../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/sim/parallel_ntt_0.v
+L0 56
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+R16
+R4
+vparallel_ntt_0_butterfly_tb
+!s10a 1640501744
+!s110 1640501937
+!i10b 1
+!s100 K@cAWR@oFODz2NhmVRZGA1
+IHUfF?L[JB_i^DhKWT5nW`1
+R8
+R0
+w1640501744
+8../../../../user_rtl/parallel_ntt_0_butterfly_tb.v
+F../../../../user_rtl/parallel_ntt_0_butterfly_tb.v
+R10
+R11
+r1
+!s85 0
+31
+!s108 1640501937.000000
+R13
+R14
+!i113 0
+R15
+R16
+R4
+vparallel_ntt_0_wrapper
+!s10a 1636605770
+R19
+!i10b 1
+!s100 aL;XClIPgJ^D]JoRB8L<N2
+I61f@K6K>V[eFNae[:i>9i2
+R8
+R0
+w1636605770
+8../../../../user_rtl/parallel_ntt_0_wrapper.v
+F../../../../user_rtl/parallel_ntt_0_wrapper.v
+R10
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+R16
+R4
+vparallel_NTT_top
+R6
+R36
+!i10b 1
+!s100 [hS<^]1_:XMDUXci]CEfZ0
+IcL6Ag4<o?2_Ig8bJB9<8X3
+R8
+R0
+R37
+8../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/parallel_NTT_top.v
+F../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/parallel_NTT_top.v
+R38
+R11
+r1
+!s85 0
+31
+R39
+R13
+R14
+!i113 0
+R15
+R16
+R4
+nparallel_@n@t@t_top
+vparallel_ntt_v2_0
+R6
+R36
+!i10b 1
+!s100 H8>7me5c6f:SMT?iOPQ@A2
+IQW6UgiK:`K`1>i`578lWX0
+R8
+R0
+R37
+8../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/hdl/parallel_ntt_v2_0.v
+F../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/hdl/parallel_ntt_v2_0.v
+L0 4
+R11
+r1
+!s85 0
+31
+R39
+R13
+R14
+!i113 0
+R15
+R16
+R4
+vparallel_ntt_v2_0_M_AXIS
+R6
+R36
+!i10b 1
+!s100 6@CmnFM1l::=enGYa@M?b1
+IJ7Y?J:;I@CWncT`]]5Yc<0
+R8
+R0
+R37
+8../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/hdl/parallel_ntt_v2_0_M_AXIS.v
+F../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/hdl/parallel_ntt_v2_0_M_AXIS.v
+L0 4
+R11
+r1
+!s85 0
+31
+R39
+R13
+R14
+!i113 0
+R15
+R16
+R4
+nparallel_ntt_v2_0_@m_@a@x@i@s
+vparallel_ntt_v2_0_S_AXIS
+R6
+R7
+!i10b 1
+!s100 ^P9X;hNT_^KbgA]3n`F]^3
+I2OJ1=ShTgGV@Rng3Q>HJ70
+R8
+R0
+R9
+8../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/hdl/parallel_ntt_v2_0_S_AXIS.v
+F../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/hdl/parallel_ntt_v2_0_S_AXIS.v
+L0 4
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+R16
+R4
+nparallel_ntt_v2_0_@s_@a@x@i@s

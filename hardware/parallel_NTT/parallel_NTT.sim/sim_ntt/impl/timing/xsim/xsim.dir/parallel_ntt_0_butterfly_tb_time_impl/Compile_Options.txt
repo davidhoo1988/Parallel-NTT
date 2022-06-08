@@ -1,0 +1,1 @@
+-wto "b5319ea4d1204568bed12873f350a247" --incr --debug "typical" --relax --mt "2" --maxdelay -L "xil_defaultlib" -L "simprims_ver" -L "secureip" --snapshot "parallel_ntt_0_butterfly_tb_time_impl" -transport_int_delays -pulse_r "0" -pulse_int_r "0" -pulse_e "0" -pulse_int_e "0" "xil_defaultlib.parallel_ntt_0_butterfly_tb" "xil_defaultlib.glbl" -log "elaborate.log" 

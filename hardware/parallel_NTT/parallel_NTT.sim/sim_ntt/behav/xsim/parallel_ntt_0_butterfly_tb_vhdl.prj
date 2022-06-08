@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mult_gen_32x32/sim/mult_gen_32x32.vhd" \
+"../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mult_gen_64x33/sim/mult_gen_64x33.vhd" \
+
+# Do not sort compile order
+nosort

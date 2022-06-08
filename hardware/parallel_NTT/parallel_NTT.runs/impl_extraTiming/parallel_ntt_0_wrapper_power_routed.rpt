@@ -1,0 +1,342 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date             : Sat Dec  4 11:55:16 2021
+| Host             : DESKTOP-AN42RLU running 64-bit major release  (build 9200)
+| Command          : report_power -file parallel_ntt_0_wrapper_power_routed.rpt -pb parallel_ntt_0_wrapper_power_summary_routed.pb -rpx parallel_ntt_0_wrapper_power_routed.rpx
+| Design           : parallel_ntt_0_wrapper
+| Device           : xczu7ev-ffvc1156-2-e
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 0.650        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.058        |
+| Device Static (W)        | 0.592        |
+| Effective TJA (C/W)      | 1.0          |
+| Max Ambient (C)          | 99.4         |
+| Junction Temperature (C) | 25.6         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |     0.008 |        3 |       --- |             --- |
+| CLB Logic                |     0.007 |     3111 |       --- |             --- |
+|   LUT as Logic           |     0.005 |      879 |    230400 |            0.38 |
+|   LUT as Shift Register  |     0.001 |      221 |    101760 |            0.22 |
+|   Register               |    <0.001 |     1470 |    460800 |            0.32 |
+|   CARRY8                 |    <0.001 |       52 |     28800 |            0.18 |
+|   LUT as Distributed RAM |    <0.001 |       32 |    101760 |            0.03 |
+|   Others                 |     0.000 |      121 |       --- |             --- |
+| Signals                  |     0.009 |     4050 |       --- |             --- |
+| Block RAM                |     0.005 |        2 |       312 |            0.64 |
+| DSPs                     |     0.006 |       30 |      1728 |            1.74 |
+| I/O                      |     0.023 |       79 |       360 |           21.94 |
+| Static Power             |     0.592 |          |           |                 |
+| Total                    |     0.650 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------------+-------------+-----------+-------------+------------+
+| Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------------+-------------+-----------+-------------+------------+
+| Vccint          |       0.850 |     0.176 |       0.040 |      0.136 |
+| Vccint_io       |       0.850 |     0.071 |       0.001 |      0.070 |
+| Vccbram         |       0.850 |     0.003 |       0.001 |      0.002 |
+| Vccaux          |       1.800 |     0.148 |       0.000 |      0.148 |
+| Vccaux_io       |       1.800 |     0.062 |       0.007 |      0.055 |
+| Vcco33          |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18          |       1.800 |     0.006 |       0.005 |      0.000 |
+| Vcco15          |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135         |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12          |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vcco10          |       1.000 |     0.000 |       0.000 |      0.000 |
+| Vccadc          |       1.800 |     0.008 |       0.000 |      0.008 |
+| VCC_PSINTFP     |       0.850 |     0.000 |       0.000 |      0.000 |
+| VCC_PSINTLP     |       0.850 |     0.005 |       0.000 |      0.005 |
+| VPS_MGTRAVCC    |       0.850 |     0.000 |       0.000 |      0.000 |
+| VCC_PSINTFP_DDR |       0.850 |     0.000 |       0.000 |      0.000 |
+| VCC_PSPLL       |       1.200 |     0.002 |       0.000 |      0.002 |
+| VPS_MGTRAVTT    |       1.800 |     0.000 |       0.000 |      0.000 |
+| VCCO_PSDDR_504  |       1.200 |     0.000 |       0.000 |      0.000 |
+| VCC_PSAUX       |       1.800 |     0.002 |       0.000 |      0.002 |
+| VCC_PSBATT      |       1.200 |     0.000 |       0.000 |      0.000 |
+| VCC_PSDDR_PLL   |       1.800 |     0.000 |       0.000 |      0.000 |
+| VCCO_PSIO0_500  |       3.300 |     0.000 |       0.000 |      0.000 |
+| VCCO_PSIO1_501  |       3.300 |     0.000 |       0.000 |      0.000 |
+| VCCO_PSIO2_502  |       3.300 |     0.000 |       0.000 |      0.000 |
+| VCCO_PSIO3_503  |       3.300 |     0.000 |       0.000 |      0.000 |
+| VCC_PSADC       |       1.800 |     0.002 |       0.000 |      0.002 |
+| VCCINT_VCU      |       0.900 |     0.025 |       0.000 |      0.025 |
+| MGTAVcc         |       0.900 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt         |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux       |       1.800 |     0.000 |       0.000 |      0.000 |
++-----------------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.0                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 1.5                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+-------------+-----------------+
+| Clock | Domain      | Constraint (ns) |
++-------+-------------+-----------------+
+| clk   | m_axis_aclk |            10.0 |
+| clk   | s_axis_aclk |            10.0 |
++-------+-------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-------------------------------------------------------------------------------------+-----------+
+| Name                                                                                | Power (W) |
++-------------------------------------------------------------------------------------+-----------+
+| parallel_ntt_0_wrapper                                                              |     0.058 |
+|   m_axis_aclk_IBUF_inst                                                             |    <0.001 |
+|   m_axis_aresetn_IBUF_inst                                                          |    <0.001 |
+|   m_axis_tready_IBUF_inst                                                           |    <0.001 |
+|   parallel_ntt_0_instance                                                           |     0.035 |
+|     inst                                                                            |     0.035 |
+|       parallel_NTT_top_inst                                                         |     0.033 |
+|         P0                                                                          |     0.016 |
+|           Barret                                                                    |     0.006 |
+|             mul32x32                                                                |     0.001 |
+|               U0                                                                    |     0.001 |
+|                 i_mult                                                              |     0.001 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.001 |
+|                     use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay |    <0.001 |
+|                     use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay |    <0.001 |
+|                     use_prim.iBdelx[1].iBdely[0].need_delay_line.Bdelay             |    <0.001 |
+|             mul64x33                                                                |     0.002 |
+|               U0                                                                    |     0.002 |
+|                 i_mult                                                              |     0.002 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.002 |
+|                     use_prim.appDSP48[3].bppDSP48[0].need_output_delay.output_delay |    <0.001 |
+|                     use_prim.iAdelx[1].iAdely[1].use_delay_line.Adelay              |    <0.001 |
+|                     use_prim.iAdelx[2].iAdely[0].use_delay_line.Adelay              |    <0.001 |
+|                     use_prim.iAdelx[2].iAdely[1].use_delay_line.Adelay              |    <0.001 |
+|                     use_prim.iAdelx[3].iAdely[0].use_delay_line.Adelay              |    <0.001 |
+|                     use_prim.iBdelx[1].iBdely[0].need_delay_line.Bdelay             |    <0.001 |
+|                     use_prim.iBdelx[1].iBdely[1].need_delay_line.Bdelay             |    <0.001 |
+|                     use_prim.iBdelx[3].iBdely[0].need_delay_line.Bdelay             |    <0.001 |
+|                     use_prim.iBdelx[3].iBdely[1].need_delay_line.Bdelay             |    <0.001 |
+|           data                                                                      |     0.003 |
+|           mul32x32                                                                  |     0.001 |
+|             U0                                                                      |     0.001 |
+|               i_mult                                                                |     0.001 |
+|                 gDSP.gDSP_only.iDSP                                                 |     0.001 |
+|                   use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay   |    <0.001 |
+|                   use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay   |    <0.001 |
+|                   use_prim.iBdelx[1].iBdely[0].need_delay_line.Bdelay               |    <0.001 |
+|                   use_prim.iBdelx[1].iBdely[1].need_delay_line.Bdelay               |    <0.001 |
+|           twiddle_factor                                                            |    <0.001 |
+|             mem_reg_0_15_0_0                                                        |    <0.001 |
+|             mem_reg_0_15_10_10                                                      |    <0.001 |
+|             mem_reg_0_15_11_11                                                      |    <0.001 |
+|             mem_reg_0_15_12_12                                                      |    <0.001 |
+|             mem_reg_0_15_13_13                                                      |    <0.001 |
+|             mem_reg_0_15_14_14                                                      |    <0.001 |
+|             mem_reg_0_15_15_15                                                      |    <0.001 |
+|             mem_reg_0_15_16_16                                                      |    <0.001 |
+|             mem_reg_0_15_17_17                                                      |    <0.001 |
+|             mem_reg_0_15_18_18                                                      |    <0.001 |
+|             mem_reg_0_15_19_19                                                      |    <0.001 |
+|             mem_reg_0_15_1_1                                                        |    <0.001 |
+|             mem_reg_0_15_20_20                                                      |    <0.001 |
+|             mem_reg_0_15_21_21                                                      |    <0.001 |
+|             mem_reg_0_15_22_22                                                      |    <0.001 |
+|             mem_reg_0_15_23_23                                                      |    <0.001 |
+|             mem_reg_0_15_24_24                                                      |    <0.001 |
+|             mem_reg_0_15_25_25                                                      |    <0.001 |
+|             mem_reg_0_15_26_26                                                      |    <0.001 |
+|             mem_reg_0_15_27_27                                                      |    <0.001 |
+|             mem_reg_0_15_28_28                                                      |    <0.001 |
+|             mem_reg_0_15_29_29                                                      |    <0.001 |
+|             mem_reg_0_15_2_2                                                        |    <0.001 |
+|             mem_reg_0_15_30_30                                                      |    <0.001 |
+|             mem_reg_0_15_31_31                                                      |    <0.001 |
+|             mem_reg_0_15_3_3                                                        |    <0.001 |
+|             mem_reg_0_15_4_4                                                        |    <0.001 |
+|             mem_reg_0_15_5_5                                                        |    <0.001 |
+|             mem_reg_0_15_6_6                                                        |    <0.001 |
+|             mem_reg_0_15_7_7                                                        |    <0.001 |
+|             mem_reg_0_15_8_8                                                        |    <0.001 |
+|             mem_reg_0_15_9_9                                                        |    <0.001 |
+|         P1                                                                          |     0.017 |
+|           Barret                                                                    |     0.007 |
+|             mul32x32                                                                |     0.001 |
+|               U0                                                                    |     0.001 |
+|                 i_mult                                                              |     0.001 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.001 |
+|                     use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay |    <0.001 |
+|                     use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay |    <0.001 |
+|                     use_prim.iBdelx[1].iBdely[0].need_delay_line.Bdelay             |    <0.001 |
+|             mul64x33                                                                |     0.002 |
+|               U0                                                                    |     0.002 |
+|                 i_mult                                                              |     0.002 |
+|                   gDSP.gDSP_only.iDSP                                               |     0.002 |
+|                     use_prim.appDSP48[3].bppDSP48[0].need_output_delay.output_delay |    <0.001 |
+|                     use_prim.iAdelx[1].iAdely[1].use_delay_line.Adelay              |    <0.001 |
+|                     use_prim.iAdelx[2].iAdely[0].use_delay_line.Adelay              |    <0.001 |
+|                     use_prim.iAdelx[2].iAdely[1].use_delay_line.Adelay              |    <0.001 |
+|                     use_prim.iAdelx[3].iAdely[0].use_delay_line.Adelay              |    <0.001 |
+|                     use_prim.iBdelx[1].iBdely[0].need_delay_line.Bdelay             |    <0.001 |
+|                     use_prim.iBdelx[1].iBdely[1].need_delay_line.Bdelay             |    <0.001 |
+|                     use_prim.iBdelx[3].iBdely[0].need_delay_line.Bdelay             |    <0.001 |
+|                     use_prim.iBdelx[3].iBdely[1].need_delay_line.Bdelay             |    <0.001 |
+|           data                                                                      |     0.003 |
+|           mul32x32                                                                  |     0.001 |
+|             U0                                                                      |     0.001 |
+|               i_mult                                                                |     0.001 |
+|                 gDSP.gDSP_only.iDSP                                                 |     0.001 |
+|                   use_prim.appDSP48[0].bppDSP48[0].need_output_delay.output_delay   |    <0.001 |
+|                   use_prim.appDSP48[1].bppDSP48[0].need_output_delay.output_delay   |    <0.001 |
+|                   use_prim.iBdelx[1].iBdely[0].need_delay_line.Bdelay               |    <0.001 |
+|                   use_prim.iBdelx[1].iBdely[1].need_delay_line.Bdelay               |    <0.001 |
+|           twiddle_factor                                                            |    <0.001 |
+|             mem_reg_0_15_0_0                                                        |    <0.001 |
+|             mem_reg_0_15_10_10                                                      |    <0.001 |
+|             mem_reg_0_15_11_11                                                      |    <0.001 |
+|             mem_reg_0_15_12_12                                                      |    <0.001 |
+|             mem_reg_0_15_13_13                                                      |    <0.001 |
+|             mem_reg_0_15_14_14                                                      |    <0.001 |
+|             mem_reg_0_15_15_15                                                      |    <0.001 |
+|             mem_reg_0_15_16_16                                                      |    <0.001 |
+|             mem_reg_0_15_17_17                                                      |    <0.001 |
+|             mem_reg_0_15_18_18                                                      |    <0.001 |
+|             mem_reg_0_15_19_19                                                      |    <0.001 |
+|             mem_reg_0_15_1_1                                                        |    <0.001 |
+|             mem_reg_0_15_20_20                                                      |    <0.001 |
+|             mem_reg_0_15_21_21                                                      |    <0.001 |
+|             mem_reg_0_15_22_22                                                      |    <0.001 |
+|             mem_reg_0_15_23_23                                                      |    <0.001 |
+|             mem_reg_0_15_24_24                                                      |    <0.001 |
+|             mem_reg_0_15_25_25                                                      |    <0.001 |
+|             mem_reg_0_15_26_26                                                      |    <0.001 |
+|             mem_reg_0_15_27_27                                                      |    <0.001 |
+|             mem_reg_0_15_28_28                                                      |    <0.001 |
+|             mem_reg_0_15_29_29                                                      |    <0.001 |
+|             mem_reg_0_15_2_2                                                        |    <0.001 |
+|             mem_reg_0_15_30_30                                                      |    <0.001 |
+|             mem_reg_0_15_31_31                                                      |    <0.001 |
+|             mem_reg_0_15_3_3                                                        |    <0.001 |
+|             mem_reg_0_15_4_4                                                        |    <0.001 |
+|             mem_reg_0_15_5_5                                                        |    <0.001 |
+|             mem_reg_0_15_6_6                                                        |    <0.001 |
+|             mem_reg_0_15_7_7                                                        |    <0.001 |
+|             mem_reg_0_15_8_8                                                        |    <0.001 |
+|             mem_reg_0_15_9_9                                                        |    <0.001 |
+|       parallel_ntt_v1_0_M_AXIS_inst                                                 |     0.001 |
+|       parallel_ntt_v1_0_S_AXIS_inst                                                 |    <0.001 |
+|   s_axis_aclk_IBUF_inst                                                             |    <0.001 |
+|   s_axis_aresetn_IBUF_inst                                                          |    <0.001 |
+|   s_axis_tdata_IBUF[0]_inst                                                         |    <0.001 |
+|   s_axis_tdata_IBUF[10]_inst                                                        |    <0.001 |
+|   s_axis_tdata_IBUF[11]_inst                                                        |    <0.001 |
+|   s_axis_tdata_IBUF[12]_inst                                                        |    <0.001 |
+|   s_axis_tdata_IBUF[13]_inst                                                        |    <0.001 |
+|   s_axis_tdata_IBUF[14]_inst                                                        |    <0.001 |
+|   s_axis_tdata_IBUF[15]_inst                                                        |    <0.001 |
+|   s_axis_tdata_IBUF[16]_inst                                                        |    <0.001 |
+|   s_axis_tdata_IBUF[17]_inst                                                        |    <0.001 |
+|   s_axis_tdata_IBUF[18]_inst                                                        |    <0.001 |
+|   s_axis_tdata_IBUF[19]_inst                                                        |    <0.001 |
+|   s_axis_tdata_IBUF[1]_inst                                                         |    <0.001 |
+|   s_axis_tdata_IBUF[20]_inst                                                        |    <0.001 |
+|   s_axis_tdata_IBUF[21]_inst                                                        |    <0.001 |
+|   s_axis_tdata_IBUF[22]_inst                                                        |    <0.001 |
+|   s_axis_tdata_IBUF[23]_inst                                                        |    <0.001 |
+|   s_axis_tdata_IBUF[24]_inst                                                        |    <0.001 |
+|   s_axis_tdata_IBUF[25]_inst                                                        |    <0.001 |
+|   s_axis_tdata_IBUF[26]_inst                                                        |    <0.001 |
+|   s_axis_tdata_IBUF[27]_inst                                                        |    <0.001 |
+|   s_axis_tdata_IBUF[28]_inst                                                        |    <0.001 |
+|   s_axis_tdata_IBUF[29]_inst                                                        |    <0.001 |
+|   s_axis_tdata_IBUF[2]_inst                                                         |    <0.001 |
+|   s_axis_tdata_IBUF[30]_inst                                                        |    <0.001 |
+|   s_axis_tdata_IBUF[31]_inst                                                        |    <0.001 |
+|   s_axis_tdata_IBUF[3]_inst                                                         |    <0.001 |
+|   s_axis_tdata_IBUF[4]_inst                                                         |    <0.001 |
+|   s_axis_tdata_IBUF[5]_inst                                                         |    <0.001 |
+|   s_axis_tdata_IBUF[6]_inst                                                         |    <0.001 |
+|   s_axis_tdata_IBUF[7]_inst                                                         |    <0.001 |
+|   s_axis_tdata_IBUF[8]_inst                                                         |    <0.001 |
+|   s_axis_tdata_IBUF[9]_inst                                                         |    <0.001 |
+|   s_axis_tvalid_IBUF_inst                                                           |    <0.001 |
+|   start_IBUF_inst                                                                   |    <0.001 |
++-------------------------------------------------------------------------------------+-----------+
+
+

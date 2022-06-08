@@ -1,0 +1,7 @@
+Running: xsim.dir/parallel_ntt_0_butterfly_tb_time_synth/xsimk.exe -simmode gui -wdb parallel_ntt_0_butterfly_tb_time_synth.wdb -simrunnum 0 -socket 52203
+Design successfully loaded
+Design Loading Memory Usage: 2029364 KB (Peak: 2029364 KB)
+Design Loading CPU Usage: 4531 ms
+Simulation completed
+Simulation Memory Usage: 2116036 KB (Peak: 2116036 KB)
+Simulation CPU Usage: 28874 ms

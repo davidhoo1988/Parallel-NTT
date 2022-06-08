@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  -i "../../../../../user_rtl" \
+"parallel_ntt_0_butterfly_tb_func_impl.v" \
+"../../../../../user_rtl/parallel_ntt_0_butterfly_tb.v" \
+
+# Do not sort compile order
+nosort

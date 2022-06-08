@@ -1,0 +1,1350 @@
+# //  ModelSim SE-64 10.5 Feb 13 2016 
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do {parallel_ntt_0_butterfly_tb_simulate.do}
+# vsim -voptargs=""+acc"" "+transport_int_delays" "+pulse_e/0" "+pulse_int_e/0" "+pulse_r/0" "+pulse_int_r/0" -L xil_defaultlib -L simprims_ver -L secureip -lib xil_defaultlib xil_defaultlib.parallel_ntt_0_butterfly_tb xil_defaultlib.glbl 
+# Start time: 17:27:46 on Nov 18,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.parallel_ntt_0_butterfly_tb(fast)
+# Loading work.parallel_ntt_0_wrapper(fast)
+# Loading simprims_ver.OBUF(fast)
+# Loading simprims_ver.BUFGCE(fast)
+# Loading work.IBUF_UNIQ_BASE_(fast)
+# Loading simprims_ver.IBUFCTRL(fast)
+# Loading simprims_ver.INBUF(fast)
+# Loading work.IBUF_HD449(fast)
+# Loading work.IBUF_HD450(fast)
+# Loading work.parallel_ntt_0(fast)
+# Loading work.parallel_ntt_0_parallel_ntt_v1_0(fast)
+# Loading simprims_ver.VCC(fast)
+# Loading simprims_ver.LUT1(fast)
+# Loading simprims_ver.CARRY8(fast)
+# Loading work.parallel_ntt_0_parallel_NTT_top(fast)
+# Loading work.parallel_ntt_0_NTT_processor(fast)
+# Loading work.parallel_ntt_0_Barret_reduce__xdcDup__1(fast)
+# Loading simprims_ver.LUT5(fast)
+# Loading simprims_ver.LUT5(fast__1)
+# Loading simprims_ver.LUT2(fast)
+# Loading simprims_ver.LUT6(fast)
+# Loading simprims_ver.LUT6(fast__1)
+# Loading simprims_ver.LUT6(fast__2)
+# Loading simprims_ver.LUT6(fast__3)
+# Loading simprims_ver.LUT6(fast__4)
+# Loading simprims_ver.LUT4(fast)
+# Loading simprims_ver.LUT2(fast__1)
+# Loading simprims_ver.LUT4(fast__1)
+# Loading simprims_ver.LUT4(fast__2)
+# Loading simprims_ver.LUT4(fast__3)
+# Loading simprims_ver.LUT6(fast__5)
+# Loading simprims_ver.LUT6(fast__6)
+# Loading simprims_ver.LUT6(fast__7)
+# Loading simprims_ver.LUT5(fast__2)
+# Loading simprims_ver.LUT5(fast__3)
+# Loading simprims_ver.LUT4(fast__4)
+# Loading simprims_ver.LUT6(fast__8)
+# Loading simprims_ver.LUT5(fast__4)
+# Loading simprims_ver.LUT4(fast__5)
+# Loading simprims_ver.LUT3(fast)
+# Loading simprims_ver.LUT2(fast__2)
+# Loading simprims_ver.LUT4(fast__6)
+# Loading simprims_ver.LUT4(fast__7)
+# Loading simprims_ver.LUT6(fast__9)
+# Loading simprims_ver.SRL16E(fast)
+# Loading simprims_ver.FDRE(fast)
+# Loading simprims_ver.LUT2(fast__3)
+# Loading simprims_ver.FDRE(fast__1)
+# Loading simprims_ver.LUT5(fast__5)
+# Loading simprims_ver.LUT6(fast__10)
+# Loading simprims_ver.LUT6(fast__11)
+# Loading simprims_ver.LUT6(fast__12)
+# Loading simprims_ver.LUT5(fast__6)
+# Loading simprims_ver.LUT4(fast__8)
+# Loading simprims_ver.LUT6(fast__13)
+# Loading simprims_ver.LUT6(fast__14)
+# Loading simprims_ver.LUT4(fast__9)
+# Loading work.parallel_ntt_0_mult_gen_32x32__5(fast)
+# Loading work.parallel_ntt_0_mult_gen_v12_0_14__5(fast)
+# Loading simprims_ver.DSP_ALU(fast)
+# Loading simprims_ver.DSP_A_B_DATA(fast)
+# Loading simprims_ver.DSP_C_DATA(fast)
+# Loading simprims_ver.DSP_MULTIPLIER(fast)
+# Loading simprims_ver.DSP_M_DATA(fast)
+# Loading simprims_ver.DSP_OUTPUT(fast)
+# Loading simprims_ver.DSP_PREADD_DATA(fast)
+# Loading simprims_ver.DSP_PREADD(fast)
+# Loading simprims_ver.DSP_ALU(fast__1)
+# Loading simprims_ver.DSP_A_B_DATA(fast__1)
+# Loading simprims_ver.DSP_A_B_DATA(fast__2)
+# Loading simprims_ver.DSP_MULTIPLIER(fast__1)
+# Loading simprims_ver.DSP_PREADD_DATA(fast__1)
+# Loading simprims_ver.GND(fast)
+# Loading work.parallel_ntt_0_mult_gen_64x33__4(fast)
+# Loading work.parallel_ntt_0_mult_gen_v12_0_14__parameterized1__4(fast)
+# Loading simprims_ver.DSP_A_B_DATA(fast__3)
+# Loading simprims_ver.LUT2(fast__4)
+# Loading simprims_ver.LUT6(fast__15)
+# Loading simprims_ver.LUT3(fast__1)
+# Loading simprims_ver.LUT6(fast__16)
+# Loading simprims_ver.FDSE(fast)
+# Loading simprims_ver.LUT5(fast__7)
+# Loading simprims_ver.LUT5(fast__8)
+# Loading simprims_ver.LUT4(fast__10)
+# Loading simprims_ver.LUT6(fast__17)
+# Loading simprims_ver.SRLC32E(fast)
+# Loading simprims_ver.LUT3(fast__2)
+# Loading simprims_ver.LUT6(fast__18)
+# Loading simprims_ver.LUT3(fast__3)
+# Loading work.parallel_ntt_0_mem_dp__1(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_v8_4_1__1(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_v8_4_1_synth_84(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_top_85(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_generic_cstr_86(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_prim_width_87(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_prim_wrapper_init_88(fast)
+# Loading simprims_ver.RAMB36E2(fast)
+# Loading simprims_ver.LUT3(fast__4)
+# Loading simprims_ver.LUT5(fast__9)
+# Loading simprims_ver.LUT5(fast__10)
+# Loading simprims_ver.LUT6(fast__19)
+# Loading simprims_ver.LUT2(fast__5)
+# Loading simprims_ver.FDSE(fast__1)
+# Loading simprims_ver.LUT6(fast__20)
+# Loading simprims_ver.LUT6(fast__21)
+# Loading simprims_ver.LUT5(fast__11)
+# Loading simprims_ver.LUT6(fast__22)
+# Loading simprims_ver.LUT6(fast__23)
+# Loading simprims_ver.LUT6(fast__24)
+# Loading simprims_ver.LUT5(fast__12)
+# Loading simprims_ver.LUT5(fast__13)
+# Loading simprims_ver.LUT2(fast__6)
+# Loading simprims_ver.LUT3(fast__5)
+# Loading simprims_ver.LUT5(fast__14)
+# Loading simprims_ver.LUT3(fast__6)
+# Loading simprims_ver.LUT6(fast__25)
+# Loading simprims_ver.LUT6(fast__26)
+# Loading simprims_ver.LUT3(fast__7)
+# Loading work.parallel_ntt_0_mult_gen_32x32__4(fast)
+# Loading work.parallel_ntt_0_mult_gen_v12_0_14__4(fast)
+# Loading simprims_ver.DSP_A_B_DATA(fast__4)
+# Loading simprims_ver.LUT5(fast__15)
+# Loading simprims_ver.LUT4(fast__11)
+# Loading simprims_ver.LUT6(fast__27)
+# Loading simprims_ver.LUT3(fast__8)
+# Loading simprims_ver.LUT6(fast__28)
+# Loading simprims_ver.LUT6(fast__29)
+# Loading simprims_ver.LUT6(fast__30)
+# Loading simprims_ver.LUT2(fast__7)
+# Loading work.parallel_ntt_0_mem_sp(fast)
+# Loading work.RAM32X1S_UNIQ_BASE_(fast)
+# Loading simprims_ver.RAMS32(fast)
+# Loading work.RAM32X1S_HD465(fast)
+# Loading simprims_ver.RAMS32(fast__1)
+# Loading work.RAM32X1S_HD466(fast)
+# Loading simprims_ver.RAMS32(fast__2)
+# Loading work.RAM32X1S_HD467(fast)
+# Loading simprims_ver.RAMS32(fast__3)
+# Loading work.RAM32X1S_HD468(fast)
+# Loading simprims_ver.RAMS32(fast__4)
+# Loading work.RAM32X1S_HD469(fast)
+# Loading simprims_ver.RAMS32(fast__5)
+# Loading work.RAM32X1S_HD470(fast)
+# Loading simprims_ver.RAMS32(fast__6)
+# Loading work.RAM32X1S_HD471(fast)
+# Loading simprims_ver.RAMS32(fast__7)
+# Loading work.RAM32X1S_HD472(fast)
+# Loading simprims_ver.RAMS32(fast__8)
+# Loading work.RAM32X1S_HD473(fast)
+# Loading simprims_ver.RAMS32(fast__9)
+# Loading work.RAM32X1S_HD474(fast)
+# Loading simprims_ver.RAMS32(fast__10)
+# Loading work.RAM32X1S_HD475(fast)
+# Loading simprims_ver.RAMS32(fast__11)
+# Loading work.RAM32X1S_HD476(fast)
+# Loading simprims_ver.RAMS32(fast__12)
+# Loading work.RAM32X1S_HD477(fast)
+# Loading simprims_ver.RAMS32(fast__13)
+# Loading work.RAM32X1S_HD478(fast)
+# Loading simprims_ver.RAMS32(fast__14)
+# Loading work.RAM32X1S_HD479(fast)
+# Loading simprims_ver.RAMS32(fast__15)
+# Loading work.RAM32X1S_HD480(fast)
+# Loading simprims_ver.RAMS32(fast__16)
+# Loading work.RAM32X1S_HD481(fast)
+# Loading simprims_ver.RAMS32(fast__17)
+# Loading work.RAM32X1S_HD482(fast)
+# Loading simprims_ver.RAMS32(fast__18)
+# Loading work.RAM32X1S_HD483(fast)
+# Loading simprims_ver.RAMS32(fast__19)
+# Loading work.RAM32X1S_HD484(fast)
+# Loading simprims_ver.RAMS32(fast__20)
+# Loading work.RAM32X1S_HD485(fast)
+# Loading simprims_ver.RAMS32(fast__21)
+# Loading work.RAM32X1S_HD486(fast)
+# Loading simprims_ver.RAMS32(fast__22)
+# Loading work.RAM32X1S_HD487(fast)
+# Loading simprims_ver.RAMS32(fast__23)
+# Loading work.RAM32X1S_HD488(fast)
+# Loading simprims_ver.RAMS32(fast__24)
+# Loading work.RAM32X1S_HD489(fast)
+# Loading simprims_ver.RAMS32(fast__25)
+# Loading work.RAM32X1S_HD490(fast)
+# Loading simprims_ver.RAMS32(fast__26)
+# Loading work.RAM32X1S_HD491(fast)
+# Loading simprims_ver.RAMS32(fast__27)
+# Loading work.RAM32X1S_HD492(fast)
+# Loading simprims_ver.RAMS32(fast__28)
+# Loading work.RAM32X1S_HD493(fast)
+# Loading simprims_ver.RAMS32(fast__29)
+# Loading work.RAM32X1S_HD494(fast)
+# Loading simprims_ver.RAMS32(fast__30)
+# Loading work.RAM32X1S_HD495(fast)
+# Loading simprims_ver.RAMS32(fast__31)
+# Loading simprims_ver.LUT3(fast__9)
+# Loading simprims_ver.LUT6(fast__31)
+# Loading simprims_ver.LUT4(fast__12)
+# Loading work.parallel_ntt_0_NTT_processor__parameterized0(fast)
+# Loading work.parallel_ntt_0_Barret_reduce__xdcDup__2(fast)
+# Loading work.parallel_ntt_0_mult_gen_32x32__7(fast)
+# Loading work.parallel_ntt_0_mult_gen_v12_0_14__7(fast)
+# Loading work.parallel_ntt_0_mult_gen_64x33__5(fast)
+# Loading work.parallel_ntt_0_mult_gen_v12_0_14__parameterized1__5(fast)
+# Loading simprims_ver.LUT4(fast__13)
+# Loading work.parallel_ntt_0_mem_dp__2(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_v8_4_1__2(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_v8_4_1_synth_56(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_top_57(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_generic_cstr_58(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_prim_width_59(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_prim_wrapper_init_60(fast)
+# Loading simprims_ver.LUT6(fast__32)
+# Loading work.parallel_ntt_0_mult_gen_32x32__6(fast)
+# Loading work.parallel_ntt_0_mult_gen_v12_0_14__6(fast)
+# Loading work.parallel_ntt_0_mem_sp__parameterized0(fast)
+# Loading work.RAM32X1S_HD511(fast)
+# Loading simprims_ver.RAMS32(fast__32)
+# Loading work.RAM32X1S_HD512(fast)
+# Loading simprims_ver.RAMS32(fast__33)
+# Loading work.RAM32X1S_HD513(fast)
+# Loading simprims_ver.RAMS32(fast__34)
+# Loading work.RAM32X1S_HD514(fast)
+# Loading simprims_ver.RAMS32(fast__35)
+# Loading work.RAM32X1S_HD515(fast)
+# Loading simprims_ver.RAMS32(fast__36)
+# Loading work.RAM32X1S_HD516(fast)
+# Loading simprims_ver.RAMS32(fast__37)
+# Loading work.RAM32X1S_HD517(fast)
+# Loading simprims_ver.RAMS32(fast__38)
+# Loading work.RAM32X1S_HD518(fast)
+# Loading simprims_ver.RAMS32(fast__39)
+# Loading work.RAM32X1S_HD519(fast)
+# Loading simprims_ver.RAMS32(fast__40)
+# Loading work.RAM32X1S_HD520(fast)
+# Loading work.RAM32X1S_HD521(fast)
+# Loading simprims_ver.RAMS32(fast__41)
+# Loading work.RAM32X1S_HD522(fast)
+# Loading simprims_ver.RAMS32(fast__42)
+# Loading work.RAM32X1S_HD523(fast)
+# Loading simprims_ver.RAMS32(fast__43)
+# Loading work.RAM32X1S_HD524(fast)
+# Loading work.RAM32X1S_HD525(fast)
+# Loading simprims_ver.RAMS32(fast__44)
+# Loading work.RAM32X1S_HD526(fast)
+# Loading simprims_ver.RAMS32(fast__45)
+# Loading work.RAM32X1S_HD527(fast)
+# Loading simprims_ver.RAMS32(fast__46)
+# Loading work.RAM32X1S_HD528(fast)
+# Loading simprims_ver.RAMS32(fast__47)
+# Loading work.RAM32X1S_HD529(fast)
+# Loading simprims_ver.RAMS32(fast__48)
+# Loading work.RAM32X1S_HD530(fast)
+# Loading simprims_ver.RAMS32(fast__49)
+# Loading work.RAM32X1S_HD531(fast)
+# Loading simprims_ver.RAMS32(fast__50)
+# Loading work.RAM32X1S_HD532(fast)
+# Loading simprims_ver.RAMS32(fast__51)
+# Loading work.RAM32X1S_HD533(fast)
+# Loading simprims_ver.RAMS32(fast__52)
+# Loading work.RAM32X1S_HD534(fast)
+# Loading simprims_ver.RAMS32(fast__53)
+# Loading work.RAM32X1S_HD535(fast)
+# Loading simprims_ver.RAMS32(fast__54)
+# Loading work.RAM32X1S_HD536(fast)
+# Loading simprims_ver.RAMS32(fast__55)
+# Loading work.RAM32X1S_HD537(fast)
+# Loading simprims_ver.RAMS32(fast__56)
+# Loading work.RAM32X1S_HD538(fast)
+# Loading simprims_ver.RAMS32(fast__57)
+# Loading work.RAM32X1S_HD539(fast)
+# Loading work.RAM32X1S_HD540(fast)
+# Loading simprims_ver.RAMS32(fast__58)
+# Loading work.RAM32X1S_HD541(fast)
+# Loading simprims_ver.RAMS32(fast__59)
+# Loading work.RAM32X1S_HD542(fast)
+# Loading simprims_ver.RAMS32(fast__60)
+# Loading work.parallel_ntt_0_NTT_processor__parameterized1(fast)
+# Loading work.parallel_ntt_0_Barret_reduce__xdcDup__3(fast)
+# Loading work.parallel_ntt_0_mult_gen_32x32__9(fast)
+# Loading work.parallel_ntt_0_mult_gen_v12_0_14__9(fast)
+# Loading work.parallel_ntt_0_mult_gen_64x33__6(fast)
+# Loading work.parallel_ntt_0_mult_gen_v12_0_14__parameterized1__6(fast)
+# Loading work.parallel_ntt_0_mem_dp__3(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_v8_4_1__3(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_v8_4_1_synth_28(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_top_29(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_generic_cstr_30(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_prim_width_31(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_prim_wrapper_init_32(fast)
+# Loading simprims_ver.LUT5(fast__16)
+# Loading work.parallel_ntt_0_mult_gen_32x32__8(fast)
+# Loading work.parallel_ntt_0_mult_gen_v12_0_14__8(fast)
+# Loading work.parallel_ntt_0_mem_sp__parameterized1(fast)
+# Loading work.RAM32X1S_HD558(fast)
+# Loading simprims_ver.RAMS32(fast__61)
+# Loading work.RAM32X1S_HD559(fast)
+# Loading simprims_ver.RAMS32(fast__62)
+# Loading work.RAM32X1S_HD560(fast)
+# Loading simprims_ver.RAMS32(fast__63)
+# Loading work.RAM32X1S_HD561(fast)
+# Loading simprims_ver.RAMS32(fast__64)
+# Loading work.RAM32X1S_HD562(fast)
+# Loading simprims_ver.RAMS32(fast__65)
+# Loading work.RAM32X1S_HD563(fast)
+# Loading simprims_ver.RAMS32(fast__66)
+# Loading work.RAM32X1S_HD564(fast)
+# Loading simprims_ver.RAMS32(fast__67)
+# Loading work.RAM32X1S_HD565(fast)
+# Loading simprims_ver.RAMS32(fast__68)
+# Loading work.RAM32X1S_HD566(fast)
+# Loading simprims_ver.RAMS32(fast__69)
+# Loading work.RAM32X1S_HD567(fast)
+# Loading simprims_ver.RAMS32(fast__70)
+# Loading work.RAM32X1S_HD568(fast)
+# Loading work.RAM32X1S_HD569(fast)
+# Loading simprims_ver.RAMS32(fast__71)
+# Loading work.RAM32X1S_HD570(fast)
+# Loading simprims_ver.RAMS32(fast__72)
+# Loading work.RAM32X1S_HD571(fast)
+# Loading simprims_ver.RAMS32(fast__73)
+# Loading work.RAM32X1S_HD572(fast)
+# Loading simprims_ver.RAMS32(fast__74)
+# Loading work.RAM32X1S_HD573(fast)
+# Loading simprims_ver.RAMS32(fast__75)
+# Loading work.RAM32X1S_HD574(fast)
+# Loading simprims_ver.RAMS32(fast__76)
+# Loading work.RAM32X1S_HD575(fast)
+# Loading simprims_ver.RAMS32(fast__77)
+# Loading work.RAM32X1S_HD576(fast)
+# Loading work.RAM32X1S_HD577(fast)
+# Loading simprims_ver.RAMS32(fast__78)
+# Loading work.RAM32X1S_HD578(fast)
+# Loading simprims_ver.RAMS32(fast__79)
+# Loading work.RAM32X1S_HD579(fast)
+# Loading simprims_ver.RAMS32(fast__80)
+# Loading work.RAM32X1S_HD580(fast)
+# Loading simprims_ver.RAMS32(fast__81)
+# Loading work.RAM32X1S_HD581(fast)
+# Loading simprims_ver.RAMS32(fast__82)
+# Loading work.RAM32X1S_HD582(fast)
+# Loading simprims_ver.RAMS32(fast__83)
+# Loading work.RAM32X1S_HD583(fast)
+# Loading simprims_ver.RAMS32(fast__84)
+# Loading work.RAM32X1S_HD584(fast)
+# Loading simprims_ver.RAMS32(fast__85)
+# Loading work.RAM32X1S_HD585(fast)
+# Loading simprims_ver.RAMS32(fast__86)
+# Loading work.RAM32X1S_HD586(fast)
+# Loading simprims_ver.RAMS32(fast__87)
+# Loading work.RAM32X1S_HD587(fast)
+# Loading simprims_ver.RAMS32(fast__88)
+# Loading work.RAM32X1S_HD588(fast)
+# Loading simprims_ver.RAMS32(fast__89)
+# Loading work.RAM32X1S_HD589(fast)
+# Loading simprims_ver.RAMS32(fast__90)
+# Loading work.parallel_ntt_0_NTT_processor__parameterized2(fast)
+# Loading work.parallel_ntt_0_Barret_reduce(fast)
+# Loading work.parallel_ntt_0_mult_gen_32x32(fast)
+# Loading work.parallel_ntt_0_mult_gen_v12_0_14(fast)
+# Loading work.parallel_ntt_0_mult_gen_64x33(fast)
+# Loading work.parallel_ntt_0_mult_gen_v12_0_14__parameterized1(fast)
+# Loading work.parallel_ntt_0_mem_dp(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_v8_4_1(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_v8_4_1_synth(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_top(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_generic_cstr(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_prim_width(fast)
+# Loading work.parallel_ntt_0_blk_mem_gen_prim_wrapper_init(fast)
+# Loading simprims_ver.LUT4(fast__14)
+# Loading work.parallel_ntt_0_mult_gen_32x32__10(fast)
+# Loading work.parallel_ntt_0_mult_gen_v12_0_14__10(fast)
+# Loading work.parallel_ntt_0_mem_sp__parameterized2(fast)
+# Loading work.RAM32X1S_HD605(fast)
+# Loading simprims_ver.RAMS32(fast__91)
+# Loading work.RAM32X1S_HD606(fast)
+# Loading simprims_ver.RAMS32(fast__92)
+# Loading work.RAM32X1S_HD607(fast)
+# Loading simprims_ver.RAMS32(fast__93)
+# Loading work.RAM32X1S_HD608(fast)
+# Loading simprims_ver.RAMS32(fast__94)
+# Loading work.RAM32X1S_HD609(fast)
+# Loading work.RAM32X1S_HD610(fast)
+# Loading simprims_ver.RAMS32(fast__95)
+# Loading work.RAM32X1S_HD611(fast)
+# Loading simprims_ver.RAMS32(fast__96)
+# Loading work.RAM32X1S_HD612(fast)
+# Loading simprims_ver.RAMS32(fast__97)
+# Loading work.RAM32X1S_HD613(fast)
+# Loading simprims_ver.RAMS32(fast__98)
+# Loading work.RAM32X1S_HD614(fast)
+# Loading work.RAM32X1S_HD615(fast)
+# Loading simprims_ver.RAMS32(fast__99)
+# Loading work.RAM32X1S_HD616(fast)
+# Loading work.RAM32X1S_HD617(fast)
+# Loading work.RAM32X1S_HD618(fast)
+# Loading simprims_ver.RAMS32(fast__100)
+# Loading work.RAM32X1S_HD619(fast)
+# Loading simprims_ver.RAMS32(fast__101)
+# Loading work.RAM32X1S_HD620(fast)
+# Loading simprims_ver.RAMS32(fast__102)
+# Loading work.RAM32X1S_HD621(fast)
+# Loading simprims_ver.RAMS32(fast__103)
+# Loading work.RAM32X1S_HD622(fast)
+# Loading simprims_ver.RAMS32(fast__104)
+# Loading work.RAM32X1S_HD623(fast)
+# Loading work.RAM32X1S_HD624(fast)
+# Loading simprims_ver.RAMS32(fast__105)
+# Loading work.RAM32X1S_HD625(fast)
+# Loading work.RAM32X1S_HD626(fast)
+# Loading work.RAM32X1S_HD627(fast)
+# Loading simprims_ver.RAMS32(fast__106)
+# Loading work.RAM32X1S_HD628(fast)
+# Loading work.RAM32X1S_HD629(fast)
+# Loading simprims_ver.RAMS32(fast__107)
+# Loading work.RAM32X1S_HD630(fast)
+# Loading simprims_ver.RAMS32(fast__108)
+# Loading work.RAM32X1S_HD631(fast)
+# Loading simprims_ver.RAMS32(fast__109)
+# Loading work.RAM32X1S_HD632(fast)
+# Loading simprims_ver.RAMS32(fast__110)
+# Loading work.RAM32X1S_HD633(fast)
+# Loading simprims_ver.RAMS32(fast__111)
+# Loading work.RAM32X1S_HD634(fast)
+# Loading simprims_ver.RAMS32(fast__112)
+# Loading work.RAM32X1S_HD635(fast)
+# Loading simprims_ver.RAMS32(fast__113)
+# Loading work.RAM32X1S_HD636(fast)
+# Loading simprims_ver.RAMS32(fast__114)
+# Loading work.parallel_ntt_0_parallel_ntt_v1_0_M_AXIS(fast)
+# Loading simprims_ver.LUT6(fast__33)
+# Loading simprims_ver.LUT4(fast__15)
+# Loading simprims_ver.LUT2(fast__8)
+# Loading simprims_ver.LUT5(fast__17)
+# Loading work.parallel_ntt_0_parallel_ntt_v1_0_S_AXIS(fast)
+# Loading work.IBUF_HD637(fast)
+# Loading work.IBUF_HD638(fast)
+# Loading work.IBUF_HD639(fast)
+# Loading work.IBUF_HD640(fast)
+# Loading work.IBUF_HD641(fast)
+# Loading work.IBUF_HD642(fast)
+# Loading work.IBUF_HD643(fast)
+# Loading work.IBUF_HD644(fast)
+# Loading work.IBUF_HD645(fast)
+# Loading work.IBUF_HD646(fast)
+# Loading work.IBUF_HD647(fast)
+# Loading work.IBUF_HD648(fast)
+# Loading work.IBUF_HD649(fast)
+# Loading work.IBUF_HD650(fast)
+# Loading work.IBUF_HD651(fast)
+# Loading work.IBUF_HD652(fast)
+# Loading work.IBUF_HD653(fast)
+# Loading work.IBUF_HD654(fast)
+# Loading work.IBUF_HD655(fast)
+# Loading work.IBUF_HD656(fast)
+# Loading work.IBUF_HD657(fast)
+# Loading work.IBUF_HD658(fast)
+# Loading work.IBUF_HD659(fast)
+# Loading work.IBUF_HD660(fast)
+# Loading work.IBUF_HD661(fast)
+# Loading work.IBUF_HD662(fast)
+# Loading work.IBUF_HD663(fast)
+# Loading work.IBUF_HD664(fast)
+# Loading work.IBUF_HD665(fast)
+# Loading work.IBUF_HD666(fast)
+# Loading work.IBUF_HD667(fast)
+# Loading work.IBUF_HD668(fast)
+# Loading work.IBUF_HD669(fast)
+# Loading work.IBUF_HD670(fast)
+# Loading work.IBUF_HD671(fast)
+# Loading work.IBUF_HD672(fast)
+# Loading work.glbl(fast)
+# Loading instances from parallel_ntt_0_butterfly_tb_time_impl.sdf
+# Loading timing data from parallel_ntt_0_butterfly_tb_time_impl.sdf
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb File: ../../../../../user_rtl/parallel_ntt_0_butterfly_tb.v
+# ** Warning: (vsim-3316) No solution possible for some delayed timing check nets. 156 negative limits were zeroed. Use +ntc_warn for more info.
+#    Time: 0 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb File: ../../../../../user_rtl/parallel_ntt_0_butterfly_tb.v
+# 1
+# 1
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+#  Time Clk Rstb Valid Ready Last Data
+#        0.0ns 0 0 0 1 0 00000000000000000000000000000000
+#       50.0ns 1 0 0 1 0 00000000000000000000000000000000
+#      100.0ns 0 0 0 1 0 00000000000000000000000000000000
+#      150.0ns 1 0 0 1 0 00000000000000000000000000000000
+#      200.0ns 0 0 0 1 0 00000000000000000000000000000000
+#      250.0ns 1 0 0 1 0 00000000000000000000000000000000
+#      300.0ns 0 0 0 1 0 00000000000000000000000000000000
+#      350.0ns 1 0 0 1 0 00000000000000000000000000000000
+#      400.0ns 0 0 0 1 0 00000000000000000000000000000000
+#      450.0ns 1 0 0 1 0 00000000000000000000000000000000
+#      500.0ns 0 0 0 1 0 00000000000000000000000000000000
+#      550.0ns 1 0 0 1 0 00000000000000000000000000000000
+#      600.0ns 0 0 0 1 0 00000000000000000000000000000000
+#      650.0ns 1 0 0 1 0 00000000000000000000000000000000
+#      700.0ns 0 0 0 1 0 00000000000000000000000000000000
+#      750.0ns 1 0 0 1 0 00000000000000000000000000000000
+#      800.0ns 0 0 0 1 0 00000000000000000000000000000000
+#      850.0ns 1 0 0 1 0 00000000000000000000000000000000
+#      900.0ns 0 0 0 1 0 00000000000000000000000000000000
+#      950.0ns 1 0 0 1 0 00000000000000000000000000000000
+add wave -position insertpoint sim:/parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/data/*
+run 13us
+#     1000.0ns 0 0 0 1 0 00000000000000000000000000000000
+#     1050.0ns 1 0 0 1 0 00000000000000000000000000000000
+#     1100.0ns 0 0 0 1 0 00000000000000000000000000000000
+#     1150.0ns 1 0 0 1 0 00000000000000000000000000000000
+#     1200.0ns 0 0 0 1 0 00000000000000000000000000000000
+#     1250.0ns 1 0 0 1 0 00000000000000000000000000000000
+#     1300.0ns 0 0 0 1 0 00000000000000000000000000000000
+#     1350.0ns 1 0 0 1 0 00000000000000000000000000000000
+#     1400.0ns 0 0 0 1 0 00000000000000000000000000000000
+#     1450.0ns 1 0 0 1 0 00000000000000000000000000000000
+#     1500.0ns 0 0 0 1 0 00000000000000000000000000000000
+#     1550.0ns 1 0 0 1 0 00000000000000000000000000000000
+#     1600.0ns 0 0 0 1 0 00000000000000000000000000000000
+#     1650.0ns 1 0 0 1 0 00000000000000000000000000000000
+#     1700.0ns 0 0 0 1 0 00000000000000000000000000000000
+#     1750.0ns 1 0 0 1 0 00000000000000000000000000000000
+#     1800.0ns 0 0 0 1 0 00000000000000000000000000000000
+#     1850.0ns 1 0 0 1 0 00000000000000000000000000000000
+#     1900.0ns 0 0 0 1 0 00000000000000000000000000000000
+#     1950.0ns 1 0 0 1 0 00000000000000000000000000000000
+#     2000.0ns 0 1 0 1 0 00000000000000000000000000000000
+#     2050.0ns 1 1 0 1 0 00000000000000000000000000000000
+#     2100.0ns 0 1 0 1 0 00000000000000000000000000000000
+#     2150.0ns 1 1 0 1 0 00000000000000000000000000000000
+#     2200.0ns 0 1 0 1 0 00000000000000000000000000000000
+#     2250.0ns 1 1 0 1 0 00000000000000000000000000000000
+#     2300.0ns 0 1 0 1 0 00000000000000000000000000000000
+#     2350.0ns 1 1 0 1 0 00000000000000000000000000000000
+#     2400.0ns 0 1 0 1 0 00000000000000000000000000000000
+#     2450.0ns 1 1 0 1 0 00000000000000000000000000000000
+#     2500.0ns 0 1 0 1 0 00000000000000000000000000000000
+#     2550.0ns 1 1 0 1 0 00000000000000000000000000000000
+#     2600.0ns 0 1 0 1 0 00000000000000000000000000000000
+#     2650.0ns 1 1 0 1 0 00000000000000000000000000000000
+#     2700.0ns 0 1 0 1 0 00000000000000000000000000000000
+#     2750.0ns 1 1 0 1 0 00000000000000000000000000000000
+#     2800.0ns 0 1 0 1 0 00000000000000000000000000000000
+#     2850.0ns 1 1 0 1 0 00000000000000000000000000000000
+#     2900.0ns 0 1 0 1 0 00000000000000000000000000000000
+#     2950.0ns 1 1 0 1 0 00000000000000000000000000000000
+#     3000.0ns 0 1 0 1 0 00000000000000000000000000000000
+#     3050.0ns 1 1 0 1 0 00000000000000000000000000000000
+#     3100.0ns 0 1 0 1 0 00000000000000000000000000000000
+#     3150.0ns 1 1 0 1 0 00000000000000000000000000000000
+#     3200.0ns 0 1 0 1 0 00000000000000000000000000000000
+#     3250.0ns 1 1 0 1 0 00000000000000000000000000000000
+#     3300.0ns 0 1 0 1 0 00000000000000000000000000000000
+#     3350.0ns 1 1 0 1 0 00000000000000000000000000000000
+#     3400.0ns 0 1 0 1 0 00000000000000000000000000000000
+#     3450.0ns 1 1 0 1 0 00000000000000000000000000000000
+#     3500.0ns 0 1 0 1 0 00000000000000000000000000000000
+#     3550.0ns 1 1 0 1 0 00000000000000000000000000000000
+#     3600.0ns 0 1 0 1 0 00000000000000000000000000000000
+#     3650.0ns 1 1 0 1 0 00000000000000000000000000000000
+#     3700.0ns 0 1 0 1 0 00000000000000000000000000000000
+#     3750.0ns 1 1 0 1 0 00000000000000000000000000000000
+#     3800.0ns 0 1 0 1 0 00000000000000000000000000000000
+#     3850.0ns 1 1 0 1 0 00000000000000000000000000000000
+#     3900.0ns 0 1 0 1 0 00000000000000000000000000000000
+#     3950.0ns 1 1 0 1 0 00000000000000000000000000000000
+#     4000.0ns 0 1 0 1 0 00000000000000000000000000000000
+#     4025.0ns 0 1 1 1 0 00000000000000000000000000000000
+#     4050.0ns 1 1 1 1 0 00000000000000000000000000000000
+#     4100.0ns 0 1 1 1 0 00000000000000000000000000000001
+#     4150.0ns 1 1 1 1 0 00000000000000000000000000000001
+#     4200.0ns 0 1 1 1 0 00000000000000000000000000000010
+#     4250.0ns 1 1 1 1 0 00000000000000000000000000000010
+#     4300.0ns 0 1 1 1 0 00000000000000000000000000000011
+#     4350.0ns 1 1 1 1 0 00000000000000000000000000000011
+#     4400.0ns 0 1 1 1 0 00000000000000000000000000000100
+#     4450.0ns 1 1 1 1 0 00000000000000000000000000000100
+#     4500.0ns 0 1 1 1 0 00000000000000000000000000000101
+#     4550.0ns 1 1 1 1 0 00000000000000000000000000000101
+#     4600.0ns 0 1 1 1 0 00000000000000000000000000000110
+#     4650.0ns 1 1 1 1 0 00000000000000000000000000000110
+#     4700.0ns 0 1 1 1 0 00000000000000000000000000000111
+#     4750.0ns 1 1 1 1 0 00000000000000000000000000000111
+#     4800.0ns 0 1 1 1 0 00000000000000000000000000001000
+#     4850.0ns 1 1 1 1 0 00000000000000000000000000001000
+#     4900.0ns 0 1 1 1 0 00000000000000000000000000001001
+#     4950.0ns 1 1 1 1 0 00000000000000000000000000001001
+#     5000.0ns 0 1 1 1 0 00000000000000000000000000001010
+#     5050.0ns 1 1 1 1 0 00000000000000000000000000001010
+#     5100.0ns 0 1 1 1 0 00000000000000000000000000001011
+#     5150.0ns 1 1 1 1 0 00000000000000000000000000001011
+#     5200.0ns 0 1 1 1 0 00000000000000000000000000001100
+#     5250.0ns 1 1 1 1 0 00000000000000000000000000001100
+#     5300.0ns 0 1 1 1 0 00000000000000000000000000001101
+#     5350.0ns 1 1 1 1 0 00000000000000000000000000001101
+#     5400.0ns 0 1 1 1 0 00000000000000000000000000001110
+#     5450.0ns 1 1 1 1 0 00000000000000000000000000001110
+#     5500.0ns 0 1 1 1 0 00000000000000000000000000001111
+#     5550.0ns 1 1 1 1 0 00000000000000000000000000001111
+#     5600.0ns 0 1 1 1 0 00000000000000000000000000010000
+#     5650.0ns 1 1 1 1 0 00000000000000000000000000010000
+#     5700.0ns 0 1 1 1 0 00000000000000000000000000010001
+#     5750.0ns 1 1 1 1 0 00000000000000000000000000010001
+#     5800.0ns 0 1 1 1 0 00000000000000000000000000010010
+#     5850.0ns 1 1 1 1 0 00000000000000000000000000010010
+#     5900.0ns 0 1 1 1 0 00000000000000000000000000010011
+#     5950.0ns 1 1 1 1 0 00000000000000000000000000010011
+#     6000.0ns 0 1 1 1 0 00000000000000000000000000010100
+#     6050.0ns 1 1 1 1 0 00000000000000000000000000010100
+#     6100.0ns 0 1 1 1 0 00000000000000000000000000010101
+#     6150.0ns 1 1 1 1 0 00000000000000000000000000010101
+#     6200.0ns 0 1 1 1 0 00000000000000000000000000010110
+#     6250.0ns 1 1 1 1 0 00000000000000000000000000010110
+#     6300.0ns 0 1 1 1 0 00000000000000000000000000010111
+#     6350.0ns 1 1 1 1 0 00000000000000000000000000010111
+#     6400.0ns 0 1 1 1 0 00000000000000000000000000011000
+#     6450.0ns 1 1 1 1 0 00000000000000000000000000011000
+#     6500.0ns 0 1 1 1 0 00000000000000000000000000011001
+#     6550.0ns 1 1 1 1 0 00000000000000000000000000011001
+#     6600.0ns 0 1 1 1 0 00000000000000000000000000011010
+#     6650.0ns 1 1 1 1 0 00000000000000000000000000011010
+#     6700.0ns 0 1 1 1 0 00000000000000000000000000011011
+#     6750.0ns 1 1 1 1 0 00000000000000000000000000011011
+#     6800.0ns 0 1 1 1 0 00000000000000000000000000011100
+#     6850.0ns 1 1 1 1 0 00000000000000000000000000011100
+#     6900.0ns 0 1 1 1 0 00000000000000000000000000011101
+#     6950.0ns 1 1 1 1 0 00000000000000000000000000011101
+#     7000.0ns 0 1 1 1 0 00000000000000000000000000011110
+#     7050.0ns 1 1 1 1 0 00000000000000000000000000011110
+#     7100.0ns 0 1 1 1 0 00000000000000000000000000011111
+#     7125.0ns 0 1 1 1 1 00000000000000000000000000011111
+#     7150.0ns 1 1 1 1 1 00000000000000000000000000011111
+#     7200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#     7250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#     7300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#     7350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#     7400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#     7450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#     7500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#     7550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#     7600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#     7650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#     7700.0ns 0 0 0 1 0 00000000000000000000000000011111
+#     7750.0ns 1 0 0 1 0 00000000000000000000000000011111
+#     7800.0ns 0 0 0 1 0 00000000000000000000000000011111
+#     7850.0ns 1 0 0 1 0 00000000000000000000000000011111
+#     7900.0ns 0 0 0 1 0 00000000000000000000000000011111
+#     7950.0ns 1 0 0 1 0 00000000000000000000000000011111
+#     8000.0ns 0 0 0 1 0 00000000000000000000000000011111
+#     8050.0ns 1 0 0 1 0 00000000000000000000000000011111
+#     8100.0ns 0 0 0 1 0 00000000000000000000000000011111
+#     8150.0ns 1 0 0 1 0 00000000000000000000000000011111
+#     8200.0ns 0 0 0 1 0 00000000000000000000000000011111
+#     8250.0ns 1 0 0 1 0 00000000000000000000000000011111
+#     8300.0ns 0 0 0 1 0 00000000000000000000000000011111
+#     8350.0ns 1 0 0 1 0 00000000000000000000000000011111
+#     8400.0ns 0 0 0 1 0 00000000000000000000000000011111
+#     8450.0ns 1 0 0 1 0 00000000000000000000000000011111
+#     8500.0ns 0 0 0 1 0 00000000000000000000000000011111
+#     8550.0ns 1 0 0 1 0 00000000000000000000000000011111
+#     8600.0ns 0 0 0 1 0 00000000000000000000000000011111
+#     8650.0ns 1 0 0 1 0 00000000000000000000000000011111
+#     8700.0ns 0 0 0 1 0 00000000000000000000000000011111
+#     8750.0ns 1 0 0 1 0 00000000000000000000000000011111
+#     8800.0ns 0 0 0 1 0 00000000000000000000000000011111
+#     8850.0ns 1 0 0 1 0 00000000000000000000000000011111
+#     8900.0ns 0 0 0 1 0 00000000000000000000000000011111
+#     8950.0ns 1 0 0 1 0 00000000000000000000000000011111
+#     9000.0ns 0 0 0 1 0 00000000000000000000000000011111
+#     9050.0ns 1 0 0 1 0 00000000000000000000000000011111
+#     9100.0ns 0 0 0 1 0 00000000000000000000000000011111
+#     9150.0ns 1 0 0 1 0 00000000000000000000000000011111
+#     9200.0ns 0 0 0 1 0 00000000000000000000000000011111
+#     9250.0ns 1 0 0 1 0 00000000000000000000000000011111
+#     9300.0ns 0 0 0 1 0 00000000000000000000000000011111
+#     9350.0ns 1 0 0 1 0 00000000000000000000000000011111
+#     9400.0ns 0 0 0 1 0 00000000000000000000000000011111
+#     9450.0ns 1 0 0 1 0 00000000000000000000000000011111
+#     9500.0ns 0 0 0 1 0 00000000000000000000000000011111
+#     9550.0ns 1 0 0 1 0 00000000000000000000000000011111
+#     9600.0ns 0 0 0 1 0 00000000000000000000000000011111
+#     9650.0ns 1 0 0 1 0 00000000000000000000000000011111
+#     9700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#     9750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#     9800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#     9850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#     9900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#     9950.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    10000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    10050.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    10100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    10150.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    10200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    10250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    10300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    10350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    10400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    10450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    10500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    10550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    10600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    10650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    10700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    10750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    10800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    10850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    10900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    10950.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    11000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    11050.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    11100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    11150.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    11200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    11250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    11300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    11350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    11400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    11450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    11500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    11550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    11600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    11650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    11700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    11750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    11800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    11850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    11900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    11950.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:11953105 ps, :11953119 ps, 275 ps );
+#    Time: 11953161 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/\cnt_reg[1] 
+#    12000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    12050.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    12100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    12150.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:12153668 ps, :12153676 ps, 275 ps );
+#    Time: 12153718 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\twiddle_factor_addr_reg[0] 
+#    12200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    12250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    12300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    12350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    12400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    12450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    12500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    12550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    12600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    12650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    12700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    12750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    12800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    12850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    12900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    12950.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    13000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    13050.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    13100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    13150.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    13200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    13250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    13300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    13350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    13400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    13450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    13500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    13550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    13600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    13650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    13700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    13750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    13800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    13850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    13900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    13950.0ns 1 1 0 1 0 00000000000000000000000000011111
+run 100us
+#    14000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    14050.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    14100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    14150.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    14200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    14250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    14300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    14350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    14400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    14450.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:14453676 ps, :14453901 ps, 275 ps );
+#    Time: 14453943 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\twiddle_factor_addr_reg[0] 
+#    14500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    14550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    14600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    14650.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:14653105 ps, :14653119 ps, 275 ps );
+#    Time: 14653161 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/\cnt_reg[1] 
+#    14700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    14750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    14800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    14850.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:14853097 ps, :14853303 ps, 275 ps );
+#    Time: 14853345 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/\roundi_reg[0] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:14853116 ps, :14853327 ps, 275 ps );
+#    Time: 14853369 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P2/\roundi_reg[0] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:14853155 ps, :14853391 ps, 275 ps );
+#    Time: 14853433 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/\roundi_reg[0] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:14853291 ps, :14853527 ps, 275 ps );
+#    Time: 14853569 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/\twiddle_factor_addr_reg[0] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:14853334 ps, :14853540 ps, 275 ps );
+#    Time: 14853582 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/\twiddle_factor_addr_reg[0] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:14853358 ps, :14853569 ps, 275 ps );
+#    Time: 14853611 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P2/\twiddle_factor_addr_reg[0] 
+#    14900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    14950.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    15000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    15050.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:15053105 ps, :15053119 ps, 275 ps );
+#    Time: 15053161 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/\cnt_reg[1] 
+#    15100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    15150.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    15200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    15250.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:15253309 ps, :15253317 ps, 275 ps );
+#    Time: 15253359 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\roundi_reg[0] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:15253668 ps, :15253676 ps, 275 ps );
+#    Time: 15253718 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\twiddle_factor_addr_reg[1] 
+#    15300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    15350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    15400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    15450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    15500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    15550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    15600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    15650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    15700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    15750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    15800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    15850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    15900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    15950.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    16000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    16050.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    16100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    16150.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    16200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    16250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    16300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    16350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    16400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    16450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    16500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    16550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    16600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    16650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    16700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    16750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    16800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    16850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    16900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    16950.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    17000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    17050.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    17100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    17150.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    17200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    17250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    17300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    17350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    17400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    17450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    17500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    17550.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:17553317 ps, :17553542 ps, 275 ps );
+#    Time: 17553584 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\roundi_reg[0] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:17553676 ps, :17553901 ps, 275 ps );
+#    Time: 17553943 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\twiddle_factor_addr_reg[1] 
+#    17600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    17650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    17700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    17750.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:17753105 ps, :17753119 ps, 275 ps );
+#    Time: 17753161 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/\cnt_reg[1] 
+#    17800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    17850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    17900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    17950.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:17953097 ps, :17953303 ps, 275 ps );
+#    Time: 17953345 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/\roundi_reg[1] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:17953116 ps, :17953327 ps, 275 ps );
+#    Time: 17953369 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P2/\roundi_reg[1] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:17953155 ps, :17953391 ps, 275 ps );
+#    Time: 17953433 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/\roundi_reg[1] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:17953291 ps, :17953527 ps, 275 ps );
+#    Time: 17953569 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/\twiddle_factor_addr_reg[1] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:17953334 ps, :17953540 ps, 275 ps );
+#    Time: 17953582 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/\twiddle_factor_addr_reg[1] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:17953358 ps, :17953569 ps, 275 ps );
+#    Time: 17953611 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P2/\twiddle_factor_addr_reg[1] 
+#    18000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    18050.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    18100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    18150.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:18153105 ps, :18153119 ps, 275 ps );
+#    Time: 18153161 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/\cnt_reg[1] 
+#    18200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    18250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    18300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    18350.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:18353309 ps, :18353317 ps, 275 ps );
+#    Time: 18353359 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\roundi_reg[1] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:18353668 ps, :18353676 ps, 275 ps );
+#    Time: 18353718 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\twiddle_factor_addr_reg[1] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:18353668 ps, :18353676 ps, 275 ps );
+#    Time: 18353718 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\twiddle_factor_addr_reg[0] 
+#    18400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    18450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    18500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    18550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    18600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    18650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    18700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    18750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    18800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    18850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    18900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    18950.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    19000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    19050.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    19100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    19150.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    19200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    19250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    19300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    19350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    19400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    19450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    19500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    19550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    19600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    19650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    19700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    19750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    19800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    19850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    19900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    19950.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    20000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    20050.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    20100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    20150.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    20200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    20250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    20300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    20350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    20400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    20450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    20500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    20550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    20600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    20650.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:20653317 ps, :20653542 ps, 275 ps );
+#    Time: 20653584 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\roundi_reg[1] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:20653676 ps, :20653901 ps, 275 ps );
+#    Time: 20653943 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\twiddle_factor_addr_reg[0] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:20653676 ps, :20653901 ps, 275 ps );
+#    Time: 20653943 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\twiddle_factor_addr_reg[1] 
+#    20700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    20750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    20800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    20850.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:20853105 ps, :20853119 ps, 275 ps );
+#    Time: 20853161 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/\cnt_reg[1] 
+#    20900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    20950.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    21000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    21050.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:21053097 ps, :21053303 ps, 275 ps );
+#    Time: 21053345 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/\roundi_reg[0] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:21053097 ps, :21053303 ps, 275 ps );
+#    Time: 21053345 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/\roundi_reg[1] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:21053116 ps, :21053327 ps, 275 ps );
+#    Time: 21053369 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P2/\roundi_reg[0] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:21053116 ps, :21053327 ps, 275 ps );
+#    Time: 21053369 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P2/\roundi_reg[1] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:21053155 ps, :21053391 ps, 275 ps );
+#    Time: 21053433 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/\roundi_reg[0] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:21053155 ps, :21053391 ps, 275 ps );
+#    Time: 21053433 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/\roundi_reg[1] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:21053291 ps, :21053527 ps, 275 ps );
+#    Time: 21053569 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/\twiddle_factor_addr_reg[0] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:21053291 ps, :21053527 ps, 275 ps );
+#    Time: 21053569 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/\twiddle_factor_addr_reg[1] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:21053334 ps, :21053540 ps, 275 ps );
+#    Time: 21053582 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/\twiddle_factor_addr_reg[0] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:21053334 ps, :21053540 ps, 275 ps );
+#    Time: 21053582 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/\twiddle_factor_addr_reg[1] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:21053358 ps, :21053569 ps, 275 ps );
+#    Time: 21053611 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P2/\twiddle_factor_addr_reg[0] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:21053358 ps, :21053569 ps, 275 ps );
+#    Time: 21053611 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P2/\twiddle_factor_addr_reg[1] 
+#    21100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    21150.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    21200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    21250.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:21253170 ps, :21253296 ps, 275 ps );
+#    Time: 21253338 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P2/\base_reg[2] 
+#    21300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    21350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    21400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    21450.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:21453309 ps, :21453317 ps, 275 ps );
+#    Time: 21453359 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\roundi_reg[1] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:21453309 ps, :21453317 ps, 275 ps );
+#    Time: 21453359 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\roundi_reg[0] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:21453668 ps, :21453676 ps, 275 ps );
+#    Time: 21453718 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\twiddle_factor_addr_reg[2] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:21453668 ps, :21453676 ps, 275 ps );
+#    Time: 21453718 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\twiddle_factor_addr_reg[0] 
+#    21500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    21550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    21600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    21650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    21700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    21750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    21800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    21850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    21900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    21950.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    22000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    22050.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    22100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    22150.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    22200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    22250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    22300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    22350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    22400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    22450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    22500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    22550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    22600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    22650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    22700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    22750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    22800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    22850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    22900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    22950.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    23000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    23050.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    23100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    23150.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    23200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    23250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    23300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    23350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    23400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    23450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    23500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    23550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    23600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    23650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    23700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    23750.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:23753317 ps, :23753542 ps, 275 ps );
+#    Time: 23753584 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\roundi_reg[0] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:23753317 ps, :23753542 ps, 275 ps );
+#    Time: 23753584 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\roundi_reg[1] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:23753676 ps, :23753901 ps, 275 ps );
+#    Time: 23753943 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\twiddle_factor_addr_reg[0] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:23753676 ps, :23753901 ps, 275 ps );
+#    Time: 23753943 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\twiddle_factor_addr_reg[2] 
+#    23800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    23850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    23900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    23950.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:23953170 ps, :23953296 ps, 275 ps );
+#    Time: 23953338 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P2/\base_reg[2] 
+#    24000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    24050.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    24100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    24150.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:24153109 ps, :24153315 ps, 275 ps );
+#    Time: 24153357 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/\roundi_reg[2] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:24153116 ps, :24153327 ps, 275 ps );
+#    Time: 24153369 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P2/\roundi_reg[2] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:24153155 ps, :24153391 ps, 275 ps );
+#    Time: 24153433 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/\roundi_reg[2] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:24153291 ps, :24153527 ps, 275 ps );
+#    Time: 24153569 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/\twiddle_factor_addr_reg[0] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:24153291 ps, :24153527 ps, 275 ps );
+#    Time: 24153569 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/\twiddle_factor_addr_reg[2] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:24153334 ps, :24153540 ps, 275 ps );
+#    Time: 24153582 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/\twiddle_factor_addr_reg[0] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:24153334 ps, :24153540 ps, 275 ps );
+#    Time: 24153582 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/\twiddle_factor_addr_reg[2] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:24153358 ps, :24153569 ps, 275 ps );
+#    Time: 24153611 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P2/\twiddle_factor_addr_reg[0] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:24153358 ps, :24153569 ps, 275 ps );
+#    Time: 24153611 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P2/\twiddle_factor_addr_reg[2] 
+#    24200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    24250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    24300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    24350.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:24353170 ps, :24353296 ps, 275 ps );
+#    Time: 24353338 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P2/\base_reg[2] 
+#    24400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    24450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    24500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    24550.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:24553210 ps, :24553218 ps, 275 ps );
+#    Time: 24553260 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\roundi_reg[2] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:24553668 ps, :24553676 ps, 275 ps );
+#    Time: 24553718 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\twiddle_factor_addr_reg[3] 
+#    24600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    24650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    24700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    24750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    24800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    24850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    24900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    24950.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    25000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    25050.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    25100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    25150.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    25200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    25250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    25300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    25350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    25400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    25450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    25500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    25550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    25600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    25650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    25700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    25750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    25800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    25850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    25900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    25950.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    26000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    26050.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    26100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    26150.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    26200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    26250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    26300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    26350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    26400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    26450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    26500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    26550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    26600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    26650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    26700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    26750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    26800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    26850.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:26853218 ps, :26853443 ps, 275 ps );
+#    Time: 26853485 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\roundi_reg[2] 
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:26853676 ps, :26853901 ps, 275 ps );
+#    Time: 26853943 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P3/\twiddle_factor_addr_reg[3] 
+#    26900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    26950.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    27000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    27050.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Error: D:/Xilinx/Vivado/2018.1/data/verilog/src/unisims/FDRE.v(158): $width( posedge R &&& init_enable:27053170 ps, :27053296 ps, 275 ps );
+#    Time: 27053338 ps  Iteration: 1  Instance: /parallel_ntt_0_butterfly_tb/DUT/parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P2/\base_reg[2] 
+#    27100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    27150.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    27200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    27250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    27300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    27350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    27400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    27450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    27500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    27550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    27600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    27650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    27700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    27750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    27800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    27850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    27900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    27950.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    28000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    28050.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    28100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    28150.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    28200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    28250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    28300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    28350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    28400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    28450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    28500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    28550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    28600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    28650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    28700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    28750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    28800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    28850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    28900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    28950.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    29000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    29050.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    29100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    29150.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    29200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    29250.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Note: $stop    : ../../../../../user_rtl/parallel_ntt_0_butterfly_tb.v(114)
+#    Time: 29255849 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb
+# Break in Module parallel_ntt_0_butterfly_tb at ../../../../../user_rtl/parallel_ntt_0_butterfly_tb.v line 114
+run 10us
+#    29300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    29350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    29400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    29450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    29500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    29550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    29600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    29650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    29700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    29750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    29800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    29850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    29900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    29950.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    30000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    30050.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    30100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    30150.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    30200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    30250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    30300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    30350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    30400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    30450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    30500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    30550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    30600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    30650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    30700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    30750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    30800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    30850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    30900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    30950.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    31000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    31050.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    31100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    31150.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    31200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    31250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    31300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    31350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    31400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    31450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    31500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    31550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    31600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    31650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    31700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    31750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    31800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    31850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    31900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    31950.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    32000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    32050.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    32100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    32150.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    32200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    32250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    32300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    32350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    32400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    32450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    32500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    32550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    32600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    32650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    32700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    32750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    32800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    32850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    32900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    32950.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    33000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    33050.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    33100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    33150.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    33200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    33250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    33300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    33350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    33400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    33450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    33500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    33550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    33600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    33650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    33700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    33750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    33800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    33850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    33900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    33950.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    34000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    34050.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    34100.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    34150.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    34200.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    34250.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    34300.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    34350.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    34400.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    34450.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    34500.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    34550.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    34600.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    34650.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    34700.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    34750.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    34800.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    34850.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    34900.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    34950.0ns 1 1 0 1 0 00000000000000000000000000011111
+#    35000.0ns 0 1 0 1 0 00000000000000000000000000011111
+#    35050.0ns 1 1 0 1 0 00000000000000000000000000011111
+# ** Note: $stop    : ../../../../../user_rtl/parallel_ntt_0_butterfly_tb.v(127)
+#    Time: 35055695 ps  Iteration: 0  Instance: /parallel_ntt_0_butterfly_tb
+# Break in Module parallel_ntt_0_butterfly_tb at ../../../../../user_rtl/parallel_ntt_0_butterfly_tb.v line 127
+# End time: 17:36:58 on Nov 18,2021, Elapsed time: 0:09:12
+# Errors: 67, Warnings: 1

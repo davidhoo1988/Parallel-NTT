@@ -1,0 +1,96 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Sat Dec  4 11:53:06 2021
+| Host         : DESKTOP-AN42RLU running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file parallel_ntt_0_wrapper_control_sets_placed.rpt
+| Design       : parallel_ntt_0_wrapper
+| Device       : xczu7ev
+---------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    27 |
+| Unused register locations in slices containing registers |    22 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      3 |            9 |
+|      4 |            6 |
+|      5 |            1 |
+|      6 |            1 |
+|      8 |            1 |
+|    16+ |            9 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             532 |           84 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             663 |          137 |
+| Yes          | No                    | No                     |              64 |            4 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             211 |           44 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------+-----------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+------------------+----------------+
+|       Clock Signal       |                                      Enable Signal                                      |                                     Set/Reset Signal                                    | Slice Load Count | Bel Load Count |
++--------------------------+-----------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+------------------+----------------+
+|  m_axis_aclk_IBUF_BUFGCE |                                                                                         |                                                                                         |                2 |              3 |
+|  s_axis_aclk_IBUF_BUFGCE |                                                                                         | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/cntb[2]_i_1_n_0                   |                0 |              3 |
+|  s_axis_aclk_IBUF_BUFGCE |                                                                                         | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/cnt[2]_i_1__0_n_0                 |                1 |              3 |
+|  s_axis_aclk_IBUF_BUFGCE |                                                                                         | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/cnt[2]_i_1_n_0                    |                1 |              3 |
+|  s_axis_aclk_IBUF_BUFGCE |                                                                                         | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/cntb[2]_i_1__0_n_0                |                2 |              3 |
+|  s_axis_aclk_IBUF_BUFGCE | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/base                              | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/base[3]_i_1__0_n_0                |                1 |              3 |
+|  s_axis_aclk_IBUF_BUFGCE | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/roundi0                           | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/roundi[2]_i_1__0_n_0              |                0 |              3 |
+|  s_axis_aclk_IBUF_BUFGCE | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/base_0                            | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/base[3]_i_1_n_0                   |                2 |              3 |
+|  s_axis_aclk_IBUF_BUFGCE | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/roundi0                           | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/roundi[2]_i_1_n_0                 |                0 |              3 |
+|  s_axis_aclk_IBUF_BUFGCE | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/data_wea_i_1__0_n_0               | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/data_addra[3]_i_1_n_0             |                1 |              4 |
+|  s_axis_aclk_IBUF_BUFGCE | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/p_0_in                            | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/data_addra[3]_i_1_n_0             |                1 |              4 |
+|  s_axis_aclk_IBUF_BUFGCE | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/twiddle_factor_addr[3]_i_2__0_n_0 | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/twiddle_factor_addr[3]_i_1__0_n_0 |                0 |              4 |
+|  s_axis_aclk_IBUF_BUFGCE | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/data_wea_i_1_n_0                  | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/data_addra[3]_i_1__0_n_0          |                2 |              4 |
+|  s_axis_aclk_IBUF_BUFGCE | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/p_0_in                            | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/data_addra[3]_i_1__0_n_0          |                0 |              4 |
+|  s_axis_aclk_IBUF_BUFGCE | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/twiddle_factor_addr[3]_i_2_n_0    | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/twiddle_factor_addr[3]_i_1_n_0    |                0 |              4 |
+|  s_axis_aclk_IBUF_BUFGCE | parallel_ntt_0_instance/inst/parallel_ntt_v1_0_S_AXIS_inst/S_AXIS_TVALID_delay          | s_axis_aresetn_IBUF_inst/O                                                              |                0 |              5 |
+|  m_axis_aclk_IBUF_BUFGCE | parallel_ntt_0_instance/inst/parallel_ntt_v1_0_M_AXIS_inst/processor_num01_out          | m_axis_aresetn_IBUF_inst/O                                                              |                1 |              6 |
+|  m_axis_aclk_IBUF_BUFGCE |                                                                                         | m_axis_aresetn_IBUF_inst/O                                                              |                3 |              8 |
+|  m_axis_aclk_IBUF_BUFGCE | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/axis_tvalid_delay_reg                | m_axis_aresetn_IBUF_inst/O                                                              |               17 |             32 |
+|  s_axis_aclk_IBUF_BUFGCE | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/en                                |                                                                                         |                2 |             32 |
+|  s_axis_aclk_IBUF_BUFGCE | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/p_0_in                            | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/data_dib[31]_i_1__0_n_0           |                4 |             32 |
+|  s_axis_aclk_IBUF_BUFGCE | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/en                                |                                                                                         |                2 |             32 |
+|  s_axis_aclk_IBUF_BUFGCE | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/p_0_in                            | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/data_dib[31]_i_1_n_0              |                2 |             32 |
+|  s_axis_aclk_IBUF_BUFGCE | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P1/data_wea_i_1__0_n_0               | s_axis_aresetn_IBUF_inst/O                                                              |                8 |             34 |
+|  s_axis_aclk_IBUF_BUFGCE | parallel_ntt_0_instance/inst/parallel_NTT_top_inst/P0/data_wea_i_1_n_0                  | s_axis_aresetn_IBUF_inst/O                                                              |                5 |             34 |
+|  s_axis_aclk_IBUF_BUFGCE |                                                                                         | s_axis_aresetn_IBUF_inst/O                                                              |              130 |            643 |
+|  s_axis_aclk_IBUF_BUFGCE |                                                                                         |                                                                                         |              123 |            942 |
++--------------------------+-----------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------+------------------+----------------+
+
+

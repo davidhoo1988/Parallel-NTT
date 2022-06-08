@@ -1,0 +1,26 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.ip_user_files/ip/parallel_ntt_0/hdl/parallel_ntt_v2_0_S_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module parallel_ntt_v2_0_S_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/NTT_processor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NTT_processor
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mem_sp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_sp
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/Barret_reduce.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Barret_reduce
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/parallel_NTT_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module parallel_NTT_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mem_dp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_dp
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.ip_user_files/ip/parallel_ntt_0/hdl/parallel_ntt_v2_0_M_AXIS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module parallel_ntt_v2_0_M_AXIS
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.ip_user_files/ip/parallel_ntt_0/hdl/parallel_ntt_v2_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module parallel_ntt_v2_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.ip_user_files/ip/parallel_ntt_0/sim/parallel_ntt_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module parallel_ntt_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/parallel_ntt_0_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module parallel_ntt_0_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/parallel_ntt_0_butterfly_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module parallel_ntt_0_butterfly_tb
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mult_gen_32x32/sim/mult_gen_32x32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mult_gen_32x32
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mult_gen_64x33/sim/mult_gen_64x33.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mult_gen_64x33

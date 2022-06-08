@@ -1,0 +1,1906 @@
+
+*** Running vivado
+    with args -log parallel_ntt_0_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source parallel_ntt_0_wrapper.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source parallel_ntt_0_wrapper.tcl -notrace
+Command: synth_design -top parallel_ntt_0_wrapper -part xczu7ev-ffvc1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 18244 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 738.500 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'parallel_ntt_0_wrapper' [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/parallel_ntt_0_wrapper.v:23]
+INFO: [Synth 8-6157] synthesizing module 'parallel_ntt_0' [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-1372-DESKTOP-AN42RLU/realtime/parallel_ntt_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'parallel_ntt_0' (1#1) [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-1372-DESKTOP-AN42RLU/realtime/parallel_ntt_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'parallel_ntt_0_wrapper' (2#1) [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/parallel_ntt_0_wrapper.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 738.500 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 738.500 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 738.500 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-1372-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc] for cell 'parallel_ntt_0_instance'
+Finished Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-1372-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc] for cell 'parallel_ntt_0_instance'
+Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk' completely overrides clock 'm_axis_aclk'.
+New: create_clock -period 100.000 -name clk -waveform {0.000 50.000} [get_ports {m_axis_aclk s_axis_aclk}], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:7]
+Previous: create_clock -period 100.000 [get_ports m_axis_aclk], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-1372-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc:1]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk' completely overrides clock 's_axis_aclk'.
+New: create_clock -period 100.000 -name clk -waveform {0.000 50.000} [get_ports {m_axis_aclk s_axis_aclk}], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:7]
+Previous: create_clock -period 100.000 [get_ports s_axis_aclk], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-1372-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc:2]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+WARNING: [Constraints 18-633] Creating clock clk with 2 sources. [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:7]
+WARNING: [Constraints 18-96] Setting input delay on a clock pin 'm_axis_aclk' is not supported, ignoring it [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:8]
+WARNING: [Constraints 18-96] Setting input delay on a clock pin 's_axis_aclk' is not supported, ignoring it [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:8]
+Finished Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1613.645 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1613.645 ; gain = 875.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1613.645 ; gain = 875.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for parallel_ntt_0_instance. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1613.645 ; gain = 875.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1613.645 ; gain = 875.145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1613.645 ; gain = 875.145
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+Clock _9008001e22020000_p_TClock _50eeff1d22020000_p_TClock _6014001e22020000_p_TClock not yet defined at line 8 of file {E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc}
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 2247.320 ; gain = 1508.820
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 2247.320 ; gain = 1508.820
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 2247.449 ; gain = 1508.949
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2248.953 ; gain = 1510.453
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2248.953 ; gain = 1510.453
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2248.953 ; gain = 1510.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2248.953 ; gain = 1510.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2248.953 ; gain = 1510.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2248.953 ; gain = 1510.453
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------+----------+
+|      |BlackBox name  |Instances |
++------+---------------+----------+
+|1     |parallel_ntt_0 |         1|
++------+---------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |parallel_ntt_0 |     1|
+|2     |IBUF           |    44|
+|3     |OBUF           |    40|
++------+---------------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   124|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2248.953 ; gain = 1510.453
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 2248.961 ; gain = 635.316
+Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2248.961 ; gain = 1510.461
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 44 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 44 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 44 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+15 Infos, 3 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:05 . Memory (MB): peak = 2293.410 ; gain = 1554.910
+INFO: [Common 17-1381] The checkpoint 'E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/parallel_ntt_0_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file parallel_ntt_0_wrapper_utilization_synth.rpt -pb parallel_ntt_0_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.144 . Memory (MB): peak = 2293.703 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 15 15:38:14 2021...
+
+*** Running vivado
+    with args -log parallel_ntt_0_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source parallel_ntt_0_wrapper.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source parallel_ntt_0_wrapper.tcl -notrace
+Command: synth_design -top parallel_ntt_0_wrapper -part xczu7ev-ffvc1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13808 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 738.461 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'parallel_ntt_0_wrapper' [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/parallel_ntt_0_wrapper.v:23]
+INFO: [Synth 8-6157] synthesizing module 'parallel_ntt_0' [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-18992-DESKTOP-AN42RLU/realtime/parallel_ntt_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'parallel_ntt_0' (1#1) [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-18992-DESKTOP-AN42RLU/realtime/parallel_ntt_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'parallel_ntt_0_wrapper' (2#1) [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/parallel_ntt_0_wrapper.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 738.461 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 738.461 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 738.461 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-18992-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc] for cell 'parallel_ntt_0_instance'
+Finished Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-18992-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc] for cell 'parallel_ntt_0_instance'
+Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk' completely overrides clock 'm_axis_aclk'.
+New: create_clock -period 100.000 -name clk -waveform {0.000 50.000} [get_ports {m_axis_aclk s_axis_aclk}], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:7]
+Previous: create_clock -period 100.000 [get_ports m_axis_aclk], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-18992-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc:1]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk' completely overrides clock 's_axis_aclk'.
+New: create_clock -period 100.000 -name clk -waveform {0.000 50.000} [get_ports {m_axis_aclk s_axis_aclk}], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:7]
+Previous: create_clock -period 100.000 [get_ports s_axis_aclk], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-18992-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc:2]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+WARNING: [Constraints 18-633] Creating clock clk with 2 sources. [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:7]
+WARNING: [Constraints 18-96] Setting input delay on a clock pin 'm_axis_aclk' is not supported, ignoring it [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:8]
+WARNING: [Constraints 18-96] Setting input delay on a clock pin 's_axis_aclk' is not supported, ignoring it [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:8]
+Finished Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc]
+Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/dont_touch.xdc]
+Finished Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1612.812 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1612.812 ; gain = 874.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1612.812 ; gain = 874.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for parallel_ntt_0_instance. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1612.812 ; gain = 874.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1612.812 ; gain = 874.352
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1612.812 ; gain = 874.352
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+Clock _30cbd27180020000_p_TClock _c0bcd27180020000_p_TClock _4006d37180020000_p_TClock not yet defined at line 8 of file {E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc}
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:01:01 . Memory (MB): peak = 2248.434 ; gain = 1509.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:01 . Memory (MB): peak = 2248.434 ; gain = 1509.973
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:55 ; elapsed = 00:01:01 . Memory (MB): peak = 2248.434 ; gain = 1509.973
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:01:02 . Memory (MB): peak = 2249.938 ; gain = 1511.477
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:01:02 . Memory (MB): peak = 2249.938 ; gain = 1511.477
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:01:02 . Memory (MB): peak = 2249.938 ; gain = 1511.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:01:02 . Memory (MB): peak = 2249.938 ; gain = 1511.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:01:02 . Memory (MB): peak = 2249.938 ; gain = 1511.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:01:02 . Memory (MB): peak = 2249.938 ; gain = 1511.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------+----------+
+|      |BlackBox name  |Instances |
++------+---------------+----------+
+|1     |parallel_ntt_0 |         1|
++------+---------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |parallel_ntt_0 |     1|
+|2     |IBUF           |    44|
+|3     |OBUF           |    40|
++------+---------------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   124|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:01:02 . Memory (MB): peak = 2249.938 ; gain = 1511.477
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:49 . Memory (MB): peak = 2250.004 ; gain = 637.191
+Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:01:03 . Memory (MB): peak = 2250.004 ; gain = 1511.543
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 44 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 44 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 44 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+15 Infos, 3 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:06 . Memory (MB): peak = 2293.684 ; gain = 1555.223
+INFO: [Common 17-1381] The checkpoint 'E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/parallel_ntt_0_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file parallel_ntt_0_wrapper_utilization_synth.rpt -pb parallel_ntt_0_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.172 . Memory (MB): peak = 2293.949 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 16 13:02:52 2021...
+
+*** Running vivado
+    with args -log parallel_ntt_0_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source parallel_ntt_0_wrapper.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source parallel_ntt_0_wrapper.tcl -notrace
+Command: synth_design -top parallel_ntt_0_wrapper -part xczu7ev-ffvc1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9452 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 738.266 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'parallel_ntt_0_wrapper' [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/parallel_ntt_0_wrapper.v:23]
+INFO: [Synth 8-6157] synthesizing module 'parallel_ntt_0' [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-18784-DESKTOP-AN42RLU/realtime/parallel_ntt_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'parallel_ntt_0' (1#1) [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-18784-DESKTOP-AN42RLU/realtime/parallel_ntt_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'parallel_ntt_0_wrapper' (2#1) [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/parallel_ntt_0_wrapper.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 738.266 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 738.266 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 738.266 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-18784-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc] for cell 'parallel_ntt_0_instance'
+Finished Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-18784-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc] for cell 'parallel_ntt_0_instance'
+Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk' completely overrides clock 'm_axis_aclk'.
+New: create_clock -period 100.000 -name clk -waveform {0.000 50.000} [get_ports {m_axis_aclk s_axis_aclk}], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:7]
+Previous: create_clock -period 100.000 [get_ports m_axis_aclk], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-18784-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc:1]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk' completely overrides clock 's_axis_aclk'.
+New: create_clock -period 100.000 -name clk -waveform {0.000 50.000} [get_ports {m_axis_aclk s_axis_aclk}], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:7]
+Previous: create_clock -period 100.000 [get_ports s_axis_aclk], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-18784-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc:2]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+WARNING: [Constraints 18-633] Creating clock clk with 2 sources. [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:7]
+WARNING: [Constraints 18-96] Setting input delay on a clock pin 'm_axis_aclk' is not supported, ignoring it [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:8]
+WARNING: [Constraints 18-96] Setting input delay on a clock pin 's_axis_aclk' is not supported, ignoring it [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:8]
+Finished Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc]
+Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/dont_touch.xdc]
+Finished Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1613.246 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1613.246 ; gain = 874.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1613.246 ; gain = 874.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for parallel_ntt_0_instance. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1613.246 ; gain = 874.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1613.246 ; gain = 874.980
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1613.246 ; gain = 874.980
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+Clock _c0272155c8010000_p_TClock _800d2155c8010000_p_TClock _70e72055c8010000_p_TClock not yet defined at line 8 of file {E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc}
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 2248.559 ; gain = 1510.293
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 2248.559 ; gain = 1510.293
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 2248.691 ; gain = 1510.426
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2250.191 ; gain = 1511.926
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2250.191 ; gain = 1511.926
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2250.191 ; gain = 1511.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2250.191 ; gain = 1511.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2250.191 ; gain = 1511.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2250.191 ; gain = 1511.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------+----------+
+|      |BlackBox name  |Instances |
++------+---------------+----------+
+|1     |parallel_ntt_0 |         1|
++------+---------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |parallel_ntt_0 |     1|
+|2     |IBUF           |    44|
+|3     |OBUF           |    40|
++------+---------------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   124|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2250.191 ; gain = 1511.926
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:47 . Memory (MB): peak = 2250.195 ; gain = 636.949
+Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2250.195 ; gain = 1511.930
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 44 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 44 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 44 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+15 Infos, 3 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:01:05 . Memory (MB): peak = 2296.066 ; gain = 1557.801
+INFO: [Common 17-1381] The checkpoint 'E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/parallel_ntt_0_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file parallel_ntt_0_wrapper_utilization_synth.rpt -pb parallel_ntt_0_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.148 . Memory (MB): peak = 2296.305 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 16 15:35:24 2021...
+
+*** Running vivado
+    with args -log parallel_ntt_0_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source parallel_ntt_0_wrapper.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source parallel_ntt_0_wrapper.tcl -notrace
+Command: synth_design -top parallel_ntt_0_wrapper -part xczu7ev-ffvc1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7640 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 738.066 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'parallel_ntt_0_wrapper' [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/parallel_ntt_0_wrapper.v:23]
+INFO: [Synth 8-6157] synthesizing module 'parallel_ntt_0' [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-17524-DESKTOP-AN42RLU/realtime/parallel_ntt_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'parallel_ntt_0' (1#1) [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-17524-DESKTOP-AN42RLU/realtime/parallel_ntt_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'parallel_ntt_0_wrapper' (2#1) [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/parallel_ntt_0_wrapper.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 738.066 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 738.066 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 738.066 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-17524-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc] for cell 'parallel_ntt_0_instance'
+Finished Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-17524-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc] for cell 'parallel_ntt_0_instance'
+Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk' completely overrides clock 'm_axis_aclk'.
+New: create_clock -period 100.000 -name clk -waveform {0.000 50.000} [get_ports {m_axis_aclk s_axis_aclk}], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:7]
+Previous: create_clock -period 100.000 [get_ports m_axis_aclk], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-17524-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc:1]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk' completely overrides clock 's_axis_aclk'.
+New: create_clock -period 100.000 -name clk -waveform {0.000 50.000} [get_ports {m_axis_aclk s_axis_aclk}], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:7]
+Previous: create_clock -period 100.000 [get_ports s_axis_aclk], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-17524-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc:2]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+WARNING: [Constraints 18-633] Creating clock clk with 2 sources. [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:7]
+WARNING: [Constraints 18-96] Setting input delay on a clock pin 'm_axis_aclk' is not supported, ignoring it [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:8]
+WARNING: [Constraints 18-96] Setting input delay on a clock pin 's_axis_aclk' is not supported, ignoring it [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:8]
+Finished Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1613.730 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1613.730 ; gain = 875.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1613.730 ; gain = 875.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for parallel_ntt_0_instance. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1613.730 ; gain = 875.664
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1613.730 ; gain = 875.664
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1613.730 ; gain = 875.664
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+Clock _10bf7223a1010000_p_TClock _30cc7223a1010000_p_TClock _a0c57223a1010000_p_TClock not yet defined at line 8 of file {E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc}
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:58 . Memory (MB): peak = 2251.621 ; gain = 1513.555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:53 ; elapsed = 00:00:58 . Memory (MB): peak = 2251.621 ; gain = 1513.555
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:53 ; elapsed = 00:00:58 . Memory (MB): peak = 2251.750 ; gain = 1513.684
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 2253.254 ; gain = 1515.188
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 2253.254 ; gain = 1515.188
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 2253.254 ; gain = 1515.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 2253.254 ; gain = 1515.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 2253.254 ; gain = 1515.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 2253.254 ; gain = 1515.188
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------+----------+
+|      |BlackBox name  |Instances |
++------+---------------+----------+
+|1     |parallel_ntt_0 |         1|
++------+---------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |parallel_ntt_0 |     1|
+|2     |IBUF           |    44|
+|3     |OBUF           |    40|
++------+---------------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   124|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 2253.254 ; gain = 1515.188
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:46 . Memory (MB): peak = 2253.312 ; gain = 639.582
+Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 2253.312 ; gain = 1515.246
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 44 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 44 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 44 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+15 Infos, 3 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:01:03 . Memory (MB): peak = 2296.930 ; gain = 1558.863
+INFO: [Common 17-1381] The checkpoint 'E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/parallel_ntt_0_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file parallel_ntt_0_wrapper_utilization_synth.rpt -pb parallel_ntt_0_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.139 . Memory (MB): peak = 2297.242 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 16 15:55:31 2021...
+
+*** Running vivado
+    with args -log parallel_ntt_0_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source parallel_ntt_0_wrapper.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source parallel_ntt_0_wrapper.tcl -notrace
+Command: synth_design -top parallel_ntt_0_wrapper -part xczu7ev-ffvc1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9408 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 738.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'parallel_ntt_0_wrapper' [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/parallel_ntt_0_wrapper.v:23]
+INFO: [Synth 8-6157] synthesizing module 'parallel_ntt_0' [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-18880-DESKTOP-AN42RLU/realtime/parallel_ntt_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'parallel_ntt_0' (1#1) [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-18880-DESKTOP-AN42RLU/realtime/parallel_ntt_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'parallel_ntt_0_wrapper' (2#1) [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/parallel_ntt_0_wrapper.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 738.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 738.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 738.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-18880-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc] for cell 'parallel_ntt_0_instance'
+Finished Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-18880-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc] for cell 'parallel_ntt_0_instance'
+Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk' completely overrides clock 'm_axis_aclk'.
+New: create_clock -period 100.000 -name clk -waveform {0.000 50.000} [get_ports {m_axis_aclk s_axis_aclk}], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:7]
+Previous: create_clock -period 100.000 [get_ports m_axis_aclk], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-18880-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc:1]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk' completely overrides clock 's_axis_aclk'.
+New: create_clock -period 100.000 -name clk -waveform {0.000 50.000} [get_ports {m_axis_aclk s_axis_aclk}], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:7]
+Previous: create_clock -period 100.000 [get_ports s_axis_aclk], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-18880-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc:2]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+WARNING: [Constraints 18-633] Creating clock clk with 2 sources. [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:7]
+WARNING: [Constraints 18-96] Setting input delay on a clock pin 'm_axis_aclk' is not supported, ignoring it [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:8]
+WARNING: [Constraints 18-96] Setting input delay on a clock pin 's_axis_aclk' is not supported, ignoring it [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:8]
+Finished Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1612.566 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1612.566 ; gain = 873.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1612.566 ; gain = 873.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for parallel_ntt_0_instance. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1612.566 ; gain = 873.980
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1612.566 ; gain = 873.980
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1612.566 ; gain = 873.980
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+Clock _5002e4355d020000_p_TClock _50c3e3355d020000_p_TClock _20cfe3355d020000_p_TClock not yet defined at line 8 of file {E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc}
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 2248.211 ; gain = 1509.625
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 2248.211 ; gain = 1509.625
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 2248.211 ; gain = 1509.625
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2249.715 ; gain = 1511.129
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2249.715 ; gain = 1511.129
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2249.715 ; gain = 1511.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2249.715 ; gain = 1511.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2249.715 ; gain = 1511.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2249.715 ; gain = 1511.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------+----------+
+|      |BlackBox name  |Instances |
++------+---------------+----------+
+|1     |parallel_ntt_0 |         1|
++------+---------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |parallel_ntt_0 |     1|
+|2     |IBUF           |    44|
+|3     |OBUF           |    40|
++------+---------------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   124|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2249.715 ; gain = 1511.129
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:48 . Memory (MB): peak = 2249.777 ; gain = 637.211
+Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2249.777 ; gain = 1511.191
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 44 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 44 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 44 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+15 Infos, 3 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:05 . Memory (MB): peak = 2293.824 ; gain = 1555.238
+INFO: [Common 17-1381] The checkpoint 'E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/parallel_ntt_0_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file parallel_ntt_0_wrapper_utilization_synth.rpt -pb parallel_ntt_0_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.169 . Memory (MB): peak = 2294.137 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 17 11:06:35 2021...
+
+*** Running vivado
+    with args -log parallel_ntt_0_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source parallel_ntt_0_wrapper.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source parallel_ntt_0_wrapper.tcl -notrace
+Command: synth_design -top parallel_ntt_0_wrapper -part xczu7ev-ffvc1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 22296 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 738.387 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'parallel_ntt_0_wrapper' [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/parallel_ntt_0_wrapper.v:23]
+INFO: [Synth 8-6157] synthesizing module 'parallel_ntt_0' [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-12228-DESKTOP-AN42RLU/realtime/parallel_ntt_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'parallel_ntt_0' (1#1) [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-12228-DESKTOP-AN42RLU/realtime/parallel_ntt_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'parallel_ntt_0_wrapper' (2#1) [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/parallel_ntt_0_wrapper.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 738.387 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 738.387 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 738.387 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-12228-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc] for cell 'parallel_ntt_0_instance'
+Finished Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-12228-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc] for cell 'parallel_ntt_0_instance'
+Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk' completely overrides clock 'm_axis_aclk'.
+New: create_clock -period 100.000 -name clk -waveform {0.000 50.000} [get_ports {m_axis_aclk s_axis_aclk}], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:7]
+Previous: create_clock -period 100.000 [get_ports m_axis_aclk], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-12228-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc:1]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk' completely overrides clock 's_axis_aclk'.
+New: create_clock -period 100.000 -name clk -waveform {0.000 50.000} [get_ports {m_axis_aclk s_axis_aclk}], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:7]
+Previous: create_clock -period 100.000 [get_ports s_axis_aclk], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-12228-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc:2]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+WARNING: [Constraints 18-633] Creating clock clk with 2 sources. [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:7]
+WARNING: [Constraints 18-96] Setting input delay on a clock pin 'm_axis_aclk' is not supported, ignoring it [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:8]
+WARNING: [Constraints 18-96] Setting input delay on a clock pin 's_axis_aclk' is not supported, ignoring it [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:8]
+Finished Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1610.758 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1610.758 ; gain = 872.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1610.758 ; gain = 872.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for parallel_ntt_0_instance. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1610.758 ; gain = 872.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1610.758 ; gain = 872.371
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1610.758 ; gain = 872.371
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+Clock _4007afc54c020000_p_TClock _70fbaec54c020000_p_TClock _8021afc54c020000_p_TClock not yet defined at line 8 of file {E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc}
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:01 ; elapsed = 00:01:06 . Memory (MB): peak = 2248.434 ; gain = 1510.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:06 . Memory (MB): peak = 2248.434 ; gain = 1510.047
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:01 ; elapsed = 00:01:06 . Memory (MB): peak = 2248.582 ; gain = 1510.195
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 2250.148 ; gain = 1511.762
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 2250.148 ; gain = 1511.762
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 2250.148 ; gain = 1511.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 2250.148 ; gain = 1511.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 2250.148 ; gain = 1511.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 2250.148 ; gain = 1511.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------+----------+
+|      |BlackBox name  |Instances |
++------+---------------+----------+
+|1     |parallel_ntt_0 |         1|
++------+---------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |parallel_ntt_0 |     1|
+|2     |IBUF           |    44|
+|3     |OBUF           |    40|
++------+---------------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   124|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 2250.148 ; gain = 1511.762
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:43 ; elapsed = 00:00:54 . Memory (MB): peak = 2250.180 ; gain = 639.422
+Synthesis Optimization Complete : Time (s): cpu = 00:01:03 ; elapsed = 00:01:09 . Memory (MB): peak = 2250.180 ; gain = 1511.793
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 44 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 44 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 44 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+15 Infos, 3 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:12 . Memory (MB): peak = 2293.867 ; gain = 1555.480
+INFO: [Common 17-1381] The checkpoint 'E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/parallel_ntt_0_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file parallel_ntt_0_wrapper_utilization_synth.rpt -pb parallel_ntt_0_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.181 . Memory (MB): peak = 2294.160 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 17 12:04:00 2021...
+
+*** Running vivado
+    with args -log parallel_ntt_0_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source parallel_ntt_0_wrapper.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source parallel_ntt_0_wrapper.tcl -notrace
+Command: synth_design -top parallel_ntt_0_wrapper -part xczu7ev-ffvc1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 22252 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 738.203 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'parallel_ntt_0_wrapper' [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/parallel_ntt_0_wrapper.v:23]
+INFO: [Synth 8-6157] synthesizing module 'parallel_ntt_0' [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-2280-DESKTOP-AN42RLU/realtime/parallel_ntt_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'parallel_ntt_0' (1#1) [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-2280-DESKTOP-AN42RLU/realtime/parallel_ntt_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'parallel_ntt_0_wrapper' (2#1) [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/parallel_ntt_0_wrapper.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 738.203 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 738.203 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 738.203 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-2280-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc] for cell 'parallel_ntt_0_instance'
+Finished Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-2280-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc] for cell 'parallel_ntt_0_instance'
+Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc]
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk' completely overrides clock 'm_axis_aclk'.
+New: create_clock -period 100.000 -name clk -waveform {0.000 50.000} [get_ports {m_axis_aclk s_axis_aclk}], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:8]
+Previous: create_clock -period 100.000 [get_ports m_axis_aclk], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-2280-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc:1]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+CRITICAL WARNING: [Constraints 18-1056] Clock 'clk' completely overrides clock 's_axis_aclk'.
+New: create_clock -period 100.000 -name clk -waveform {0.000 50.000} [get_ports {m_axis_aclk s_axis_aclk}], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:8]
+Previous: create_clock -period 100.000 [get_ports s_axis_aclk], [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/.Xil/Vivado-2280-DESKTOP-AN42RLU/parallel_ntt_0/parallel_ntt_0/parallel_ntt_0_in_context.xdc:2]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+WARNING: [Constraints 18-633] Creating clock clk with 2 sources. [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc:8]
+Finished Parsing XDC File [E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1611.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1611.992 ; gain = 873.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1611.992 ; gain = 873.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for parallel_ntt_0_instance. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1611.992 ; gain = 873.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1611.992 ; gain = 873.789
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1611.992 ; gain = 873.789
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+Clock _808bfc1ce2010000_p_TClock _e09dfc1ce2010000_p_TClock _b094fc1ce2010000_p_TClock not yet defined at line 9 of file {E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/user_rtl/usr_constrain.xdc}
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2249.316 ; gain = 1511.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2249.316 ; gain = 1511.113
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:01:01 . Memory (MB): peak = 2249.445 ; gain = 1511.242
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:01:02 . Memory (MB): peak = 2250.949 ; gain = 1512.746
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:01:02 . Memory (MB): peak = 2250.949 ; gain = 1512.746
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:01:02 . Memory (MB): peak = 2250.949 ; gain = 1512.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:01:02 . Memory (MB): peak = 2250.949 ; gain = 1512.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:01:02 . Memory (MB): peak = 2250.949 ; gain = 1512.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:01:02 . Memory (MB): peak = 2250.949 ; gain = 1512.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------+----------+
+|      |BlackBox name  |Instances |
++------+---------------+----------+
+|1     |parallel_ntt_0 |         1|
++------+---------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |parallel_ntt_0 |     1|
+|2     |IBUF           |    44|
+|3     |OBUF           |    40|
++------+---------------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   124|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:01:02 . Memory (MB): peak = 2250.949 ; gain = 1512.746
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:48 . Memory (MB): peak = 2251.012 ; gain = 639.020
+Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:01:02 . Memory (MB): peak = 2251.012 ; gain = 1512.809
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 44 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 44 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 44 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+15 Infos, 1 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:06 . Memory (MB): peak = 2295.727 ; gain = 1557.523
+INFO: [Common 17-1381] The checkpoint 'E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/parallel_NTT.runs/synth_default/parallel_ntt_0_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file parallel_ntt_0_wrapper_utilization_synth.rpt -pb parallel_ntt_0_wrapper_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.136 . Memory (MB): peak = 2296.027 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 17 14:14:33 2021...

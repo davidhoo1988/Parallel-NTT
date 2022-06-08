@@ -1,0 +1,9 @@
+(DELAYFILE 
+(SDFVERSION "3.0" )
+(DESIGN "parallel_ntt_0_wrapper")
+(DATE "Fri Nov 19 16:00:43 2021")
+(VENDOR "XILINX")
+(PROGRAM "Vivado")
+(VERSION "2018.1")
+(DIVIDER /)
+(TIMESCALE 1ps)

@@ -1,0 +1,19 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  -i "../../../../user_rtl" --include "../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src" \
+"../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/hdl/parallel_ntt_v2_0_S_AXIS.v" \
+"../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/NTT_processor.v" \
+"../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mem_sp.v" \
+"../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/Barret_reduce.v" \
+"../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/parallel_NTT_top.v" \
+"../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/src/mem_dp.v" \
+"../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/hdl/parallel_ntt_v2_0_M_AXIS.v" \
+"../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/hdl/parallel_ntt_v2_0.v" \
+"../../../../parallel_NTT.ip_user_files/ip/parallel_ntt_0/sim/parallel_ntt_0.v" \
+"../../../../user_rtl/parallel_ntt_0_wrapper.v" \
+"../../../../user_rtl/parallel_ntt_0_butterfly_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

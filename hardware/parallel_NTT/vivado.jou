@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Nov 14 11:12:30 2021
+# Process ID: 1904
+# Current directory: E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10112 E:\Dropbox\FHE\my project\Parallel NTT\hardware\parallel_NTT\parallel_NTT.xpr
+# Log file: E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT/vivado.log
+# Journal file: E:/Dropbox/FHE/my project/Parallel NTT/hardware/parallel_NTT\vivado.jou
+#-----------------------------------------------------------
+start_gui

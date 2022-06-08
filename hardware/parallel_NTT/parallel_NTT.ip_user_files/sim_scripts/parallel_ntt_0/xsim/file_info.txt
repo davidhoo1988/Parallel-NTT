@@ -1,0 +1,12 @@
+mult_gen_32x32.vhd,vhdl,xil_defaultlib,../../../ip/parallel_ntt_0/src/mult_gen_32x32/sim/mult_gen_32x32.vhd,incdir="$ref_dir/../../../ip/parallel_ntt_0/src"incdir="../../../ip/parallel_ntt_0/src"
+mult_gen_64x33.vhd,vhdl,xil_defaultlib,../../../ip/parallel_ntt_0/src/mult_gen_64x33/sim/mult_gen_64x33.vhd,incdir="$ref_dir/../../../ip/parallel_ntt_0/src"incdir="../../../ip/parallel_ntt_0/src"
+parallel_ntt_v2_0_S_AXIS.v,verilog,xil_defaultlib,../../../ip/parallel_ntt_0/hdl/parallel_ntt_v2_0_S_AXIS.v,incdir="$ref_dir/../../../ip/parallel_ntt_0/src"incdir="../../../ip/parallel_ntt_0/src"
+NTT_processor.v,verilog,xil_defaultlib,../../../ip/parallel_ntt_0/src/NTT_processor.v,incdir="$ref_dir/../../../ip/parallel_ntt_0/src"incdir="../../../ip/parallel_ntt_0/src"
+mem_sp.v,verilog,xil_defaultlib,../../../ip/parallel_ntt_0/src/mem_sp.v,incdir="$ref_dir/../../../ip/parallel_ntt_0/src"incdir="../../../ip/parallel_ntt_0/src"
+Barret_reduce.v,verilog,xil_defaultlib,../../../ip/parallel_ntt_0/src/Barret_reduce.v,incdir="$ref_dir/../../../ip/parallel_ntt_0/src"incdir="../../../ip/parallel_ntt_0/src"
+parallel_NTT_top.v,verilog,xil_defaultlib,../../../ip/parallel_ntt_0/src/parallel_NTT_top.v,incdir="$ref_dir/../../../ip/parallel_ntt_0/src"incdir="../../../ip/parallel_ntt_0/src"
+mem_dp.v,verilog,xil_defaultlib,../../../ip/parallel_ntt_0/src/mem_dp.v,incdir="$ref_dir/../../../ip/parallel_ntt_0/src"incdir="../../../ip/parallel_ntt_0/src"
+parallel_ntt_v2_0_M_AXIS.v,verilog,xil_defaultlib,../../../ip/parallel_ntt_0/hdl/parallel_ntt_v2_0_M_AXIS.v,incdir="$ref_dir/../../../ip/parallel_ntt_0/src"incdir="../../../ip/parallel_ntt_0/src"
+parallel_ntt_v2_0.v,verilog,xil_defaultlib,../../../ip/parallel_ntt_0/hdl/parallel_ntt_v2_0.v,incdir="$ref_dir/../../../ip/parallel_ntt_0/src"incdir="../../../ip/parallel_ntt_0/src"
+parallel_ntt_0.v,verilog,xil_defaultlib,../../../ip/parallel_ntt_0/sim/parallel_ntt_0.v,incdir="$ref_dir/../../../ip/parallel_ntt_0/src"incdir="../../../ip/parallel_ntt_0/src"
+glbl.v,Verilog,xil_defaultlib,glbl.v

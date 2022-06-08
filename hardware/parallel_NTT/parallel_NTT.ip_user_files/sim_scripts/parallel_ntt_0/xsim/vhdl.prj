@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../ip/parallel_ntt_0/src/mult_gen_32x32/sim/mult_gen_32x32.vhd" \
+"../../../ip/parallel_ntt_0/src/mult_gen_64x33/sim/mult_gen_64x33.vhd" \
+
+nosort
