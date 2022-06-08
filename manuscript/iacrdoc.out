@@ -1,0 +1,11 @@
+\BOOKMARK [1][-]{section.1}{FHEW-like\040Fully\040Homomorphic\040Encryption\040Scheme}{}% 1
+\BOOKMARK [1][-]{section.2}{Number-theoretic\040transform\040with\040merged\040twiddle\040factors}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Higher\040level\040description\040for\040NTT\040with\040merged\040twiddle\040factors}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{log2d-Dimensional\040Hypercube\040Multiprocessors}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{A\040Useful\040Equivalent\040Notation:\040|PID|Local\040M}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{First\040attempt:\040parallel\040in-place\040FFTs\040without\040inter-processor\040permutations}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.5}{Second\040attempt:\040Parallel\040NTTs\040with\040Inter-processor\040permutations}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.6}{Butterfly\040Processor}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.7}{Implementation\040Experiments}{section.2}% 9
+\BOOKMARK [1][-]{section.3}{System\040Integration\040on\040Xilinx\040MPSOC\040platform}{}% 10
+\BOOKMARK [1][-]{section.4}{Conclusions}{}% 11
