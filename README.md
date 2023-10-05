@@ -14,7 +14,7 @@ This program implements both NTT (a.k.a ntt_forward) and inverse NTT (a.k.a ntt_
 
 
 ### hypercube.py
-This program implements the parallelized NTT on top of hypercube. The NTT type can be 'NR' (input is in natural order and the output is in reversed order) or 'RN' (input is in reversed order and the output is in natural order)
+This program implements the parallelized NTT on top of hypercube which simulates the behavior of NTT hardware. The NTT type can be 'NR' (input is in natural order and the output is in reversed order) or 'RN' (input is in reversed order and the output is in natural order)
 
 
 
