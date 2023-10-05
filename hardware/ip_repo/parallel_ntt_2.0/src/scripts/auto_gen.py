@@ -28,7 +28,7 @@ import os
 import argparse
 import sys
 
-sys.path.insert(1, 'E:\Dropbox\FHE\my project\Parallel NTT\python')
+sys.path.insert(1, 'E:\Dropbox\FHE\my project\Parallel NTT\python') # find the python directory where some utility functions are required.
 from NTT import *
 
 if __name__ == "__main__":
