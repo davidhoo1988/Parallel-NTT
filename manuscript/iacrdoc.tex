@@ -75,7 +75,7 @@
 \author{Jingwei Hu\inst{1} \and Unknown\inst{2}}
 \institute{Nanyang Technological University, Singapore, \email{davidhu@ntu.edu.sg} \and
            Unknown}
-\title[]{Memory Swapping based Number-Theoretic Transform for Fully Homomorphic Encryption}
+\title[]{Number-Theoretic Transform Architecture for Fully Homomorphic Encryption from Hypercube Topology}
 \subtitle{}
 
 \begin{document}
@@ -86,13 +86,22 @@
 \keywords{Fully Homomorphic Encryption, Number Theoretic Transform, FPGA Implementation}
 
 \begin{abstract}
-  This document is a quick introduction to the \LaTeX{} class for the
-  \publname{}.
-\end{abstract}
+This paper introduces a high-performance and scalable hardware architecture designed for the Number-Theoretic Transform (NTT), a fundamental component extensively utilized in lattice-based encryption and fully homomorphic encryption schemes.
 
+The underlying rationale behind this research is to harness the advantages of the hypercube topology. This topology serves to significantly diminish the volume of data exchanges required during each iteration of the NTT, reducing it to a complexity of $\Omega(\log N)$. Concurrently, it enables the parallelization of $N$ processing elements. This reduction in data exchange operations is of paramount importance. It not only facilitates the establishment of interconnections among the $N$ processing elements but also lays the foundation for the development of a high-performance NTT design. This is particularly valuable when dealing with large values of $N$.
+\end{abstract}
+\newpage
 \tableofcontents{}
+\newpage
 
 \section*{Introduction}
+
+The contributions of this paper include:
+\begin{itemize}
+    \item Pioneering Hypercube Topology in NTT Designs: This research introduces the innovative concept of applying hypercube topology to NTT designs. It successfully addresses the challenging issue of managing a substantial volume of data exchange within high-performance NTT designs.
+    \item Prototyping a Hypercube-Based NTT Hardware: The study provides a practical implementation of NTT hardware based on the hypercube topology. Importantly, it allows users the flexibility to configure the degree of parallelization as per their requirements. The paper also offers theoretical estimations of the timing performance, which are subsequently validated through concrete implementation results.
+\end{itemize}
+
 
 \section{FHEW-like Fully Homomorphic Encryption Scheme}
 

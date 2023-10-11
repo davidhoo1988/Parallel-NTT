@@ -15,24 +15,26 @@
 // 
 // Revision:
 // Revision 0.01 - File Created
-// Additional Comments:
-// 
+// Additional Comments: 
+// the fundamental logic for parallel_NTT_top is the data movement
+// between processor ram and external. The data channel is 32-bit wide,
+// and only one processor is selected per time
 //////////////////////////////////////////////////////////////////////////////////
 
 module parallel_NTT_top(
     input wire clk,
-    input wire rst_b,
-    input wire start,
-    output wire finish,
+    input wire rst_b, // reset signal, enabled if set low
+    input wire start, //trigger this signal to start NTT computation
+    output wire finish, //indicator signal set high if NTT computation is finished
     // related to slave interface, send data to ram
-    input wire [31:0] s_processor_din,
-    input wire [1:0] s_processor_num,
-    input wire s_processor_din_valid,
+    input wire [31:0] s_processor_din,  // data channel from external to processor ram
+    input wire [1:0] s_processor_num, // indicator signal suggesting which proceesor is ready for data transfer from external to processor ram
+    input wire s_processor_din_valid, //indicator signal set high if the input data is valid
     // related to master interface, request data from ram
-    output reg [31:0] m_processor_dout,
-    output reg m_processor_dout_valid,
-    input wire [1:0] m_processor_num,
-    input wire m_processor_num_valid
+    output reg [31:0] m_processor_dout, //data channel from processor ram to external 
+    output reg m_processor_dout_valid, // indicator signal set high if the data inside processor ram is ready for transfer
+    input wire [1:0] m_processor_num, //indicator signal suggesting which processor is ready for data transfer from processor ram to external
+    input wire m_processor_num_valid //indicator signal set high if the slected processor is valid
     );
 
 // declare port signals
