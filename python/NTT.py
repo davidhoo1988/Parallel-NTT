@@ -1,4 +1,10 @@
 # -*- coding: utf-8 -*-
+#
+# This file implements the NTT algorithm including three implementation methods
+# 1. matrix form used in 'NTT_forward(self, A)'
+# 2. CT butterfly used in 'NTT_forward_ct(self, A, type='twiddle_merged')'
+# 3. GS butterfly used in 'NTT_forward_gs(self, A, type='twiddle_merged')'
+###############################################################################
 
 import numpy as np
 import random
@@ -168,14 +174,14 @@ class NTT:
 
 	# fast NTT computation based on CT-butterfly (or DIT_{NR}), implemented Chapter 7 of the book 'Inside FFT Black Box: Serial & Parallel FFT Algorithms' 
 	def NTT_forward_ct(self, A, type='twiddle_merged'):
-		if type != 'twiddle_merged':
+		if type != 'twiddle_merged': # this is the mode used in the standard FFT
 			# initialize omega list in bit-reversed-order
 			N = self.N
 			q = self.q
 			omega = self.omega
 			omega_reverse_list = [None]*int(N/2)
 			for i in range(int(N/2)):
-				omega_reverse_list[i] = pow(omega, NTT.bitreverse(i,int(math.log(N/2,2))), q) # table for stand N-point NTT
+				omega_reverse_list[i] = pow(omega, NTT.bitreverse(i,int(math.log(N/2,2))), q) # table for standard N-point NTT
 
 			# initialize Barret reduction parameters
 			(r,k) = NTT.Barret_init(q)
@@ -205,7 +211,7 @@ class NTT:
 			for i in range(N):
 				B[NTT.bitreverse(i, int(math.log(N,2)))] = A_dc[i] # transform B in natural order
 			return B
-		else: 
+		else: # this is the mode used in FHE or other lattice-based cryptographic schemes
 			# initialize omega list in bit-reversed-order
 			N = self.N
 			q = self.q
@@ -214,7 +220,7 @@ class NTT:
 			omega_reverse_list = [None]*int(N/2)
 			psi = self.psi
 			for i in range(int(N/2)):
-				omega_reverse_list[i] = pow(omega, NTT.bitreverse(i,int(math.log(N/2,2))), q) # table for stand N-point NTT
+				omega_reverse_list[i] = pow(omega, NTT.bitreverse(i,int(math.log(N/2,2))), q) # table for standard N-point NTT
 
 			# initialize Barret reduction parameters
 			(r,k) = NTT.Barret_init(q)
@@ -247,7 +253,7 @@ class NTT:
 			return B			
 
 	def NTT_backward_gs(self, A, type='twiddle_merged'): # implemented Chapter 5 of the book 'Inside FFT Black Box: Serial & Parallel FFT Algorithms' 
-		if type != 'twiddle_merged':
+		if type != 'twiddle_merged': # this is the mode used in the standard FFT
 			# initialize omega list in bit-reversed-order
 			N = self.N
 			q = self.q
@@ -283,7 +289,7 @@ class NTT:
 			for i in range(N):
 				B[i] = B[i]*self.psi_inv_list[i]*NTT.modinv(N,q)%q
 			return B # return B in natural order
-		else: 
+		else:  # this is the mode used in FHE or other lattice-based cryptographic schemes
 			# initialize omega list in bit-reversed-order
 			N = self.N
 			q = self.q

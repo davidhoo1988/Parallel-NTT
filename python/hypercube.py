@@ -1,6 +1,13 @@
+########################################################################################
+# This file implements(simulates) the ntt hardware based on hypercube topology
+#
+#
+#
+########################################################################################
 import math
 import random
 import glob, os
+
 
 class HyperCube:
 
