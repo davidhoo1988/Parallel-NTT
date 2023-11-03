@@ -1,8 +1,13 @@
 ########################################################################################
 # This file implements(simulates) the ntt hardware based on hypercube topology
+# processor_elts holds a symbolic representation for the collection of nodes(a_i) residing in each processor(P_j)
+# processor_elts_real holds the concrete value for the collection of nodes(a_i) residing in each processor(P_j) if the input nodes {a_i} are initialized by real values
 #
+# twiddle_factor holds a symbolic representation for the twiddle factors used in each round, number of twiddle factors = 1/2 * N/d * d
+# twiddle_factor_real holds he concrete value for the twiddle factors used in each round if the system parameters [N,q,psi] are given
 #
-#
+# twiddle_factors_LUT holds (a symbolic representation) the twiddle_factors_LUT attached to each hypercube-NTT processor
+# twiddle_factors_LUT_real holds (real values) the twiddle_factors_LUT attached to each hypercube-NTT processor
 ########################################################################################
 import math
 import random
