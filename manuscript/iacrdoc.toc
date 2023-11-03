@@ -5,7 +5,7 @@
 \contentsline {subsection}{\numberline {2.3}A Useful Equivalent Notation: |PID|Local $M$}{9}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}First attempt: parallel in-place FFTs without inter-processor permutations}{10}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Second attempt: Parallel NTTs with Inter-processor permutations}{11}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Butterfly Processor}{14}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.6}Butterfly Processor}{13}{subsection.2.6}%
 \contentsline {subsection}{\numberline {2.7}Implementation Experiments}{17}{subsection.2.7}%
 \contentsline {section}{\numberline {3}System Integration on Xilinx MPSOC platform}{18}{section.3}%
 \contentsline {section}{\numberline {4}Conclusions}{18}{section.4}%

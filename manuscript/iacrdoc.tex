@@ -146,14 +146,14 @@ A visualization of Alg.~\ref{alg:descript_ntt} is depicted in Fig.~\ref{fig:dit1
  \DontPrintSemicolon % Some LaTeX compilers require you to use \dontprintsemicolon instead
  \KwIn{a polynomial ring $R_q$, and NTT points $N$}
  \KwOut{Twiddle factors $\{w_i[\cdot]\}_{i=0,\ldots,log_2N-1}$ used in Algorithm~\ref{alg:descript_ntt}}
-    $FirstPart \gets [0\cdots0]_2$\;{}
-    $SecondPart \gets [1\cdots0]_2$\;
+    $FirstPart \gets 0 \text{ where } [0\cdots0]_2 == BinRepr(0)$\;{}
+    $SecondPart \gets 2^{N-1} \text{ where } [1\cdots0]_2 == BinRepr(2^{N-1})$\;
     \For{$i\leftarrow 0$ \KwTo $log_2N-1$}{
         \For{$j\leftarrow 0$ \KwTo $N-1$}{
             $[j_{log_2N-1,\cdots,j_0}]_2 \gets BinRepr(j)$\;
+            $Firstpart\gets \sum_{k=0}^{i}j_{log_2N-i-1+k}\cdot 2^{log_2N-1-k}$\;
             $w_i[j] \gets \phi^{Firstpart}\cdot \phi^{SecondPart}$\;         
-        }   
-        $FirstPart \gets RightRot(FirstPart, j_{log_2N-1-i})$\;   
+        }     
         $SecondPart \gets SecondPart/2$\;
     }
     \Return {$\{w_i[\cdot]\}_{i=0,\ldots,log_2N-1}$\;}
@@ -182,7 +182,7 @@ Assume $N=2^n$, let $Y_i^{(n-1)}$ and $Z_i^{(n-1)}$ be solutions to the two half
     Z_i^{(n-1)} = \sum_{j=0}^{\frac{N}{2}-1}a_{2j+1}\omega_{\frac{N}{2}}^{ij}\omega_N^{j} \bmod q \notag
 \end{gather}
 
-Therefore, the equation above is rewritten in a more compact form:
+To unify the notation systems, we define $Y_i^{(n)}$ and $Z_i^{(n)}$ as the first half part and the second half part, respectively, of $A_i$, \textit{i.e.}, $Y_i^{(n)}\overset{def}{=} A_i \text{ for } i\in [0,\frac{N}{2}-1]$ and $Y_i^{(n)}\overset{def}{=} A_i \text{ for } i\in [\frac{N}{2},N-1]$. Therefore, the equation above is rewritten in a more compact form:
 \begin{gather}
     Y_i^{(n)} = Y_i^{(n-1)} + \omega_{N}^i\omega_{2N}\cdot Z_i^{(n-1)} = A_i\bmod q \text{ for } i\in [0,\frac{N}{2}-1]\notag\\
     Z_i^{(n)} = Y_i^{(n-1)} - \omega_{N}^i\omega_{2N}\cdot Z_i^{(n-1)} = A_{i+\frac{N}{2}} \bmod q \notag
@@ -192,7 +192,7 @@ The key observation for the equation above is that $Y_i^{(n)}$ and $Z_i^{(n)}$ h
 \begin{table}\centering
 \begin{tabular}{lc}
  \hline
- NTT iteration $i$ & \makecell{twiddle factor associated with $a[j]$ and\\ $a[j+distance]$ where $j=j_{n-1}j_{n-2}\cdots j_{1}j_{0}$}\\
+ NTT iteration $i$ & \makecell{twiddle factor associated with $a[j]$ and\\ $a[j+distance]$ where $j=[j_{n-1}j_{n-2}\cdots j_{1}j_{0}]_2$}\\
  \hline
  $i=0$ & $\omega_{N}^{\textcolor{red}{\overbrace{00\cdots00}^{n-1 \text{ bits}}}}\cdot \omega_{2N}^{\textcolor{red}{\overbrace{10\cdots00}^{n \text{ bits}}}}$\\
  $i=0$ & $\omega_{N}^{\textcolor{red}{j_{n-1}0\cdots 00}}\cdot\omega_{2N}^{\textcolor{red}{01\cdots 00}}$ \\
@@ -207,10 +207,10 @@ The key observation for the equation above is that $Y_i^{(n)}$ and $Z_i^{(n)}$ h
  \end{table}
 
  As shown in Table~\ref{table:merged_tf}, the updated twidldle factor is composed of two multiplicative factors which is called the first part and the second part in this paper. The first part of the merged twiddle factor is identical to the standard NTT. We keep the same notations here and do not repeat the proof. It has the form $\omega_{N}^{\overbrace{00\cdots 00}^{n-1 \text{ bits}}}$, $\omega_{N}^{\overbrace{j_{n-1}0\cdots 00}^{n-1 \text{ bits}}}$, $\cdots$, $\omega_{N}^{\overbrace{j_1j_2\cdots j_{n-2}j_{n-1}}^{n-1 \text{ bits}}}$, for $i=0,1,\cdots,n-1$, respectively.
-The second part of the merged twiddle factor is $\omega_{2N'}^1$. However, the value of $N'$ depends on the recursive structure of butterfly, for the $i$-th layer, noted as $N'=N/2^{n-1-i}$ where $N=2^n$. In other words, the second part equals to $\omega_{2\cdot 2}^1, \omega_{2\cdot 4}^1$, $\cdots$, $\omega_{2N}^1$ for $i=0,1,\cdots,n-1$. Further to unify the notation, the second part is rewritten in binary form as $\omega_{2N}^{\overbrace{10\cdots 00}^{n\text{ bits}}}$, $\omega_{2N}^{\overbrace{01\cdots 00}^{n\text{ bits}}}$, $\cdots$, $\omega_{2N}^{\overbrace{00\cdots 01}^{n\text{ bits}}}$ for $i=0,1,\cdots,n-1$.
+The second part of the merged twiddle factor is $\omega_{2N'}^1$. However, the value of $N'$ depends on the recursive structure of butterfly, for the $i$-th layer, noted as $N'=N/2^{n-1-i}$ where $N=2^n$. In other words, the second part equals to $\omega_{2\cdot 2}^1, \omega_{2\cdot 4}^1$, $\cdots$, $\omega_{2N}^1$ for $i=0,1,\cdots,n-1$. Further to unify the second part is rewritten in binary form as $\omega_{2N}^{\overbrace{10\cdots 00}^{n\text{ bits}}}$, $\omega_{2N}^{\overbrace{01\cdots 00}^{n\text{ bits}}}$, $\cdots$, $\omega_{2N}^{\overbrace{00\cdots 01}^{n\text{ bits}}}$ for $i=0,1,\cdots,n-1$.
 
-Alg.~\ref{alg:descript_twiddlefactor} formally describes how to construct the twiddle factors for each round of butterfly computation based on our first-part-second-part concept mentioned above.
-The first impression on Alg.~\ref{alg:descript_twiddlefactor} might be that the size of twiddle factor LUTs is about $\mathcal{O}(NlogN)$: It has $logN$ rounds and each round cosumes $N/2$ twiddle factor for the $N/2$ pairs of input points.  The key observation for reducing the size of twiddle factor LUT $\{w_i[\cdot]\}_i$ is that many entries in $w_i[\cdot]$ are duplicates and thus redundant. In particular, $w_0[\cdot]$ has only one distinct element $w_0[0]$, $w_1[\cdot]$ has two distinct elements $w_1[0]$ and $w_1[N/2]$, $w_2[\cdots]$ has four distinct elements $w_2[0]$, $w_2[N/4]$, $w_2[2N/4]$, and $w_2[3N/4]$ and so on so forth. Therefore, the total valid entries used in $\{w_i[\cdot]\}$ equal to
+Alg.~\ref{alg:descript_twiddlefactor} formally describes how to construct the twiddle factors for each round of butterfly computation based on our first-part-second-part concept mentioned above. The key variable \texttt{Firstpart} is updated in line 6 within the inner j-loop to maintain the desired binary form $\texttt{Firstpart}=[j_{\log_2N-1-i},\cdots, j_{\log_2N-1},0,\cdots,0]_2$. The other key variable \texttt{Secondpart} is updated in  line 8 at the end of the outer i-loop.
+The first impression on Alg.~\ref{alg:descript_twiddlefactor} might be that the size of twiddle factor LUTs is about $\mathcal{O}(NlogN)$: It has $logN$ rounds and each round cosumes $N/2$ twiddle factor for the $N/2$ pairs of input points.  However, we deploy a simplified twiddle factor LUT with only $N-1$ elements for our actual hardware design. The key observation for reducing the size of twiddle factor LUT $\{w_i[\cdot]\}_i$ is that many entries in $w_i[\cdot]$ are duplicates and thus redundant. In particular, $w_0[\cdot]$ has only one distinct element $w_0[0]$, $w_1[\cdot]$ has two distinct elements $w_1[0]$ and $w_1[N/2]$, $w_2[\cdots]$ has four distinct elements $w_2[0]$, $w_2[N/4]$, $w_2[2N/4]$, and $w_2[3N/4]$ and so on so forth. Therefore, the total valid entries used in $\{w_i[\cdot]\}$ after eliminating duplicates equal to
 \[
 \sum_{i=0}^{log_2N-1} 2^i = N-1 = \mathcal{O}(N) 
 \]
