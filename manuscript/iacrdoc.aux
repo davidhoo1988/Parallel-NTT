@@ -13,85 +13,103 @@
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \providecommand \oddpage@label [2]{}
+\citation{chillotti2020tfhe}
+\citation{ducas2015fhew}
 \@writefile{toc}{\contentsline {section}{\numberline {1}FHEW-like Fully Homomorphic Encryption Scheme}{3}{section.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {2}Number-theoretic transform with merged twiddle factors}{3}{section.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Higher level description for NTT with merged twiddle factors}{3}{subsection.2.1}\protected@file@percent }
-\newlabel{sec:gf2m_arith}{{2.1}{3}{Higher level description for NTT with merged twiddle factors}{subsection.2.1}{}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Higher level description of NTT, \textit  {a.k.a} $DIT_{NN\to RN}$\relax }}{4}{algocf.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}LWE and RLWE}{3}{subsection.1.1}\protected@file@percent }
+\citation{gentry2013homomorphic}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Key Switch and Mod Switch}{4}{subsection.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Sample Extraction}{4}{subsection.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4}RGSW cryptosystem}{4}{subsection.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5}Blind Rotation}{5}{subsection.1.5}\protected@file@percent }
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces the primitive blind rotation \texttt  {BlindRotate}(brK, ct, $\mathbf  {a}$)\relax }}{5}{algocf.1}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{alg:descript_ntt}{{1}{4}{Higher level description for NTT with merged twiddle factors}{algocf.1}{}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {2}{\ignorespaces Construction of Twiddle Factor LUTs\relax }}{4}{algocf.2}\protected@file@percent }
-\newlabel{alg:descript_twiddlefactor}{{2}{4}{Higher level description for NTT with merged twiddle factors}{algocf.2}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Merged Twiddle Factor used in $N$-point NTT. The exponent is expressed in binary form.\relax }}{5}{table.1}\protected@file@percent }
-\newlabel{table:merged_tf}{{1}{5}{Merged Twiddle Factor used in $N$-point NTT. The exponent is expressed in binary form.\relax }{table.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}$log_2d$-Dimensional Hypercube Multiprocessors}{6}{subsection.2.2}\protected@file@percent }
-\@writefile{loa}{\contentsline {algocf}{\numberline {3}{\ignorespaces Construction of the $log_2d$-dimensional hypercube\relax }}{6}{algocf.3}\protected@file@percent }
-\newlabel{alg:descript_hypercube}{{3}{6}{$log_2d$-Dimensional Hypercube Multiprocessors}{algocf.3}{}}
-\newlabel{fig:dit1}{{1a}{7}{Generic architecture for NTT with merged twiddle factors ($N=8$)\relax }{subfigure.1.1}{}}
-\newlabel{sub@fig:dit1}{{a}{7}{Generic architecture for NTT with merged twiddle factors ($N=8$)\relax }{subfigure.1.1}{}}
-\newlabel{table:table}{{1b}{7}{Twiddle factor LUT context ($N=8$)\relax }{subfigure.1.2}{}}
-\newlabel{sub@table:table}{{b}{7}{Twiddle factor LUT context ($N=8$)\relax }{subfigure.1.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces DIT instance with $N=8$\relax }}{7}{figure.1}\protected@file@percent }
-\newlabel{fig:hypercube4}{{2a}{7}{$d=4$, $ID\in \{P_0,P_1,P_2,P_3\}$\relax }{subfigure.2.1}{}}
-\newlabel{sub@fig:hypercube4}{{a}{7}{$d=4$, $ID\in \{P_0,P_1,P_2,P_3\}$\relax }{subfigure.2.1}{}}
-\newlabel{fig:hypercube8}{{2b}{7}{$d=8$, $ID\in \{P_0,P_1,P_2,P_3,P_4,P_5,P_6,P_7\}$\relax }{subfigure.2.2}{}}
-\newlabel{sub@fig:hypercube8}{{b}{7}{$d=8$, $ID\in \{P_0,P_1,P_2,P_3,P_4,P_5,P_6,P_7\}$\relax }{subfigure.2.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Hypercubes of Dimension $log_2d=2$ and $log_2d=3$\relax }}{7}{figure.2}\protected@file@percent }
-\@writefile{loa}{\contentsline {algocf}{\numberline {4}{\ignorespaces Subcube-doubling communication in $log_2d$-dimensional hypercube\relax }}{8}{algocf.4}\protected@file@percent }
-\newlabel{alg:descript_subcube}{{4}{8}{$log_2d$-Dimensional Hypercube Multiprocessors}{algocf.4}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Subcube-doubling communication in $3$-dimensional hypercube\relax }}{8}{table.2}\protected@file@percent }
-\newlabel{tab:descript_subcube}{{2}{8}{Subcube-doubling communication in $3$-dimensional hypercube\relax }{table.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}A Useful Equivalent Notation: |PID|Local $M$}{9}{subsection.2.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Local data in processor $P_{i_4i_3}$ expressed in terms of global array element $a[m],m=i_4i_3i_2i_1i_0$ for the notation $i_4i_3$|$i_2i_1i_0$\relax }}{9}{table.3}\protected@file@percent }
-\newlabel{tab:pid_notation2}{{3}{9}{Local data in processor $P_{i_4i_3}$ expressed in terms of global array element $a[m],m=i_4i_3i_2i_1i_0$ for the notation $i_4i_3$|$i_2i_1i_0$\relax }{table.3}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Local data in processor $P_{i_0i_1}$ (bit reversed) expressed in terms of global array element $a[r]=a_m,r=i_0i_1i_2i_3i_4,m=i_4i_3i_2i_1i_0$ for the notation $i_0i_1$|$i_2i_3i_4$\relax }}{10}{table.4}\protected@file@percent }
-\newlabel{tab:pid_notation}{{4}{10}{Local data in processor $P_{i_0i_1}$ (bit reversed) expressed in terms of global array element $a[r]=a_m,r=i_0i_1i_2i_3i_4,m=i_4i_3i_2i_1i_0$ for the notation $i_0i_1$|$i_2i_3i_4$\relax }{table.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}First attempt: parallel in-place FFTs without inter-processor permutations}{10}{subsection.2.4}\protected@file@percent }
-\newlabel{fig:dataswap_without_perm1}{{3a}{11}{In round-0, Data sent and received by processors $P_0$ and $P_2$\relax }{subfigure.3.1}{}}
-\newlabel{sub@fig:dataswap_without_perm1}{{a}{11}{In round-0, Data sent and received by processors $P_0$ and $P_2$\relax }{subfigure.3.1}{}}
-\newlabel{fig:dataswap_without_perm2}{{3b}{11}{In round-0, Data sent and received by processors $P_1$ and $P_3$\relax }{subfigure.3.2}{}}
-\newlabel{sub@fig:dataswap_without_perm2}{{b}{11}{In round-0, Data sent and received by processors $P_1$ and $P_3$\relax }{subfigure.3.2}{}}
-\newlabel{fig:dataswap_without_perm3}{{3c}{11}{In round-1, Data sent and received by processors $P_0$ and $P_1$\relax }{subfigure.3.3}{}}
-\newlabel{sub@fig:dataswap_without_perm3}{{c}{11}{In round-1, Data sent and received by processors $P_0$ and $P_1$\relax }{subfigure.3.3}{}}
-\newlabel{fig:dataswap_without_perm4}{{3d}{11}{In round-1, Data sent and received by processors $P_2$ and $P_3$\relax }{subfigure.3.4}{}}
-\newlabel{sub@fig:dataswap_without_perm4}{{d}{11}{In round-1, Data sent and received by processors $P_2$ and $P_3$\relax }{subfigure.3.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces An illustrative example for parallelizing in-place NTT($N=32,d=4$) without inter-processor permutations\relax }}{11}{figure.3}\protected@file@percent }
-\newlabel{fig:dataswap_without_perm}{{3}{11}{An illustrative example for parallelizing in-place NTT($N=32,d=4$) without inter-processor permutations\relax }{figure.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Second attempt: Parallel NTTs with Inter-processor permutations}{11}{subsection.2.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Butterfly Processor}{13}{subsection.2.6}\protected@file@percent }
-\newlabel{sec:butterfly processor}{{2.6}{13}{Butterfly Processor}{subsection.2.6}{}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {5}{\ignorespaces Parallel Hypercube NTT\relax }}{14}{algocf.5}\protected@file@percent }
-\newlabel{alg:descript_hypercube_ntt}{{5}{14}{Second attempt: Parallel NTTs with Inter-processor permutations}{algocf.5}{}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {6}{\ignorespaces Barret-Reduction based Modular Multiplication\relax }}{15}{algocf.6}\protected@file@percent }
-\newlabel{alg:modmul}{{6}{15}{Butterfly Processor}{algocf.6}{}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {7}{\ignorespaces Modular Addition\relax }}{15}{algocf.7}\protected@file@percent }
-\newlabel{alg:modadd}{{7}{15}{Butterfly Processor}{algocf.7}{}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {8}{\ignorespaces Modular Subtraction\relax }}{15}{algocf.8}\protected@file@percent }
-\newlabel{alg:modsub}{{8}{15}{Butterfly Processor}{algocf.8}{}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {9}{\ignorespaces Memory address generation for butterfly computation\relax }}{17}{algocf.9}\protected@file@percent }
-\newlabel{alg:addrgen}{{9}{17}{Butterfly Processor}{algocf.9}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.7}Implementation Experiments}{17}{subsection.2.7}\protected@file@percent }
+\newlabel{alg:Blind_Rotate}{{1}{5}{Blind Rotation}{algocf.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.6}Bootstrapping a \texttt  {NAND} gate}{6}{subsection.1.6}\protected@file@percent }
+\@writefile{loa}{\contentsline {algocf}{\numberline {2}{\ignorespaces Half domain bootstrapping \texttt  {Bootstrap}(brK, ct, $f(\cdot )$, ksK)\relax }}{6}{algocf.2}\protected@file@percent }
+\newlabel{alg:HDB_origin}{{2}{6}{Bootstrapping a \texttt {NAND} gate}{algocf.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Number-theoretic transform with merged twiddle factors}{7}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Higher level description for NTT with merged twiddle factors}{7}{subsection.2.1}\protected@file@percent }
+\newlabel{sec:gf2m_arith}{{2.1}{7}{Higher level description for NTT with merged twiddle factors}{subsection.2.1}{}}
+\newlabel{eq:ntt_def}{{1}{7}{Higher level description for NTT with merged twiddle factors}{equation.2.1}{}}
+\newlabel{eq:ntt_def2}{{2}{7}{Higher level description for NTT with merged twiddle factors}{equation.2.2}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {3}{\ignorespaces Higher level description of NTT, \textit  {a.k.a} $DIT_{NN\to RN}$\relax }}{8}{algocf.3}\protected@file@percent }
+\newlabel{alg:descript_ntt}{{3}{8}{Higher level description for NTT with merged twiddle factors}{algocf.3}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {4}{\ignorespaces Construction of Twiddle Factor LUTs\relax }}{8}{algocf.4}\protected@file@percent }
+\newlabel{alg:descript_twiddlefactor}{{4}{8}{Higher level description for NTT with merged twiddle factors}{algocf.4}{}}
+\newlabel{eq:ntt_def3}{{3}{8}{Higher level description for NTT with merged twiddle factors}{equation.2.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Merged Twiddle Factor used in $N$-point NTT. The exponent is expressed in binary form.\relax }}{9}{table.1}\protected@file@percent }
+\newlabel{table:merged_tf}{{1}{9}{Merged Twiddle Factor used in $N$-point NTT. The exponent is expressed in binary form.\relax }{table.1}{}}
+\newlabel{fig:dit1}{{1a}{10}{Generic architecture for NTT with merged twiddle factors ($N=8$)\relax }{subfigure.1.1}{}}
+\newlabel{sub@fig:dit1}{{a}{10}{Generic architecture for NTT with merged twiddle factors ($N=8$)\relax }{subfigure.1.1}{}}
+\newlabel{table:table}{{1b}{10}{Twiddle factor LUT context ($N=8$)\relax }{subfigure.1.2}{}}
+\newlabel{sub@table:table}{{b}{10}{Twiddle factor LUT context ($N=8$)\relax }{subfigure.1.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces DIT instance with $N=8$\relax }}{10}{figure.1}\protected@file@percent }
+\newlabel{fig:hypercube4}{{2a}{11}{$d=4$, $ID\in \{P_0,P_1,P_2,P_3\}$\relax }{subfigure.2.1}{}}
+\newlabel{sub@fig:hypercube4}{{a}{11}{$d=4$, $ID\in \{P_0,P_1,P_2,P_3\}$\relax }{subfigure.2.1}{}}
+\newlabel{fig:hypercube8}{{2b}{11}{$d=8$, $ID\in \{P_0,P_1,P_2,P_3,P_4,P_5,P_6,P_7\}$\relax }{subfigure.2.2}{}}
+\newlabel{sub@fig:hypercube8}{{b}{11}{$d=8$, $ID\in \{P_0,P_1,P_2,P_3,P_4,P_5,P_6,P_7\}$\relax }{subfigure.2.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Hypercubes of Dimension $log_2d=2$ and $log_2d=3$\relax }}{11}{figure.2}\protected@file@percent }
+\@writefile{loa}{\contentsline {algocf}{\numberline {5}{\ignorespaces Construction of the $log_2d$-dimensional hypercube\relax }}{11}{algocf.5}\protected@file@percent }
+\newlabel{alg:descript_hypercube}{{5}{11}{$log_2d$-Dimensional Hypercube Multiprocessors}{algocf.5}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {6}{\ignorespaces Subcube-doubling communication in $log_2d$-dimensional hypercube\relax }}{11}{algocf.6}\protected@file@percent }
+\newlabel{alg:descript_subcube}{{6}{11}{$log_2d$-Dimensional Hypercube Multiprocessors}{algocf.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}$log_2d$-Dimensional Hypercube Multiprocessors}{11}{subsection.2.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Subcube-doubling communication in $3$-dimensional hypercube\relax }}{12}{table.2}\protected@file@percent }
+\newlabel{tab:descript_subcube}{{2}{12}{Subcube-doubling communication in $3$-dimensional hypercube\relax }{table.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}A Useful Equivalent Notation: |PID|Local $M$}{12}{subsection.2.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Local data in processor $P_{i_4i_3}$ expressed in terms of global array element $a[m],m=i_4i_3i_2i_1i_0$ for the notation $i_4i_3$|$i_2i_1i_0$\relax }}{13}{table.3}\protected@file@percent }
+\newlabel{tab:pid_notation2}{{3}{13}{Local data in processor $P_{i_4i_3}$ expressed in terms of global array element $a[m],m=i_4i_3i_2i_1i_0$ for the notation $i_4i_3$|$i_2i_1i_0$\relax }{table.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}First attempt: parallel in-place FFTs without inter-processor permutations}{13}{subsection.2.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Local data in processor $P_{i_0i_1}$ (bit reversed) expressed in terms of global array element $a[r]=a_m,r=i_0i_1i_2i_3i_4,m=i_4i_3i_2i_1i_0$ for the notation $i_0i_1$|$i_2i_3i_4$\relax }}{14}{table.4}\protected@file@percent }
+\newlabel{tab:pid_notation}{{4}{14}{Local data in processor $P_{i_0i_1}$ (bit reversed) expressed in terms of global array element $a[r]=a_m,r=i_0i_1i_2i_3i_4,m=i_4i_3i_2i_1i_0$ for the notation $i_0i_1$|$i_2i_3i_4$\relax }{table.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Second attempt: Parallel NTTs with Inter-processor permutations}{14}{subsection.2.5}\protected@file@percent }
+\newlabel{fig:dataswap_without_perm1}{{3a}{15}{In round-0, Data sent and received by processors $P_0$ and $P_2$\relax }{subfigure.3.1}{}}
+\newlabel{sub@fig:dataswap_without_perm1}{{a}{15}{In round-0, Data sent and received by processors $P_0$ and $P_2$\relax }{subfigure.3.1}{}}
+\newlabel{fig:dataswap_without_perm2}{{3b}{15}{In round-0, Data sent and received by processors $P_1$ and $P_3$\relax }{subfigure.3.2}{}}
+\newlabel{sub@fig:dataswap_without_perm2}{{b}{15}{In round-0, Data sent and received by processors $P_1$ and $P_3$\relax }{subfigure.3.2}{}}
+\newlabel{fig:dataswap_without_perm3}{{3c}{15}{In round-1, Data sent and received by processors $P_0$ and $P_1$\relax }{subfigure.3.3}{}}
+\newlabel{sub@fig:dataswap_without_perm3}{{c}{15}{In round-1, Data sent and received by processors $P_0$ and $P_1$\relax }{subfigure.3.3}{}}
+\newlabel{fig:dataswap_without_perm4}{{3d}{15}{In round-1, Data sent and received by processors $P_2$ and $P_3$\relax }{subfigure.3.4}{}}
+\newlabel{sub@fig:dataswap_without_perm4}{{d}{15}{In round-1, Data sent and received by processors $P_2$ and $P_3$\relax }{subfigure.3.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces An illustrative example for parallelizing in-place NTT($N=32,d=4$) without inter-processor permutations\relax }}{15}{figure.3}\protected@file@percent }
+\newlabel{fig:dataswap_without_perm}{{3}{15}{An illustrative example for parallelizing in-place NTT($N=32,d=4$) without inter-processor permutations\relax }{figure.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Butterfly Processor}{17}{subsection.2.6}\protected@file@percent }
+\newlabel{sec:butterfly processor}{{2.6}{17}{Butterfly Processor}{subsection.2.6}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {7}{\ignorespaces Parallel Hypercube NTT\relax }}{18}{algocf.7}\protected@file@percent }
+\newlabel{alg:descript_hypercube_ntt}{{7}{18}{Second attempt: Parallel NTTs with Inter-processor permutations}{algocf.7}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {8}{\ignorespaces Barret-Reduction based Modular Multiplication\relax }}{19}{algocf.8}\protected@file@percent }
+\newlabel{alg:modmul}{{8}{19}{Butterfly Processor}{algocf.8}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {9}{\ignorespaces Modular Addition\relax }}{19}{algocf.9}\protected@file@percent }
+\newlabel{alg:modadd}{{9}{19}{Butterfly Processor}{algocf.9}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {10}{\ignorespaces Modular Subtraction\relax }}{19}{algocf.10}\protected@file@percent }
+\newlabel{alg:modsub}{{10}{19}{Butterfly Processor}{algocf.10}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {11}{\ignorespaces Memory address generation for butterfly computation\relax }}{21}{algocf.11}\protected@file@percent }
+\newlabel{alg:addrgen}{{11}{21}{Butterfly Processor}{algocf.11}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Performance of the configurable hypercube NTT hardware for FHEW-like FHE schemes on Xilinx Artix-7 FPGA\relax }}{21}{table.5}\protected@file@percent }
+\newlabel{table:hypercube-ntt-result}{{5}{21}{Performance of the configurable hypercube NTT hardware for FHEW-like FHE schemes on Xilinx Artix-7 FPGA\relax }{table.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.7}Implementation Experiments}{21}{subsection.2.7}\protected@file@percent }
 \bibstyle{alpha}
 \bibdata{./reference}
-\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Performance of the configurable hypercube NTT hardware for FHEW-like FHE schemes on Xilinx Artix-7 FPGA\relax }}{18}{table.5}\protected@file@percent }
-\newlabel{table:hypercube-ntt-result}{{5}{18}{Performance of the configurable hypercube NTT hardware for FHEW-like FHE schemes on Xilinx Artix-7 FPGA\relax }{table.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}System Integration on Xilinx MPSOC platform}{18}{section.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusions}{18}{section.4}\protected@file@percent }
-\newlabel{fig:dataswap_with_perm1}{{4a}{19}{In round-0, $DIT_{NR}$ butterfly computation with data migration between processors $P_0$ and $P_2$, and $P_1$ and $P_3$, respectively\relax }{subfigure.4.1}{}}
-\newlabel{sub@fig:dataswap_with_perm1}{{a}{19}{In round-0, $DIT_{NR}$ butterfly computation with data migration between processors $P_0$ and $P_2$, and $P_1$ and $P_3$, respectively\relax }{subfigure.4.1}{}}
-\newlabel{fig:dataswap_with_perm2}{{4b}{19}{In round-1, $DIT_{NR}$ butterfly computation with data migration between processors $P_0$ and $P_1$, and $P_2$ and $P_3$, respectively\relax }{subfigure.4.2}{}}
-\newlabel{sub@fig:dataswap_with_perm2}{{b}{19}{In round-1, $DIT_{NR}$ butterfly computation with data migration between processors $P_0$ and $P_1$, and $P_2$ and $P_3$, respectively\relax }{subfigure.4.2}{}}
-\newlabel{fig:dataswap_with_perm3}{{4c}{19}{In round-2/3/4, $DIT_{NR}$ butterfly computation with data migration between processors $P_0$ and $P_2$, and $P_1$ and $P_3$, respectively\relax }{subfigure.4.3}{}}
-\newlabel{sub@fig:dataswap_with_perm3}{{c}{19}{In round-2/3/4, $DIT_{NR}$ butterfly computation with data migration between processors $P_0$ and $P_2$, and $P_1$ and $P_3$, respectively\relax }{subfigure.4.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces An illustrative example for parallelizing in-place NTT($N=32,d=4$) with inter-processor permutations\relax }}{19}{figure.4}\protected@file@percent }
-\newlabel{fig:dataswap_with_perm}{{4}{19}{An illustrative example for parallelizing in-place NTT($N=32,d=4$) with inter-processor permutations\relax }{figure.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Internal structure of butterfly processor\relax }}{20}{figure.5}\protected@file@percent }
-\newlabel{fig:butterfly_processor}{{5}{20}{Internal structure of butterfly processor\relax }{figure.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Illustrative timing diagram for memory address generation in line with Alg.\nobreakspace  {}\ref {alg:addrgen}($N=32, d=4$)\relax }}{21}{figure.6}\protected@file@percent }
-\newlabel{fig:timing_diag}{{6}{21}{Illustrative timing diagram for memory address generation in line with Alg.~\ref {alg:addrgen}($N=32, d=4$)\relax }{figure.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Top-level timing diagram for hypercube NTT in 5 rounds($N=32, d=4$)\relax }}{21}{figure.7}\protected@file@percent }
-\newlabel{fig:timing_diag2}{{7}{21}{Top-level timing diagram for hypercube NTT in 5 rounds($N=32, d=4$)\relax }{figure.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces A software-hardware co-design for FHEW where the NTT module is implemented in PL logic and the software runs in PS logic\relax }}{21}{figure.8}\protected@file@percent }
-\newlabel{fig:mpsoc}{{8}{21}{A software-hardware co-design for FHEW where the NTT module is implemented in PL logic and the software runs in PS logic\relax }{figure.8}{}}
-\newlabel{TotPages}{{21}{21}{}{page.21}{}}
-\gdef \@abspage@last{21}
+\bibcite{chillotti2020tfhe}{CGGI20}
+\bibcite{ducas2015fhew}{DM15}
+\bibcite{gentry2013homomorphic}{GSW13}
+\@writefile{toc}{\contentsline {section}{\numberline {3}System Integration on Xilinx MPSOC platform}{22}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusions}{22}{section.4}\protected@file@percent }
+\newlabel{fig:dataswap_with_perm1}{{4a}{23}{In round-0, $DIT_{NR}$ butterfly computation with data migration between processors $P_0$ and $P_2$, and $P_1$ and $P_3$, respectively\relax }{subfigure.4.1}{}}
+\newlabel{sub@fig:dataswap_with_perm1}{{a}{23}{In round-0, $DIT_{NR}$ butterfly computation with data migration between processors $P_0$ and $P_2$, and $P_1$ and $P_3$, respectively\relax }{subfigure.4.1}{}}
+\newlabel{fig:dataswap_with_perm2}{{4b}{23}{In round-1, $DIT_{NR}$ butterfly computation with data migration between processors $P_0$ and $P_1$, and $P_2$ and $P_3$, respectively\relax }{subfigure.4.2}{}}
+\newlabel{sub@fig:dataswap_with_perm2}{{b}{23}{In round-1, $DIT_{NR}$ butterfly computation with data migration between processors $P_0$ and $P_1$, and $P_2$ and $P_3$, respectively\relax }{subfigure.4.2}{}}
+\newlabel{fig:dataswap_with_perm3}{{4c}{23}{In round-2/3/4, $DIT_{NR}$ butterfly computation with data migration between processors $P_0$ and $P_2$, and $P_1$ and $P_3$, respectively\relax }{subfigure.4.3}{}}
+\newlabel{sub@fig:dataswap_with_perm3}{{c}{23}{In round-2/3/4, $DIT_{NR}$ butterfly computation with data migration between processors $P_0$ and $P_2$, and $P_1$ and $P_3$, respectively\relax }{subfigure.4.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces An illustrative example for parallelizing in-place NTT($N=32,d=4$) with inter-processor permutations\relax }}{23}{figure.4}\protected@file@percent }
+\newlabel{fig:dataswap_with_perm}{{4}{23}{An illustrative example for parallelizing in-place NTT($N=32,d=4$) with inter-processor permutations\relax }{figure.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Internal structure of butterfly processor\relax }}{24}{figure.5}\protected@file@percent }
+\newlabel{fig:butterfly_processor}{{5}{24}{Internal structure of butterfly processor\relax }{figure.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Illustrative timing diagram for memory address generation in line with Alg.\nobreakspace  {}\ref {alg:addrgen}($N=32, d=4$)\relax }}{25}{figure.6}\protected@file@percent }
+\newlabel{fig:timing_diag}{{6}{25}{Illustrative timing diagram for memory address generation in line with Alg.~\ref {alg:addrgen}($N=32, d=4$)\relax }{figure.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Top-level timing diagram for hypercube NTT in 5 rounds($N=32, d=4$)\relax }}{25}{figure.7}\protected@file@percent }
+\newlabel{fig:timing_diag2}{{7}{25}{Top-level timing diagram for hypercube NTT in 5 rounds($N=32, d=4$)\relax }{figure.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces A software-hardware co-design for FHEW where the NTT module is implemented in PL logic and the software runs in PS logic\relax }}{25}{figure.8}\protected@file@percent }
+\newlabel{fig:mpsoc}{{8}{25}{A software-hardware co-design for FHEW where the NTT module is implemented in PL logic and the software runs in PS logic\relax }{figure.8}{}}
+\gdef \@abspage@last{25}

@@ -104,9 +104,160 @@ The contributions of this paper include:
 
 
 \section{FHEW-like Fully Homomorphic Encryption Scheme}
+TFHE~\cite{chillotti2020tfhe} and FHEW~\cite{ducas2015fhew} are examples of the third generation of fully homomorphic encryption (FHE) schemes. They offer advantages in terms of bootstrapping performance, which is a crucial operation in FHE schemes. The state-of-the-art advancements in TFHE/FHEW indicate that any discrete function $f$ over a small domain $\mathbb{Z}_t$ can be bootstrapped. This unique capability is often referred to as functional or programmable bootstrapping. It allows for performing computations on encrypted data without decrypting it. In this work, we stay focused on one particular function called \texttt{NAND} gate which is proposed in the original FHEW paper as:
+\[
+    \texttt{NAND}(x,y)=\begin{cases}
+    0 & \text{ if } x ==y \\
+    1 & \text{ otherwise}
+    \end{cases}
+\]
+where $x,y \in\{0,1\}$.
+
+
+
+\subsection{LWE and RLWE}
+TFHE ciphertext is essentially an LWE ciphertext. The LWE ciphertext is defined as follows:
+\[
+(\mathbf{a},b) = (\mathbf{a}, \langle\mathbf{a},\mathbf{s}\rangle+\frac{q}{t}m+e)\in \mathbb{Z}_q^n\times\mathbb{Z}_q
+\],
+where $\mathbf{s}$ is a secret key, $m\in\mathbb{Z}_t$ is the message, $e$ is an error term extracted from a discrete Gaussian distribution with small variance $e\sim\mathcal{N}(0,\sigma^2)$. 
+The parameters $n,q,\mathbf{s}$ characterize an LWE ciphertext. 
+We use the notation $LWE_{\mathbf{s}}^{n,q}(m)$ (or $LWE_{\mathbf{s}}(m), LWE(m), LWE(\frac{q}{t}m)$ when the context is clear) to represent an LWE encryption of the message $m$.
+
+In the TFHE bootstrapping algorithm, another format of ciphertext, called RLWE ciphertext, is used. 
+An RLWE ciphertext can be viewed as an LWE ciphertext defined over polynomial ring $R_Q=\mathbb{Z}_Q[X]/(X^N+1)$: 
+\[
+(a(X),b(X))= (a(X), a(X)\cdot z(X)+ \frac{Q}{t}m(X)+e(X))\in R_Q\times R_Q
+\]
+where $z$ is the secret key, $m$ is the message, $e=\sum_ie_iX^i$ is the error polynomial where each coefficient is extracted from a discrete Gaussian distribution with small variance $e_i\sim\mathcal{N}(0,\sigma^2)$. 
+Likewise, we use $RLWE_z^{N,Q}(m)$ (or $RLWE_{\mathbf{s}}(m), RLWE(m), RLWE(\frac{Q}{t}m)$ when the context is clear) to denote an RLWE encryption of the message $m(X)$. 
+
+\subsection{Key Switch and Mod Switch}
+Key switching and modulus switching are two important homomorphic operations in TFHE. 
+We skip the algorithmic detail for these two primitives but outline the functionality abstractly. \texttt{KeySwitch} takes as input an LWE encryption of message $m$ under secret key $\mathbf{z}$ and outputs another LWE ciphertext encrypting the same message $m$ but under a different secret key $\mathbf{s}$:
+\[
+LWE_{\mathbf{z}}^{N,Q}(m)\xrightarrow[]{\texttt{KeySwitch}}LWE_{\mathbf{s}}^{n,Q}(m)
+\]
+\texttt{KeySwitch} utilizes another publicly known key called key switching key $\mathbf{KSK}$ to perform this operation and \texttt{KeySwitch} introduces extra noise to the input LWE ciphertext. In practice, we may use another form of key switching, called LWE-to-RLWE keyswitch which homomorphically converts an LWE encryption to an RLWE encryption without changing the encrypted message:
+\[
+LWE_{\mathbf{z}}^{N,Q}(m)\xrightarrow[]{\texttt{LWE-to-RLWE KeySwitch}}RLWE_{z}^{n,Q}(m)
+\]
+
+
+\texttt{ModSwitch} takes input as an LWE encryption of message $m$ defined over $\mathbb{Z}_Q^N\times\mathbb{Z}_Q$ and outputs another LWE encryption of the same message defined over $\mathbb{Z}_q^N\times\mathbb{Z}_q$ with $Q>q$:
+\[
+LWE_{\mathbf{s}}^{N,Q}(m)\xrightarrow[]{\texttt{ModSwitch}}LWE_{\mathbf{s}}^{N,q}(m)
+\]
+A unique feature of \texttt{ModSwitch} is that it reduces the noise within the LWE ciphertext. TFHE bootstrapping utilizes this feature to homomorphically evaluate a discrete function $f$ while reducing the noise in the ciphertext.
+
+\subsection{Sample Extraction}
+Sample extraction is another classical technique that homomorphically extracts a term in an encrypted polynomial. More precisely, the input for sample extraction is an RLWE ciphertext $RLWE(m(X))$ which encrypts a polynomial $m(X)=\sum_{i=0}^{N-1}m_iX^i$ and sample extraction extracts the $i$-th term of $m(X)$ as an LWE encryption $LWE(m_i)$ denoted as:
+\[
+LWE_{\mathbf{z}}^{N,Q}(m_i) \gets \texttt{SampleExt}(RLWE_{z}^{N,Q}(m(X),i)
+\]
+
+Note that the secret key $z=\sum_{i=0}^{N-1}z_iX^i$ is changed accordingly to its vector form $\mathbf{z}=(z_0,\cdots,z_{N-1})$.
+Sometimes, we abuse the notation above and use $LWE_{\mathbf{z}}^{N,Q}(m_0) \gets \texttt{SampleExt}(RLWE_{z}^{N,Q}(m(X))$ to denote the extraction of the constant term. 
+The computational overhead for \texttt{SampleExt} is trivial and the noise does not grow.
+
+
+\subsection{RGSW cryptosystem}
+In TFHE/FHEW schemes, a new encryption scheme called RGSW~\cite{gentry2013homomorphic} is used as the basis for homomorphic multiplication. We use the notation $RGSW_z^{N,Q}(m(X))$ to denote an RGSW encryption of a polynomial $m(X)\in R_Q=\mathbb{Z}_Q[X]/(X^N+1)$ under the secret key $z$. 
+
+Before detailing RGSW, an extended form of RLWE encryption with respect to some basis $B_g$ should be introduced, \textit{i.e.},
+\[
+RLWE'(m)=(RLWE(m), \cdots, RLWE(B^im), \cdots, RLWE(B^{d_g-1}m))
+\] 
+where $d_g=\lceil log_{B_g}(Q)\rceil$.
+
+The noise growth for the scalar multiplication $d\cdot RLWE'(m)$ defined in $RLWE'(\cdot)$ is well controlled since:
+\[
+    d\cdot RLWE'(m) = \sum_{i=0}^{d_g-1} d_i\cdot RLWE(B^im) =RLWE(\sum_i d_iB^im)=RLWE(d\cdot m)
+\]
+where $d=\sum_i d_iB^i$.
+
+
+RSGW encryption is further constructed based on $RLWE'(\cdot)$ as:
+\[
+RGSW_z(m)=(RLWE'_z(-z\cdot m),RLWE'_z(m))
+\]
+In other terms, RGSW not only encrypts the message $m$ but also encrypts $z\cdot m$ which encloses the secret key $z$.
+
+The RGSW homomorphic multiplication between a RLWE ciphertext $RLWE(m_0)\overset{def}{=}(a,b)$ and another RSGW ciphertext $RGSW(m_1)$
+ $\odot: RLWE\times RGSW\to RLWE$ proceeds as follows:
+\begin{align*}
+    RLWE(m_0)\odot RGSW(m_1) = &  (a,b)\odot (RLWE'(-z\cdot m_1), RLWE'(m_1)) \\
+                             = & a\cdot RLWE'(-z\cdot m_1) + b\cdot RLWE'(m_1) \\
+                             = & RLWE((b-as)\cdot m_1)\\
+                             = & RLWE(\frac{Q}{t}m_0m_1+ e_0m_1)
+\end{align*}
+since $e_0m_1$ is a small component and can be treated as noise and thus we have $RLWE(\frac{Q}{t}m_0m_1+ e_0m_1)=RLWE(\frac{Q}{t}m_0m_1)$. Also note that the inputs are asymmetric where one input is an RLWE encryption while the other is an RGSW encryption. 
+This type of homomorphic multiplication is also known as external product. 
+Each external product takes $4d_gN \log N$ $\mathbb{F}_Q$ multiplications where $d_g\approx 6$ is a small constant used to describe RSGW encryption if number-theoretic transform (NTT) is applied.
+
+
+\subsection{Blind Rotation}
+Blind Rotation essentially homomorphically performs an inner product of a public known vector $\mathbf{a}\overset{def}{=}(a_0,\cdots, a_{n-1})$ and the private key vector $\mathbf{s}\overset{def}{=}(s_0,\cdots, s_{n-1})$ over the exponent of $X$ by extensive use of RGSW external product. In order to control the noise growth during the homomorphic computation, a redundant encryption of the private key $\mathbf{s}$, \textit{i.e.}, $\mathbf{Z}_{i,j,v}=RGSW(X^{vB_r^j\cdot s_i})$ for all $i, j, v$ is used. Algorithm~\ref{alg:Blind_Rotate} formally describes the primitive \texttt{BlindRotate}.
+
+\begin{algorithm}[!tbh]
+\DontPrintSemicolon % Some LaTeX compilers require you to use \dontprintsemicolon instead
+\KwIn{bootstrapping key brK $\mathbf{Z}_{i,j,v}=RGSW(X^{vB_r^j\cdot s_i})$ for all $i, j, v$,  RLWE ciphertext $ct=RLWE(X^b)$ and a public known vector $\mathbf{a}$.}
+\KwOut{an RLWE encryption of $X^{b-\langle \mathbf{a}, \mathbf{s}\rangle}$.}
+   \For{$i\leftarrow 0$ \KwTo $n-1$}{
+        Compute $a_i\gets q-a_i$\;
+        \For{$j\leftarrow 0$ \KwTo $log_{B_r}q-1$}{
+            Compute $a_{i,j}\gets \lfloor a_i/B_r^j\rfloor$\;
+            Compute $ACC\gets ACC\odot \mathbf{Z}_{i,j,v}$\;
+        }
+   }
+  \Return {$ACC$}
+\caption{the primitive blind rotation \texttt{BlindRotate}(brK, ct, $\mathbf{a}$)}\label{alg:Blind_Rotate}
+\end{algorithm}
+
+\begin{proposition}
+Given an RLWE encryption of a monomial $X^b$, and a public known vector $\mathbf{a}$ an an pre-computed encryption of the secret keys, \textit{i.e.}, $\mathbf{Z}_{i,j,v}=RGSW(X^{vB_r^j\cdot s_i})$ for all $i, j, v$. Algorithm~\ref{alg:Blind_Rotate} correctly computes an RLWE encryption of $X^{b-\langle \mathbf{a}, \mathbf{s}\rangle}$.
+\end{proposition}
+\begin{proof}
+The algorithm proceeds in a nested loop with loop-$i$ as the outer loop and loop-$j$ as the inner loop. Each iteration of loop-$i$ first flattens $a_i$ to $\{a_{i,j}\}$ for all $j$ and then computes in the inner loop-$j$ $RLWE(X^{b-\sum_{k=0}^{i} a_ks_k})$ from $RLWE(X^{b-\sum_{k=0}^{i-1} a_ks_k})$ since $-a_is_i=\sum_j a_{i,j}B_r^js_i$. By induction,  $ACC$ returns $RLWE(X^{b-\sum_{k=0}^{n-1} a_ks_k})$ at the end of the algorithm.
+\end{proof}
+
+
+\subsection{Bootstrapping a \texttt{NAND} gate}
+A full description of homomorphic NAND gate operation is presented in Alg.~\ref{alg:HDB_origin}. $acc_{\text{BR},f}=RLWE_{z}^{N,Q}(rotP\cdot X^{\widetilde{m}})$ where $\widetilde{m}=b_N-\langle\mathbf{a}_N,\mathbf{s}\rangle=\frac{q}{t}m+e$, $ct_Q=LWE_{\mathbf{z}}^{N,Q}(f(m))$, and $ct_q=LWE_{\mathbf{s}}^{n,q}(f(m))$. 
+HDB is relatively fast since it  performs the most time-consuming operation~\texttt{BlindRotate}, whose computational complexity is $\mathcal{O}(d_gN^2\log N)$, only once. Here, 
+$d_g$ is a small constant used  in the TFHE system parameter description. 
+For 80-bit security, one HDB function evaluation takes less than 1 second by a typical software implementation on a desktop PC. 
+
+ 
+\begin{algorithm}[!tbh]
+\DontPrintSemicolon % Some LaTeX compilers require you to use \dontprintsemicolon instead
+\KwIn{ bootstrapping key brK,  LWE ciphertexts $ct_i=LWE_{\mathbf{s}}^{q/4}(m_i)=(\mathbf{a},b) \text{ for } i\in \{0,1\}$, LWE-to-LWE key-switching key ksK.}
+\KwOut{ an LWE encryption of $\texttt{NAND}(m_0,m_1)$, \textit{i.e.,}  $ct_q=LWE_{\mathbf{s}}^{q/4}(\texttt{NAND}(m_0,m_1))$. }
+   Compute $ct\gets ct_0+ct_1$ \;
+   Set $rotP=f(0)\left(\sum_{j=0}^{\frac{N}{4}}X^j + \sum_{j=N-\frac{N}{4}+1}^{N-1}X^j\right ) - f(1)\left(\sum_{j=\frac{N}{4}+1}^{\frac{3N}{4}} X^j\right )$ where $f(0)=f(1)=\frac{q}{8}$\;
+   Set $ct_N \gets \texttt{ModSwitch}(ct, q, 2N)=(\mathbf{a}_N,b_N)$\;
+   Compute $acc_f \gets rotP\cdot X^{b_N}$\;
+   Run $acc_{\text{BR},f} \gets \texttt{BlindRotate}(brK,acc_f,ct_N)$\;
+   Run $ct_Q \gets \texttt{SampleExt}(acc_{\text{BR},f},0)$\;
+   Run $ct_{Q,ksK} \gets \texttt{KeySwitch}(ct_Q, ksK)$\;
+   Run $ct_q \gets \texttt{ModSwitch}(ct_Q, Q, q)$\;
+  \Return {$ct_q + (\mathbf{0}, \frac{q}{8})$}
+\caption{Half domain bootstrapping \texttt{Bootstrap}(brK, ct, $f(\cdot)$, ksK)}\label{alg:HDB_origin}
+\end{algorithm}
+
+
+\begin{proposition}
+Given an LWE encryption of a binary message $m_0$, and an LWE encryption of another message $m_1$, Algorithm~\ref{alg:HDB_origin} correctly computes an LWE encryption of $\texttt{NAND}(m_0,m_1)$.
+\end{proposition}
+\begin{proof}
+In line 1, the homomorphic addition returns $ct=LWE_{\mathbf{s}}^{q/4}(m_0+m_1)$. In line 2, the rotation polynomial $rotP(x)$ is configured according to the anti-cyclic function $f(x)\text{ for } x\in \{0,1,2,3\}$ \textit{s.t.} $f(0)=f(1)=\frac{q}{8}$ and $f(2)=f(3)=-\frac{q}{8}$. In line 3, the primitive $\texttt{ModSwitch}$ is invoked to scale the ciphertext modulus $q$ down to $2N$ making $ct_N=LWE_{\mathbf{s}}^{2N/4}(m_0+m_1)$. Line 4 essentially creates a noiseless and trivial RLWE encryption of $rotP(X)\cdot X^{b_N}$.
+In line 5, the primitive \texttt{BlindRotate} uses the bootstrapping key to compute $acc_{\text{BR},f}=RLWE_{z}^{N,Q}(rotP\cdot X^{\widetilde{m}})$ where $\widetilde{m}=b_N-\langle\mathbf{a}_N,\mathbf{s}\rangle=\frac{2N}{t}(m_0+m_1)+e \bmod 2N$. In line 6, the constant term in $rotP\cdot X^{\widetilde{m}}$ is extracted as a new LWE encryption over a relatively larger ciphertext modulus, \textit{i.e.}, $LWE_{\mathbf{z}}^{N,Q}(f(m_0+m_1))$. Line 7 switches the secret key $\mathbf{z}$ back to the original secret key $\mathbf{s}$ such that $ct_{Q,ksk}=LWE_{\mathbf{s}}^{n,Q}(f(m_0+m_1))$. Line 8 performs again the primitive \texttt{ModSwitch} to switch back to the original ciphertext modulus $q$ such that $ct_q=LWE_{\mathbf{s}}^{n,q}(f(m_0+m_1))$. In line 9, the final result $LWE_{\mathbf{s}}^{n,q}(f(m_0+m_1)+q/8)$ is returned. It is easy to verify that $LWE_{\mathbf{s}}^{n,q}(f(m_0+m_1)+q/8)=(\mathbf{a},\langle \mathbf{a}, \mathbf{s}\rangle +e)$ which encrypts `0' if $m_0=m_1=1$, and $LWE_{\mathbf{s}}^{n,q}(f(m_0+m_1)+q/8)=(\mathbf{a},\langle \mathbf{a}, \mathbf{s}\rangle +\frac{q}{4}+e)$ which encrypts `1' otherwise.
+\end{proof}
+
+
 
 \section{Number-theoretic transform with merged twiddle factors}
-This section describes NTT hardware at the bottom level. Firstly,  The distinguishing feature is that a series of new twiddle factor LUTs  is constructed and used:  an independent twiddle factor LUT, denoted as $\{w_i[\cdot]\}_{i=0,\ldots,log_2N-1}$, is prepared for the $i$-th round of butterfly computation ($logN$ rounds in total) as described in Alg.~\ref{alg:descript_twiddlefactor}. Note that differing from the standard FFT which uses twiddle factor $\omega_{N}^i$ for $i\in [N]$, the NTT used in the ring $\mathcal{R}_q$ uses the modified twiddle factor $\omega_N^i\cdot\omega_{2N}^j$ for $i\in [N], j=2^0,2^1,\cdots,2^{logN-1}$.
+This section describes NTT hardware at the bottom level. Firstly,  The distinguishing feature is that a series of new twiddle factor LUTs  is constructed and used:  an independent twiddle factor LUT, denoted as $\{w_i[\cdot]\}_{i=0,\ldots,log_2N-1}$, is prepared for the $i$-th round of butterfly computation ($logN$ rounds in total) as described in Alg.~\ref{alg:descript_twiddlefactor}. Note that differing from the standard FFT which uses twiddle factor $\omega_{N}^i$ for $i\in [N]$, the NTT used in the ring $\mathcal{R}_q$ uses the modified twiddle factor $\omega_N^i\cdot\omega_{2N}^j$ for $i\in [N], j=2^0,2^1,\cdots,2^{logN-1}$. 
 
 \subsection{Higher level description for NTT with merged twiddle factors}\label{sec:gf2m_arith}
 
@@ -161,19 +312,21 @@ A visualization of Alg.~\ref{alg:descript_ntt} is depicted in Fig.~\ref{fig:dit1
 \end{algorithm}
 
 Next, we detail how to construct the twiddle factor LUT. Recall the NTT with pre-processing can be written together as a summation of $N$ terms:
-\[
+\begin{equation}\label{eq:ntt_def}
     A_i = \sum_{j=0}^{N-1}a_j\omega_{2N}^j\omega_N^{ij} \bmod q, i\in [0,N-1]
-\]
+\end{equation}
 
-Next, by splitting the summation above into even and odd groups according to the index $i$ of $A_i$, we obtain
+Next, by splitting the summation above (Equation~\ref{eq:ntt_def}) into even and odd groups according to the index $i$ of $A_i$, we obtain
 \begin{gather}
-    A_i = \sum_{j=0}^{\frac{N}{2}-1}a_{2j}\omega_N^{2ij}\omega_{2N}^{2j}  + \sum_{j=0}^{\frac{N}{2}-1}a_{2j+1}\omega_N^{i(2j+1)}\omega_{2N}^{2j+1} \bmod q \text{ for } i\in [0,\frac{N}{2}-1]\notag\\
-    = \sum_{j=0}^{\frac{N}{2}-1}a_{2j}\omega_{\frac{N}{2}}^{ij}\omega_{N}^{j}  + \omega_{N}^i\omega_{2N}\sum_{j=0}^{\frac{N}{2}-1}a_{2j+1}\omega_{\frac{N}{2}}^{ij}\omega_N^{j} \bmod q \notag
+    A_i = \sum_{j=0}^{\frac{N}{2}-1}a_{2j}\omega_N^{2ij}\omega_{2N}^{2j}  + \sum_{j=0}^{\frac{N}{2}-1}a_{2j+1}\omega_N^{i(2j+1)}\omega_{2N}^{2j+1} \bmod q \notag\\
+    = \sum_{j=0}^{\frac{N}{2}-1}a_{2j}\omega_{\frac{N}{2}}^{ij}\omega_{N}^{j}  + \omega_{N}^i\omega_{2N}\sum_{j=0}^{\frac{N}{2}-1}a_{2j+1}\omega_{\frac{N}{2}}^{ij}\omega_N^{j} \bmod q \label{eq:ntt_def2}
 \end{gather}
-Now express $A_i$s into the first half $A_{i}$ and the second half $A_{i+\frac{N}{2}}$ as follows: 
+
+
+Now express $A_i$s in Equation~\ref{eq:ntt_def2} into the first half $A_{i}$ and the second half $A_{i+\frac{N}{2}}$ as follows: 
 \begin{gather}
     A_i = \sum_{j=0}^{\frac{N}{2}-1}a_{2j}\omega_{\frac{N}{2}}^{ij}\omega_{N}^{j}  + \omega_{N}^i\omega_{2N}\sum_{j=0}^{\frac{N}{2}-1}a_{2j+1}\omega_{\frac{N}{2}}^{ij}\omega_N^{j} \bmod q \text{ for } i\in [0,\frac{N}{2}-1]\notag\\
-   A_{i+\frac{N}{2}} = \sum_{j=0}^{\frac{N}{2}-1}a_{2j}\omega_{\frac{N}{2}}^{ij}\omega_{N}^{j}  - \omega_{N}^i\omega_{2N}\sum_{j=0}^{\frac{N}{2}-1}a_{2j+1}\omega_{\frac{N}{2}}^{ij}\omega_N^{j} \bmod q \notag
+   A_{i+\frac{N}{2}} = \sum_{j=0}^{\frac{N}{2}-1}a_{2j}\omega_{\frac{N}{2}}^{ij}\omega_{N}^{j}  - \omega_{N}^i\omega_{2N}\sum_{j=0}^{\frac{N}{2}-1}a_{2j+1}\omega_{\frac{N}{2}}^{ij}\omega_N^{j} \bmod q \label{eq:ntt_def3}
 \end{gather}
 
 Assume $N=2^n$, let $Y_i^{(n-1)}$ and $Z_i^{(n-1)}$ be solutions to the two half-sized subproblems (NTT of size of $\frac{N}{2}=2^{n-1}$ for the even terms $\{a_{2j}\}_{j\in [\frac{N}{2}]}$ and the odd terms $\{a_{2j+1}\}_{j\in [\frac{N}{2}]}$) defined by
@@ -182,7 +335,7 @@ Assume $N=2^n$, let $Y_i^{(n-1)}$ and $Z_i^{(n-1)}$ be solutions to the two half
     Z_i^{(n-1)} = \sum_{j=0}^{\frac{N}{2}-1}a_{2j+1}\omega_{\frac{N}{2}}^{ij}\omega_N^{j} \bmod q \notag
 \end{gather}
 
-To unify the notation systems, we define $Y_i^{(n)}$ and $Z_i^{(n)}$ as the first half part and the second half part, respectively, of $A_i$, \textit{i.e.}, $Y_i^{(n)}\overset{def}{=} A_i \text{ for } i\in [0,\frac{N}{2}-1]$ and $Y_i^{(n)}\overset{def}{=} A_i \text{ for } i\in [\frac{N}{2},N-1]$. Therefore, the equation above is rewritten in a more compact form:
+To unify the notation systems, we define $Y_i^{(n)}$ and $Z_i^{(n)}$ as the first half part and the second half part, respectively, of $A_i$, \textit{i.e.}, $Y_i^{(n)}\overset{def}{=} A_i \text{ for } i\in [0,\frac{N}{2}-1]$ and $Y_i^{(n)}\overset{def}{=} A_i \text{ for } i\in [\frac{N}{2},N-1]$. Therefore, the Equation~\ref{eq:ntt_def3} is rewritten in a more compact form:
 \begin{gather}
     Y_i^{(n)} = Y_i^{(n-1)} + \omega_{N}^i\omega_{2N}\cdot Z_i^{(n-1)} = A_i\bmod q \text{ for } i\in [0,\frac{N}{2}-1]\notag\\
     Z_i^{(n)} = Y_i^{(n-1)} - \omega_{N}^i\omega_{2N}\cdot Z_i^{(n-1)} = A_{i+\frac{N}{2}} \bmod q \notag

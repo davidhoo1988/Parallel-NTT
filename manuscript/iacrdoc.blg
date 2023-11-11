@@ -2,47 +2,45 @@ This is BibTeX, Version 0.99d (TeX Live 2022)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: iacrdoc.aux
 The style file: alpha.bst
-I found no \citation commands---while reading file iacrdoc.aux
 Database file #1: ./reference.bib
-You've used 0 entries,
+You've used 3 entries,
             2543 wiz_defined-function locations,
-            558 strings with 4444 characters,
-and the built_in function-call counts, 24 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 10
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 2
+            578 strings with 5285 characters,
+and the built_in function-call counts, 1598 in all, are:
+= -- 168
+> -- 75
+< -- 2
++ -- 27
+- -- 27
+* -- 112
+:= -- 255
+add.period$ -- 11
+call.type$ -- 3
+change.case$ -- 21
+chr.to.int$ -- 3
+cite$ -- 3
+duplicate$ -- 64
+empty$ -- 114
+format.name$ -- 30
+if$ -- 341
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+missing$ -- 3
+newline$ -- 18
+num.names$ -- 9
+pop$ -- 22
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 24
 quote$ -- 0
-skip$ -- 2
+skip$ -- 56
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 96
+swap$ -- 21
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 24
 warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 2
-(There was 1 error message)
+while$ -- 17
+width$ -- 5
+write$ -- 43
